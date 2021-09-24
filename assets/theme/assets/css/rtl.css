@@ -1,0 +1,255 @@
+
+
+.rtl {
+  direction: rtl; 
+}
+
+.ltr {
+  direction: ltr; 
+}
+
+.rtl .pull-left{
+  float: right !important;
+}
+
+.rtl .pull-right{
+  float: left !important;
+}
+
+.rtl .main-menu .navigation > li{
+  float: right;
+}
+
+.rtl .main-menu{
+  float: right;
+}
+
+.rtl .cta-section{
+  text-align: right;
+}
+
+.rtl .main-menu .navigation > li:first-child{
+  margin-left: 15px !important;
+  margin-right: 0px;
+}
+
+.rtl .main-menu .navigation > li:last-child{
+  margin-right: 15px !important;
+  margin-left: 0px;
+}
+
+.rtl .main-menu .navigation > li > ul > li > a, 
+.rtl .main-menu .navigation > li > .megamenu li > a{
+  text-align: right;
+}
+
+.rtl .main-menu .navigation li.dropdown .megamenu li h4{
+  text-align: right;
+}
+
+.rtl .main-menu .navigation > li > ul > li > ul > li > a{
+  text-align: right;
+}
+
+.rtl .main-menu .navigation > li > ul > li.dropdown > a:after{
+  right: inherit;
+  left: 20px;
+  content: "\f104";
+}
+
+.rtl .mobile-menu{
+  text-align: right;
+}
+
+.rtl .mobile-menu .nav-logo{
+  text-align: right;
+}
+
+.rtl .mobile-menu .navigation li > a:before{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .mobile-menu .navigation li.dropdown .dropdown-btn{
+  right: inherit;
+  left: 6px;
+}
+
+.rtl .mobile-menu .navigation li.dropdown .dropdown-btn.open{
+  transform: rotate(-90deg);
+}
+
+.rtl .banner-carousel{
+  direction: ltr;
+}
+
+.rtl .main-header .menu-right-content{
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+.rtl .main-header .menu-right-content .btn-box{
+  float: right;
+}
+
+.rtl .main-header .search-box-outer .dropdown-menu{
+  left: 0px !important;
+  right: inherit;
+}
+
+.rtl .main-header .search-box-outer{
+  margin-right: 0px;
+  margin-left: 7px;
+}
+
+.rtl .banner-section .content-box{
+  text-align: right;
+}
+
+.rtl .booking-form .form-group{
+  float: right;
+}
+
+.rtl .booking-form .form-group .nice-select{
+  float: right;
+  text-align: right !important;
+}
+
+.rtl .banner-section .content-box .form-inner{
+  padding-right: 20px;
+  padding-left: 228px;
+}
+
+.rtl .booking-form .message-btn{
+  right: inherit;
+  left: 20px;
+}
+
+.rtl .nice-select .option{
+  text-align: right;
+}
+
+.rtl .booking-form .form-group .nice-select:after{
+  right: inherit;
+  left: 30px;
+}
+
+.rtl .booking-form .form-group i{
+  right: inherit;
+  left: 39px;
+}
+
+.rtl .about-section .content_block_1 .content-box{
+  margin-left: 0px;
+  margin-right: 40px;
+  text-align: right;
+}
+
+.rtl .content_block_1 .content-box .list li{
+  padding-left: 0px;
+  padding-right: 28px;
+}
+
+.rtl .content_block_1 .content-box .list li:before{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .image_block_1 .image-box .video-content{
+  text-align: right;
+}
+
+.rtl .tour-block-one .inner-box{
+  text-align: right;
+}
+
+.rtl .tour-block-one .inner-box .lower-content .rating span{
+  padding-left: 0px;
+  padding-right: 23px;
+}
+
+.rtl .tour-block-one .inner-box .lower-content .rating span i{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .content_block_2 .content-box{
+  text-align: right;
+}
+
+.rtl .place-block-one .inner-box .text{
+  padding-left: 30px;
+  padding-right: 45px;
+  text-align: right;
+}
+
+.rtl .place-section .title-column{
+  text-align: right;
+}
+
+.rtl .map-section .map-inner .map-content .single-location-box .address-box{
+  text-align: right;
+}
+
+.rtl .three-item-carousel{
+  direction: ltr;
+}
+
+.rtl .news-section{
+  text-align: right;
+}
+
+.rtl .news-block-one .inner-box .image-box .post-date{
+  left: inherit;
+  right: 20px;
+}
+
+.rtl .news-section .sec-title .theme-btn-two{
+  right: inherit;
+  left: 0px;
+}
+
+.rtl .footer-top{
+  text-align: right;
+}
+
+.rtl .footer-top .gallery-widget {
+  margin-right: -58px;
+  margin-left: 38px;
+}
+
+.rtl .footer-top .contact-widget .info-list li{
+  padding-left: 0px;
+  padding-right: 30px;
+}
+
+.rtl .footer-top .contact-widget .info-list li i{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .footer-top .links-widget{
+  margin-left: 0px;
+  margin-right: 60px;
+}
+
+.rtl .footer-top .logo-widget{
+  margin-right: 0px;
+  margin-left: -15px;
+}
+
+.rtl .footer-top .logo-widget .social-links li{
+  float: right;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.rtl .footer-bottom .footer-nav li{
+  margin-right: 0px;
+  margin-left: 25px;
+}
+
+.rtl .footer-bottom .footer-nav li:before{
+  right: inherit;
+  left: -15px;
+}

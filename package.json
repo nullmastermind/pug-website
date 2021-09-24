@@ -1,0 +1,13 @@
+{
+  "name": "hoiandor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@prettier/plugin-pug": "^1.16.6",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}
