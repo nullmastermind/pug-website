@@ -8,8 +8,14 @@ html(lang="en")
     //  Fav Icon 
     link(rel="icon", href="assets/images/favicon.ico", type="image/x-icon")
     //  Google Fonts 
-    link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
+    link(
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      rel="stylesheet"
+    )
+    link(
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      rel="stylesheet"
+    )
     //  Stylesheets 
     link(href="assets/css/font-awesome-all.css", rel="stylesheet")
     link(href="assets/css/flaticon.css", rel="stylesheet")
@@ -34,29 +40,17 @@ html(lang="en")
               .spinner
               .txt-loading
                 span.letters-loading(data-text-preloader="t").
-                  
                   t
-                  
                 span.letters-loading(data-text-preloader="r").
-                  
                   r
-                  
                 span.letters-loading(data-text-preloader="a").
-                  
                   a
-                  
                 span.letters-loading(data-text-preloader="v").
-                  
                   v
-                  
                 span.letters-loading(data-text-preloader="i").
-                  
                   i
-                  
                 span.letters-loading(data-text-preloader="o").
-                  
                   o
-                  
       //  preloader end 
       //  main header 
       header.main-header.style-two
@@ -88,7 +82,7 @@ html(lang="en")
                   i.icon-bar
                   i.icon-bar
                 nav.main-menu.navbar-expand-md.navbar-light
-                  .collapse.navbar-collapse.show.clearfix#navbarSupportedContent
+                  #navbarSupportedContent.collapse.navbar-collapse.show.clearfix
                     ul.navigation.scroll-nav.clearfix
                       li.current.dropdown
                         a(href="index.html") Home
@@ -120,7 +114,7 @@ html(lang="en")
               ul.menu-right-content.clearfix
                 li.search-box-outer
                   .dropdown
-                    button.search-box-btn#dropdownMenu3(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                    button#dropdownMenu3.search-box-btn(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                       i.far.fa-search
                     .dropdown-menu.search-panel(aria-labelledby="dropdownMenu3")
                       .form-container
@@ -146,7 +140,7 @@ html(lang="en")
               ul.menu-right-content.clearfix
                 li.search-box-outer
                   .dropdown
-                    button.search-box-btn#dropdownMenu4(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                    button#dropdownMenu4.search-box-btn(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                       i.far.fa-search
                     .dropdown-menu.search-panel(aria-labelledby="dropdownMenu4")
                       .form-container
@@ -197,7 +191,7 @@ html(lang="en")
                   span.fab.fa-youtube
       //  End Mobile Menu 
       //  banner-section 
-      section.banner-section.style-two.centred(style="background-image: url(assets/images/banner/banner-2.jpg);")
+      section.banner-section.style-two.centred(style="background-image: url(assets/images/banner/banner-2.jpg)")
         .auto-container
           .content-box
             h2 Explore Your Travel
@@ -223,8 +217,8 @@ html(lang="en")
                     | Find Now
       //  banner-section end 
       //  about-style-two 
-      section.about-style-two#about
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-2.png);")
+      section#about.about-style-two
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-2.png)")
         .auto-container
           .row.clearfix
             .col-lg-6.col-md-12.col-sm-12.content-column
@@ -241,18 +235,18 @@ html(lang="en")
               .image_block_2
                 .image-box
                   .shape
-                    .shape-1(style="background-image: url(assets/images/shape/shape-13.png);")
-                    .shape-2(style="background-image: url(assets/images/shape/shape-12.png);")
-                    .shape-3(style="background-image: url(assets/images/shape/shape-12.png);")
+                    .shape-1(style="background-image: url(assets/images/shape/shape-13.png)")
+                    .shape-2(style="background-image: url(assets/images/shape/shape-12.png)")
+                    .shape-3(style="background-image: url(assets/images/shape/shape-12.png)")
                   figure.image
                     img(src="assets/images/resource/about-3.jpg", alt)
       //  about-style-two end 
       //  place-section 
-      section.place-section.style-two.sec-pad.bg-color-1#feature
+      section#feature.place-section.style-two.sec-pad.bg-color-1
         .anim-icon
-          .icon.anim-icon-1(style="background-image: url(assets/images/icons/anim-icon-1.png);")
-          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png);")
-          .icon.anim-icon-3(style="background-image: url(assets/images/shape/shape-3.png);")
+          .icon.anim-icon-1(style="background-image: url(assets/images/icons/anim-icon-1.png)")
+          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png)")
+          .icon.anim-icon-3(style="background-image: url(assets/images/shape/shape-3.png)")
         .auto-container
           .sec-title.centred
             p Choose Your place
@@ -307,7 +301,7 @@ html(lang="en")
                 a.theme-btn(href="destination.html") Find Now
       //  place-section end 
       //  offer-section 
-      section.offer-section.sec-pad(style="background-image: url(assets/images/background/offer-1.jpg);")
+      section.offer-section.sec-pad(style="background-image: url(assets/images/background/offer-1.jpg)")
         .auto-container
           .sec-title.light
             p Deals & Offers
@@ -396,7 +390,7 @@ html(lang="en")
                   h4 $190
       //  offer-section end 
       //  tour-section 
-      section.tour-section.sec-pad#tour
+      section#tour.tour-section.sec-pad
         .auto-container
           .sec-title.text-center
             p Modern & Beautiful
@@ -418,7 +412,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -445,7 +439,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -472,7 +466,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -487,11 +481,11 @@ html(lang="en")
       //  video-style-two 
       section.video-style-two.centred
         .anim-icon
-          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-3.png);")
-          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png);")
+          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-3.png)")
+          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png)")
         .auto-container
           .inner-container
-            .inner-box(style="background-image: url(assets/images/background/video-2.jpg);")
+            .inner-box(style="background-image: url(assets/images/background/video-2.jpg)")
               .content-box
                 h2 Explore Your Travel
                 p Your New Traveling Idea
@@ -503,7 +497,7 @@ html(lang="en")
                     span.border-animation.border-3
       //  video-style-two end 
       //  testimonial-section 
-      section.testimonial-section.bg-color-1.sec-pad.centred#testimonial
+      section#testimonial.testimonial-section.bg-color-1.sec-pad.centred
         .auto-container
           .sec-title.centred
             p Review & Testimonials
@@ -523,7 +517,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -544,7 +538,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -565,7 +559,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -586,7 +580,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -607,7 +601,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -628,7 +622,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -649,7 +643,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -670,7 +664,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -691,7 +685,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -701,7 +695,7 @@ html(lang="en")
       //  testimonial-section end 
       //  funfact-style-two 
       section.funfact-style-two.centred
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-14.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-14.png)")
         .auto-container
           .row.clearfix
             .col-lg-3.col-md-6.col-sm-12.counter-block
@@ -733,7 +727,7 @@ html(lang="en")
                   p Years in Service
       //  funfact-style-two end 
       //  news-section 
-      section.news-section.sec-pad#news
+      section#news.news-section.sec-pad
         .auto-container
           .sec-title
             p News & Articles
@@ -757,7 +751,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -780,7 +774,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -803,7 +797,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -813,7 +807,7 @@ html(lang="en")
       //  main-footer 
       footer.main-footer.bg-color-2
         .footer-top.pt-130
-          .vector-bg(style="background-image: url(assets/images/shape/shape-11.png);")
+          .vector-bg(style="background-image: url(assets/images/shape/shape-11.png)")
           .auto-container
             .row.clearfix
               .col-lg-3.col-md-6.col-sm-12.footer-column
@@ -908,7 +902,8 @@ html(lang="en")
               .copyright.pull-left
                 p
                   a(href="index.html") Travio
-                  |  © 2021 All Right Reserved
+                  |
+                  | © 2021 All Right Reserved
               ul.footer-nav.pull-right
                 li
                   a(href="index.html") Terms of Service
@@ -933,4 +928,4 @@ html(lang="en")
     script(src="assets/js/pagenav.js")
     //  main-js 
     script(src="assets/js/script.js")
-  //  End of .page_wrapper 
+  //  End of .page_wrapper 

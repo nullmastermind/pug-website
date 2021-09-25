@@ -8,8 +8,14 @@ html(lang="en")
     //  Fav Icon 
     link(rel="icon", href="assets/images/favicon.ico", type="image/x-icon")
     //  Google Fonts 
-    link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
+    link(
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      rel="stylesheet"
+    )
+    link(
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      rel="stylesheet"
+    )
     //  Stylesheets 
     link(href="assets/css/font-awesome-all.css", rel="stylesheet")
     link(href="assets/css/flaticon.css", rel="stylesheet")
@@ -34,29 +40,17 @@ html(lang="en")
               .spinner
               .txt-loading
                 span.letters-loading(data-text-preloader="t").
-                  
                   t
-                  
                 span.letters-loading(data-text-preloader="r").
-                  
                   r
-                  
                 span.letters-loading(data-text-preloader="a").
-                  
                   a
-                  
                 span.letters-loading(data-text-preloader="v").
-                  
                   v
-                  
                 span.letters-loading(data-text-preloader="i").
-                  
                   i
-                  
                 span.letters-loading(data-text-preloader="o").
-                  
                   o
-                  
       //  preloader end 
       //  main header 
       header.main-header.style-three.style-five
@@ -74,7 +68,7 @@ html(lang="en")
                 i.icon-bar
                 i.icon-bar
               nav.main-menu.navbar-expand-md.navbar-light
-                .collapse.navbar-collapse.show.clearfix#navbarSupportedContent
+                #navbarSupportedContent.collapse.navbar-collapse.show.clearfix
                   ul.navigation.clearfix
                     li.current.dropdown
                       a(href="index.html") Home
@@ -201,7 +195,7 @@ html(lang="en")
             ul.menu-right-content.pull-right.clearfix
               li.search-box-outer
                 .dropdown
-                  button.search-box-btn#dropdownMenu3(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                  button#dropdownMenu3.search-box-btn(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                     i.far.fa-search
                   .dropdown-menu.search-panel(aria-labelledby="dropdownMenu3")
                     .form-container
@@ -229,7 +223,7 @@ html(lang="en")
               ul.menu-right-content.clearfix
                 li.search-box-outer
                   .dropdown
-                    button.search-box-btn#dropdownMenu4(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                    button#dropdownMenu4.search-box-btn(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                       i.far.fa-search
                     .dropdown-menu.search-panel(aria-labelledby="dropdownMenu4")
                       .form-container
@@ -281,10 +275,10 @@ html(lang="en")
       //  End Mobile Menu 
       //  banner-section 
       section.banner-style-five
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-21.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-21.png)")
         .anim-icon
-          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-16.png);")
-          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-17.png);")
+          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-16.png)")
+          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-17.png)")
         .auto-container
           .row.align-items-center.clearfix
             .col-lg-6.col-md-12.col-sm-12.content-column
@@ -321,11 +315,11 @@ html(lang="en")
       //  banner-section end 
       //  feature-section 
       section.feature-section.centred.sec-pad
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-22.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-22.png)")
         .anim-icon
-          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-15.png);")
-          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-16.png);")
-          .icon.anim-icon-3(style="background-image: url(assets/images/shape/shape-17.png);")
+          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-15.png)")
+          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-16.png)")
+          .icon.anim-icon-3(style="background-image: url(assets/images/shape/shape-17.png)")
         .auto-container
           .sec-title.centred
             p Travio Specials
@@ -370,11 +364,11 @@ html(lang="en")
       //  feature-section end 
       //  place-section 
       section.place-section.home-5.sec-pad
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-23.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-23.png)")
         .anim-icon
-          .icon.anim-icon-1(style="background-image: url(assets/images/icons/anim-icon-1.png);")
-          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png);")
-          .icon.anim-icon-3(style="background-image: url(assets/images/shape/shape-3.png);")
+          .icon.anim-icon-1(style="background-image: url(assets/images/icons/anim-icon-1.png)")
+          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png)")
+          .icon.anim-icon-3(style="background-image: url(assets/images/shape/shape-3.png)")
         .auto-container
           .row.clearfix
             .col-lg-4.col-md-6.col-sm-12.title-column
@@ -514,7 +508,7 @@ html(lang="en")
       //  offer-section end 
       //  tour-section 
       section.tour-section.home-5.sec-pad
-        .pattern-layer-2(style="background-image: url(assets/images/shape/shape-24.png);")
+        .pattern-layer-2(style="background-image: url(assets/images/shape/shape-24.png)")
         .auto-container
           .sec-title.text-center
             p Modern & Beautiful
@@ -536,7 +530,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -563,7 +557,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -590,7 +584,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -605,11 +599,11 @@ html(lang="en")
       //  video-style-two 
       section.video-style-two.centred
         .anim-icon
-          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-3.png);")
-          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png);")
+          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-3.png)")
+          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png)")
         .auto-container
           .inner-container
-            .inner-box(style="background-image: url(assets/images/background/video-2.jpg);")
+            .inner-box(style="background-image: url(assets/images/background/video-2.jpg)")
               .content-box
                 h2 Explore Your Travel
                 p Your New Traveling Idea
@@ -641,7 +635,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -662,7 +656,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -683,7 +677,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -704,7 +698,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -725,7 +719,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -746,7 +740,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -767,7 +761,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -788,7 +782,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -809,7 +803,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -819,7 +813,7 @@ html(lang="en")
       //  testimonial-section end 
       //  funfact-style-two 
       section.funfact-style-two.centred
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-14.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-14.png)")
         .auto-container
           .row.clearfix
             .col-lg-3.col-md-6.col-sm-12.counter-block
@@ -875,7 +869,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -898,7 +892,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -921,7 +915,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -930,7 +924,7 @@ html(lang="en")
       //  news-section end 
       //  instagram-section 
       section.instagram-section
-        .bg-layer(style="background-image: url(assets/images/background/instagram-1.jpg);")
+        .bg-layer(style="background-image: url(assets/images/background/instagram-1.jpg)")
         .auto-container
           .row.clearfix
             .col-lg-3.col-md-6.col-sm-12.single-column
@@ -965,7 +959,7 @@ html(lang="en")
       //  main-footer 
       footer.main-footer.bg-color-2
         .footer-top.pt-130
-          .vector-bg(style="background-image: url(assets/images/shape/shape-11.png);")
+          .vector-bg(style="background-image: url(assets/images/shape/shape-11.png)")
           .auto-container
             .row.clearfix
               .col-lg-3.col-md-6.col-sm-12.footer-column
@@ -1060,7 +1054,8 @@ html(lang="en")
               .copyright.pull-left
                 p
                   a(href="index.html") Travio
-                  |  © 2021 All Right Reserved
+                  |
+                  | © 2021 All Right Reserved
               ul.footer-nav.pull-right
                 li
                   a(href="index.html") Terms of Service
@@ -1084,4 +1079,4 @@ html(lang="en")
     script(src="assets/js/jquery-ui.js")
     //  main-js 
     script(src="assets/js/script.js")
-  //  End of .page_wrapper 
+  //  End of .page_wrapper 

@@ -8,8 +8,14 @@ html(lang="en")
     //  Fav Icon 
     link(rel="icon", href="assets/images/favicon.ico", type="image/x-icon")
     //  Google Fonts 
-    link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
+    link(
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      rel="stylesheet"
+    )
+    link(
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      rel="stylesheet"
+    )
     //  Stylesheets 
     link(href="assets/css/font-awesome-all.css", rel="stylesheet")
     link(href="assets/css/flaticon.css", rel="stylesheet")
@@ -34,29 +40,17 @@ html(lang="en")
               .spinner
               .txt-loading
                 span.letters-loading(data-text-preloader="t").
-                  
                   t
-                  
                 span.letters-loading(data-text-preloader="r").
-                  
                   r
-                  
                 span.letters-loading(data-text-preloader="a").
-                  
                   a
-                  
                 span.letters-loading(data-text-preloader="v").
-                  
                   v
-                  
                 span.letters-loading(data-text-preloader="i").
-                  
                   i
-                  
                 span.letters-loading(data-text-preloader="o").
-                  
                   o
-                  
       //  preloader end 
       //  main header 
       header.main-header.style-three
@@ -74,7 +68,7 @@ html(lang="en")
                 i.icon-bar
                 i.icon-bar
               nav.main-menu.navbar-expand-md.navbar-light
-                .collapse.navbar-collapse.show.clearfix#navbarSupportedContent
+                #navbarSupportedContent.collapse.navbar-collapse.show.clearfix
                   ul.navigation.clearfix
                     li.dropdown
                       a(href="index.html") Home
@@ -201,7 +195,7 @@ html(lang="en")
             ul.menu-right-content.pull-right.clearfix
               li.search-box-outer
                 .dropdown
-                  button.search-box-btn#dropdownMenu3(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                  button#dropdownMenu3.search-box-btn(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                     i.far.fa-search
                   .dropdown-menu.search-panel(aria-labelledby="dropdownMenu3")
                     .form-container
@@ -229,7 +223,7 @@ html(lang="en")
               ul.menu-right-content.clearfix
                 li.search-box-outer
                   .dropdown
-                    button.search-box-btn#dropdownMenu4(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                    button#dropdownMenu4.search-box-btn(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                       i.far.fa-search
                     .dropdown-menu.search-panel(aria-labelledby="dropdownMenu4")
                       .form-container
@@ -280,7 +274,7 @@ html(lang="en")
                   span.fab.fa-youtube
       //  End Mobile Menu 
       //  Page Title 
-      section.page-title.centred(style="background-image: url(assets/images/background/page-title-4.jpg);")
+      section.page-title.centred(style="background-image: url(assets/images/background/page-title-4.jpg)")
         .auto-container
           .content-box
             h1 Gallery 1
@@ -366,7 +360,7 @@ html(lang="en")
       //  main-footer 
       footer.main-footer.bg-color-2
         .footer-top.pt-130
-          .vector-bg(style="background-image: url(assets/images/shape/shape-11.png);")
+          .vector-bg(style="background-image: url(assets/images/shape/shape-11.png)")
           .auto-container
             .row.clearfix
               .col-lg-3.col-md-6.col-sm-12.footer-column
@@ -461,7 +455,8 @@ html(lang="en")
               .copyright.pull-left
                 p
                   a(href="index.html") Travio
-                  |  © 2021 All Right Reserved
+                  |
+                  | © 2021 All Right Reserved
               ul.footer-nav.pull-right
                 li
                   a(href="index.html") Terms of Service
@@ -490,4 +485,4 @@ html(lang="en")
     script(src="assets/js/map-helper.js")
     //  main-js 
     script(src="assets/js/script.js")
-  //  End of .page_wrapper 
+  //  End of .page_wrapper 

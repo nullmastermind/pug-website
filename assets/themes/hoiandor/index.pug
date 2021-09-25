@@ -8,8 +8,14 @@ html(lang="en")
     //  Fav Icon 
     link(rel="icon", href="assets/images/favicon.ico", type="image/x-icon")
     //  Google Fonts 
-    link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap", rel="stylesheet")
+    link(
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      rel="stylesheet"
+    )
+    link(
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+      rel="stylesheet"
+    )
     //  Stylesheets 
     link(href="assets/css/font-awesome-all.css", rel="stylesheet")
     link(href="assets/css/flaticon.css", rel="stylesheet")
@@ -34,29 +40,17 @@ html(lang="en")
               .spinner
               .txt-loading
                 span.letters-loading(data-text-preloader="t").
-                  
                   t
-                  
                 span.letters-loading(data-text-preloader="r").
-                  
                   r
-                  
                 span.letters-loading(data-text-preloader="a").
-                  
                   a
-                  
                 span.letters-loading(data-text-preloader="v").
-                  
                   v
-                  
                 span.letters-loading(data-text-preloader="i").
-                  
                   i
-                  
                 span.letters-loading(data-text-preloader="o").
-                  
                   o
-                  
       //  preloader end 
       //  main header 
       header.main-header.style-one
@@ -75,7 +69,7 @@ html(lang="en")
                   i.icon-bar
                   i.icon-bar
                 nav.main-menu.navbar-expand-md.navbar-light
-                  .collapse.navbar-collapse.show.clearfix#navbarSupportedContent
+                  #navbarSupportedContent.collapse.navbar-collapse.show.clearfix
                     ul.navigation.clearfix
                       li.current.dropdown
                         a(href="index.html") Home
@@ -202,7 +196,7 @@ html(lang="en")
               ul.menu-right-content.clearfix
                 li.search-box-outer
                   .dropdown
-                    button.search-box-btn#dropdownMenu3(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                    button#dropdownMenu3.search-box-btn(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                       i.far.fa-search
                     .dropdown-menu.search-panel(aria-labelledby="dropdownMenu3")
                       .form-container
@@ -228,7 +222,7 @@ html(lang="en")
               ul.menu-right-content.clearfix
                 li.search-box-outer
                   .dropdown
-                    button.search-box-btn#dropdownMenu4(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                    button#dropdownMenu4.search-box-btn(type="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
                       i.far.fa-search
                     .dropdown-menu.search-panel(aria-labelledby="dropdownMenu4")
                       .form-container
@@ -279,8 +273,8 @@ html(lang="en")
                   span.fab.fa-youtube
       //  End Mobile Menu 
       //  banner-section 
-      section.banner-section(style="background-image: url(assets/images/banner/banner-1.jpg);")
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-1.png);")
+      section.banner-section(style="background-image: url(assets/images/banner/banner-1.jpg)")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-1.png)")
         .auto-container
           .content-box
             h2
@@ -354,18 +348,18 @@ html(lang="en")
       //  feature-section end 
       //  about-section 
       section.about-section
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-2.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-2.png)")
         .auto-container
           .row.clearfix
             .col-lg-6.col-md-12.col-sm-12.image-column
               .image_block_1
                 .image-box
                   .shape
-                    .shape-1(style="background-image: url(assets/images/shape/shape-2.png);")
-                    .shape-2(style="background-image: url(assets/images/shape/shape-3.png);")
+                    .shape-1(style="background-image: url(assets/images/shape/shape-2.png)")
+                    .shape-2(style="background-image: url(assets/images/shape/shape-3.png)")
                   figure.image.image-1
                     img(src="assets/images/resource/about-1.jpg", alt)
-                    .shape-3(style="background-image: url(assets/images/shape/shape-3.png);")
+                    .shape-3(style="background-image: url(assets/images/shape/shape-3.png)")
                   figure.image.image-2
                     img(src="assets/images/resource/about-2.jpg", alt)
                   .video-content
@@ -390,7 +384,7 @@ html(lang="en")
       //  about-section end 
       //  tour-section 
       section.tour-section.bg-color-1.sec-pad
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-4.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-4.png)")
         .auto-container
           .sec-title.text-center
             p Modern & Beautiful
@@ -412,7 +406,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -439,7 +433,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -466,7 +460,7 @@ html(lang="en")
                       a(href="tour-details.html") Moscow Red City Land
                     h4
                       | $170.00
-                      span  / Per person
+                      span / Per person
                     ul.info.clearfix
                       li
                         i.far.fa-clock
@@ -479,7 +473,7 @@ html(lang="en")
                       a(href="tour-details.html") See Details
       //  tour-section end 
       //  deals-section 
-      section.deals-section(style="background-image: url(assets/images/background/deals-1.jpg);")
+      section.deals-section(style="background-image: url(assets/images/background/deals-1.jpg)")
         .auto-container
           .content_block_2
             .content-box
@@ -496,9 +490,9 @@ html(lang="en")
       //  place-section 
       section.place-section.sec-pad
         .anim-icon
-          .icon.anim-icon-1(style="background-image: url(assets/images/icons/anim-icon-1.png);")
-          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png);")
-          .icon.anim-icon-3(style="background-image: url(assets/images/shape/shape-3.png);")
+          .icon.anim-icon-1(style="background-image: url(assets/images/icons/anim-icon-1.png)")
+          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png)")
+          .icon.anim-icon-3(style="background-image: url(assets/images/shape/shape-3.png)")
         .auto-container
           .row.clearfix
             .col-lg-4.col-md-6.col-sm-12.title-column
@@ -549,12 +543,12 @@ html(lang="en")
       //  place-section end 
       //  map-section 
       section.map-section.bg-color-1
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-9.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-9.png)")
         .outer-container
           .sec-title.centred
             p Modern & Beautiful
             h2 Explore the World for Travel
-          .map-inner(style="background-image: url(assets/images/shape/map-1.png);")
+          .map-inner(style="background-image: url(assets/images/shape/map-1.png)")
             .map-content.clearfix
               .single-location-box
                 figure.map-marker
@@ -588,15 +582,15 @@ html(lang="en")
       //  funfact-section 
       section.funfact-section.centred
         .anim-icon
-          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-3.png);")
-          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png);")
+          .icon.anim-icon-1(style="background-image: url(assets/images/shape/shape-3.png)")
+          .icon.anim-icon-2(style="background-image: url(assets/images/shape/shape-3.png)")
         .auto-container
           .inner-container
             .row.clearfix
               .col-lg-3.col-md-6.col-sm-12.counter-block
                 .counter-block-one
                   .inner-box
-                    .pattern(style="background-image: url(assets/images/shape/shape-5.png);")
+                    .pattern(style="background-image: url(assets/images/shape/shape-5.png)")
                     .count-outer.count-box
                       span.count-text(data-speed="1500", data-stop="2000") 0
                       span +
@@ -604,7 +598,7 @@ html(lang="en")
               .col-lg-3.col-md-6.col-sm-12.counter-block
                 .counter-block-one
                   .inner-box
-                    .pattern(style="background-image: url(assets/images/shape/shape-6.png);")
+                    .pattern(style="background-image: url(assets/images/shape/shape-6.png)")
                     .count-outer.count-box
                       span.count-text(data-speed="1500", data-stop="70") 0
                       span +
@@ -612,7 +606,7 @@ html(lang="en")
               .col-lg-3.col-md-6.col-sm-12.counter-block
                 .counter-block-one
                   .inner-box
-                    .pattern(style="background-image: url(assets/images/shape/shape-7.png);")
+                    .pattern(style="background-image: url(assets/images/shape/shape-7.png)")
                     .count-outer.count-box
                       span.count-text(data-speed="1500", data-stop="1200") 0
                       span +
@@ -620,7 +614,7 @@ html(lang="en")
               .col-lg-3.col-md-6.col-sm-12.counter-block
                 .counter-block-one
                   .inner-box
-                    .pattern(style="background-image: url(assets/images/shape/shape-8.png);")
+                    .pattern(style="background-image: url(assets/images/shape/shape-8.png)")
                     .count-outer.count-box
                       span.count-text(data-speed="1500", data-stop="15") 0
                       p Years in Service
@@ -646,7 +640,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -667,7 +661,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -688,7 +682,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -709,7 +703,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -730,7 +724,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -751,7 +745,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -772,7 +766,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Mike Hardson
@@ -793,7 +787,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Amy Johnson
@@ -814,7 +808,7 @@ html(lang="en")
                   li
                     i.icon-Star
                 .text
-                  .icon(style="background-image: url(assets/images/icons/quote-1.png);")
+                  .icon(style="background-image: url(assets/images/icons/quote-1.png)")
                   p Lorem ipsum dolor amet consectet adipiscing sed do eiusmod tempor incididunt labore et dolore magna aliqua ipsum suspen disse ultrices gravida Risus
                 .author-box
                   h4 Luaka Smith
@@ -823,7 +817,7 @@ html(lang="en")
                     img(src="assets/images/resource/testimonial-3.png", alt)
       //  testimonial-section end 
       //  video-section 
-      section.video-section.centred(style="background-image: url(assets/images/background/video-1.jpg);")
+      section.video-section.centred(style="background-image: url(assets/images/background/video-1.jpg)")
         .auto-container
           .inner-box
             h2 Explore Your Travel
@@ -837,7 +831,7 @@ html(lang="en")
       //  video-section end 
       //  news-section 
       section.news-section.sec-pad.pb-220
-        .pattern-layer(style="background-image: url(assets/images/shape/shape-10.png);")
+        .pattern-layer(style="background-image: url(assets/images/shape/shape-10.png)")
         .auto-container
           .sec-title
             p News & Articles
@@ -861,7 +855,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -884,7 +878,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -907,7 +901,7 @@ html(lang="en")
                     ul.post-info.clearfix
                       li
                         span By
-                        |  
+                        |
                         a(href="index.html") Eva Green
                       li - October 13, 2020
                     p Lorem ipsum dolor sit amet consectur adip icing sed do eiusmod tempor incididunt labore dolore magna aliqua enim.
@@ -917,7 +911,7 @@ html(lang="en")
       //  main-footer 
       footer.main-footer.bg-color-2
         .footer-top
-          .vector-bg(style="background-image: url(assets/images/shape/shape-11.png);")
+          .vector-bg(style="background-image: url(assets/images/shape/shape-11.png)")
           .auto-container
             .row.clearfix
               .col-lg-3.col-md-6.col-sm-12.footer-column
@@ -1012,7 +1006,8 @@ html(lang="en")
               .copyright.pull-left
                 p
                   a(href="index.html") Travio
-                  |  © 2021 All Right Reserved
+                  |
+                  | © 2021 All Right Reserved
               ul.footer-nav.pull-right
                 li
                   a(href="index.html") Terms of Service
@@ -1036,4 +1031,4 @@ html(lang="en")
     script(src="assets/js/jquery-ui.js")
     //  main-js 
     script(src="assets/js/script.js")
-  //  End of .page_wrapper 
+  //  End of .page_wrapper 
