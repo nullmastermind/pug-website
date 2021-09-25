@@ -5,13 +5,15 @@
   "license": "MIT",
   "scripts": {
     "hello-ts": "ts-node scripts/hello.ts",
-    "html-to-pug": "ts-node scripts/htmlToPug.ts"
+    "html-to-pug": "ts-node scripts/htmlToPug.ts",
+    "pug-to-html": "ts-node scripts/pugToHtml.ts"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",
     "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.6",
     "@types/prettier": "^2.4.0",
+    "@types/pug": "^2.0.5",
     "html2pug": "^4.0.0",
     "prettier": "^2.4.1",
     "ts-node": "^10.2.1",
