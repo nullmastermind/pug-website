@@ -3,6 +3,7 @@ import path = require("path");
 import { getAllFiles } from "../utils/utils";
 import _ = require("lodash");
 import fs = require("fs-extra");
+import yaml = require("yaml");
 
 async function main() {
   const root = path.join(__dirname, "../pages");
@@ -15,13 +16,20 @@ async function main() {
     _.map(files, async (filename: string) => {
       if (!filename.endsWith(".pug")) return;
 
-      const fn = pug.compileFile(filename, {});
-      const html = fn();
-      const chunks: Array<string> = filename.replace(root, dist).split(".pug");
+      const chunks: Array<string> = filename.split(".pug");
 
       chunks.pop();
 
-      const saveTo = chunks.join(".pug") + ".html";
+      const saveTo = (chunks.join(".pug") + ".html").replace(root, dist);
+      const dataFile = chunks.join(".pug") + ".yaml";
+      let locals = {};
+
+      if (fs.existsSync(dataFile)) {
+        locals = yaml.parse(await fs.readFile(dataFile, "utf-8"));
+      }
+
+      const fn = pug.compileFile(filename);
+      const html = fn(locals);
 
       await fs.ensureFile(saveTo);
       await fs.writeFile(saveTo, html);
