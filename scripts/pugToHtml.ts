@@ -9,7 +9,7 @@ async function main() {
   const dist = path.join(__dirname, "../dist");
   const files = await getAllFiles(root);
 
-  await fs.remove(dist);
+  // await fs.remove(dist);
 
   await Promise.all(
     _.map(files, async (filename: string) => {

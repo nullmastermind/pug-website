@@ -4,16 +4,7 @@
       .animation-preloader
         .spinner
         .txt-loading
-          - for(let i = 0; i < 10; i++)
-            span.letters-loading(data-text-preloader="t").
-              t
-            span.letters-loading(data-text-preloader="r").
-              r
-            span.letters-loading(data-text-preloader="a").
-              a
-            span.letters-loading(data-text-preloader="v").
-              v
-            span.letters-loading(data-text-preloader="i").
-              i
-            span.letters-loading(data-text-preloader="o").
-              o
+          - let chars = (preloaderText || '').split('');
+          - let enChars = chars.map((v) => (v === ' ' ? '&nbsp;' : v));
+          - for(let i = 0; i < chars.length; i++)
+            span.letters-loading(data-text-preloader=`${chars[i]}`)!= enChars[i]
