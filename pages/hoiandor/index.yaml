@@ -1,3 +1,13 @@
 title: Hội An D'Or - Chính thức chủ đầu tư
 preloader:
   text: Hội An D'Or
+header:
+  logo:
+    src: assets/images/hoiandor/logo-hoian-dor.png
+    alt: Logo Hội An D'Or
+    href: /index.html
+banner:
+  background: assets/images/hoiandor/nh-ban-m-2.jpg
+  title: Dự án <br />Hội An D'Or
+  description: Dự án nghỉ dưỡng đáng chú ý tại Hội An – Đà Nẵng trong năm 2021
+
