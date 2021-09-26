@@ -3,7 +3,7 @@ preloader:
   text: Hội An D'Or
 header:
   logo:
-    src: assets/images/hoiandor/logo-hoian-dor.png
+    src: assets/images/logo-hoian-dor.png
     alt: Logo Hội An D'Or
     href: /index.html
   menu:
@@ -36,6 +36,6 @@ header:
     mobile: "+84376561156"
     address: Hội An
 banner:
-  background: assets/images/hoiandor/nh-ban-m-2.jpg
-  title: Dự án <br />Hội An D'Or
-  description: Dự án nghỉ dưỡng đáng chú ý tại Hội An – Đà Nẵng trong năm 2021 <br/> <br/> Được kiến tạo trên một vùng đất bồi lắng phù sa cách trung tâm phố cổ Hội An 800m, <strong>Hoian d’Or</strong> là nơi đất vượng giao hòa, tôn tạo giá trị riêng, khơi lên chất sống mới của miền di sản; là mảnh ghép cuối cùng tạo nên một Hội An trọn vẹn
+  background: assets/images/nh-ban-m-2.jpg
+  title: Hội An D'Or
+  description: Dự án nghỉ dưỡng đáng chú ý tại Hội An – Đà Nẵng trong năm 2021 <br/> <br/> Được kiến tạo trên một vùng đất bồi lắng phù sa cách trung tâm phố cổ Hội An 800m, <strong>Hoi An D’Or</strong> là nơi đất vượng giao hòa, tôn tạo giá trị riêng, khơi lên chất sống mới của miền di sản, là mảnh ghép cuối cùng tạo nên một Hội An trọn vẹn.
