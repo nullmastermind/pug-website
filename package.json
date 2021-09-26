@@ -7,7 +7,7 @@
     "hello-ts": "ts-node scripts/hello.ts",
     "html-to-pug": "ts-node scripts/htmlToPug.ts",
     "build": "ts-node scripts/build.ts",
-    "build-watch": "chokidar \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*.css\" --initial -c \"npm run build\""
+    "build-watch": "chokidar \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*\" --initial -c \"npm run build\""
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",

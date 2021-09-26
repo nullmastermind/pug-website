@@ -30,11 +30,13 @@ html(lang="vi")
       link(href="assets/themes/assets/css/color.css", rel="stylesheet")
       link(href="assets/themes/assets/css/style.css", rel="stylesheet")
       link(href="assets/themes/assets/css/responsive.css", rel="stylesheet")
+      link(href="assets/css/viewer.min.css", rel="stylesheet")
       link(href="assets/css/style.css", rel="stylesheet")
-  body
+  body#images-viewer
     .boxed_wrapper
       block body
     block script
+      script(src="assets/js/viewer.min.js")
       // jquery plugins
       script(src="assets/themes/assets/js/jquery.js")
       script(src="assets/themes/assets/js/popper.min.js")
@@ -49,3 +51,4 @@ html(lang="vi")
       script(src="assets/themes/assets/js/jquery-ui.js")
       // main-js
       script(src="assets/themes/assets/js/script.js")
+      script(src="assets/js/main.js")

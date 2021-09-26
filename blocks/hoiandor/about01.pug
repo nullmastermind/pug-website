@@ -1,0 +1,41 @@
+section.about-section(style="background: #f5f6f6")
+  .pattern-layer(style="background-image: url(assets/themes/assets/images/shape/shape-2.png)")
+  .auto-container
+    .row.clearfix
+      .col-lg-6.col-md-12.col-sm-12.image-column
+        .image_block_1
+          .image-box
+            .shape
+              .shape-1(style="background-image: url(assets/themes/assets/images/shape/shape-2.png)")
+              .shape-2(style="background-image: url(assets/themes/assets/images/shape/shape-3.png)")
+            figure.image.image-1
+              img.allow-viewer(src="assets/images/13d-1024x768.jpg", alt="Ảnh dự án Hội An Dor, Hội An D'Or 1")
+              .shape-3(style="background-image: url(assets/themes/assets/images/shape/shape-3.png)")
+            figure.image.image-2
+              img.allow-viewer(src="assets/images/4d.jpg", alt="Ảnh dự án Hội An Dor, Hội An D'Or 2")
+            //.video-content
+            //  .video-btn
+            //    a.lightbox-image(href="https://www.youtube.com/watch?v=wIDjvxSLyIg", data-caption="video du an hoian d'or, Hoi An D'Or")
+            //      i.icon-Video
+      .col-lg-6.col-md-12.col-sm-12.content-column
+        .content_block_1
+          .content-box
+            .sec-title
+              //p.color-primary Hội An D'Or
+              h2.color-primary Hội An D'Or
+              h3.text-pretty.color-primary.text-italic(style="margin-top: 0.5em") Thương cảng Vàng son – Liền kề phố hội
+            - for (let detail of about01.info.details)
+              .text
+                p.color-text-primary
+                  b= detail.primary
+                  span= ' ' + detail.secondary
+            //img(src="assets/images/partners.png", alt="Đơn vị hoian d'or")
+            //                   <ul class="list clearfix">
+            //                     <li>Ratione voluptatem.sequi nesciunt.</li>
+            //                     <li>Ratione voluptatem.</li>
+            //                     <li>Ratione voluptatem sequi.</li>
+            //                   </ul>
+            //.btn-box
+            //  a.theme-btn(href="#contact") Liên Hệ
+      //.col-lg-12.col-md-12.col-sm-12
+      //  img(src="assets/images/partners.png", style="width: 100%")

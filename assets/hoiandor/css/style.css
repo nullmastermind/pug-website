@@ -1,5 +1,7 @@
 :root {
   --primary-color: #72163b;
+  --secondary-font: "Playfair Display", serif;
+  --color-text-primary: #333333;
 }
 
 .la-contact-form .form-group input {
@@ -42,4 +44,38 @@
   background: rgba(255, 255, 255, 0.5);
   padding: 0 0.25em;
   border-radius: 0.25em;
+}
+
+.main-header .logo-box {
+  padding: 0;
+}
+
+.color-primary {
+  color: var(--primary-color) !important;
+}
+
+.color-text-primary {
+  color: var(--color-text-primary) !important;
+}
+
+.text-pretty {
+  font-family: var(--secondary-font);
+  text-transform: inherit;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.content_block_1 .content-box .text {
+  margin-bottom: 1em;
+}
+
+.image_block_1 .image-box .video-content {
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5em;
+}
+
+.allow-viewer {
 }
