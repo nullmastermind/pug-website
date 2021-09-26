@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #72163b;
+}
+
 .la-contact-form .form-group input {
   position: relative;
   max-width: 286px;
@@ -20,10 +24,15 @@
 
 .la-contact-form .message-btn .theme-btn {
   padding: 20px 42px !important;
-  background: #72163b;
+  background: var(--primary-color);
   border-radius: 60px;
 }
 
 .text-outline {
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.la-banner-desc {
+  color: var(--primary-color);
+  max-width: 600px;
 }

@@ -6,10 +6,11 @@
   "scripts": {
     "hello-ts": "ts-node scripts/hello.ts",
     "html-to-pug": "ts-node scripts/htmlToPug.ts",
-    "pug-to-html": "ts-node scripts/pugToHtml.ts"
+    "build": "ts-node scripts/build.ts"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",
+    "@types/glob": "^7.1.4",
     "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.6",
     "@types/prettier": "^2.4.0",
@@ -23,6 +24,7 @@
   "dependencies": {
     "@types/fs-extra": "^9.0.13",
     "fs-extra": "^10.0.0",
+    "glob": "^7.2.0",
     "lodash": "^4.17.21",
     "pug": "^3.0.2",
     "yaml": "^1.10.2"
