@@ -6,7 +6,8 @@
   "scripts": {
     "hello-ts": "ts-node scripts/hello.ts",
     "html-to-pug": "ts-node scripts/htmlToPug.ts",
-    "build": "ts-node scripts/build.ts"
+    "build": "ts-node scripts/build.ts",
+    "build-watch": "chokidar \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*.css\" --initial -c \"npm run build\""
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",
@@ -16,6 +17,7 @@
     "@types/prettier": "^2.4.0",
     "@types/pug": "^2.0.5",
     "@types/yaml": "^1.9.7",
+    "chokidar-cli": "^3.0.0",
     "html2pug": "^4.0.0",
     "prettier": "^2.4.1",
     "ts-node": "^10.2.1",
