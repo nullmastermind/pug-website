@@ -3,7 +3,7 @@
     #handle-preloader.handle-preloader
       .animation-preloader
         .spinner
-        .txt-loading
+        .txt-loading(style="transform: scale(0.8); white-space: nowrap")
           - if (preloader)
             - let chars = (preloader.text || '').split('');
             - let enChars = chars.map((v) => (v === ' ' ? '&nbsp;' : v));

@@ -6,8 +6,36 @@ header:
     src: assets/images/hoiandor/logo-hoian-dor.png
     alt: Logo Hội An D'Or
     href: /index.html
+  menu:
+    - label: Trang chủ
+      href: /
+      active: true
+    - label: Tổng quan
+      href: /
+    - label: Vị trí
+      href: /
+    - label: Phân khu
+      children:
+        - label: Shophouse – Hoian d’Or
+          href: /
+        - label: Villa – Hoian d’Or
+          href: /
+        - label: Condotel – Hoian d’Or
+          href: /
+        - label: Không gian văn hóa
+          href: /
+        - label: Khu nông nghiệp sinh thái
+          href: /
+    - label: Tin tức
+      href: /
+    - label: Liên hệ
+      href: /
+  contact:
+    facebook: https://www.facebook.com/anh.lan.779205
+    email: undefined@gmail.com
+    mobile: "+84376561156"
+    address: Hội An
 banner:
   background: assets/images/hoiandor/nh-ban-m-2.jpg
   title: Dự án <br />Hội An D'Or
   description: Dự án nghỉ dưỡng đáng chú ý tại Hội An – Đà Nẵng trong năm 2021
-
