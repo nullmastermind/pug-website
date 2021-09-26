@@ -4,22 +4,3 @@ section.banner-section(style=`background-image: url(${banner.background})`)
     .content-box
       h2!= banner.title
       p= banner.description
-      .form-inner
-        form.booking-form.clearfix(action="index.html", method="post")
-          .form-group
-            input(type="text", name="service", placeholder="Where to?", required)
-          .form-group.input-date
-            i.far.fa-angle-down
-            input#datepicker(type="text", name="date", placeholder="When?")
-          .form-group
-            .select-box
-              select.wide
-                option(data-display="Travel Type") Travel Type
-                option(value="1") Adventure Tours
-                option(value="2") City Tours
-                option(value="3") Couple Tours
-                option(value="4") Group Tours
-          .message-btn
-            button.theme-btn(type="submit")
-              i.far.fa-search
-              | Find Now
