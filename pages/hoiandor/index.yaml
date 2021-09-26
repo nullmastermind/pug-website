@@ -1,10 +1,10 @@
-title: Hội An D'Or - Chính thức chủ đầu tư
+title: Hoian d'Or - Chính thức chủ đầu tư
 preloader:
-  text: Hội An D'Or
+  text: Hoian d'Or
 header:
   logo:
     src: assets/images/logo-hoian-dor.png
-    alt: Logo Hội An D'Or
+    alt: Logo Hoian d'Or
     href: /index.html
   menu:
     - label: Trang chủ
@@ -37,11 +37,11 @@ header:
     address: Hội An
 banner:
   background: assets/images/nh-ban-m-2.jpg
-  title: Hội An D'Or
-  description: Dự án nghỉ dưỡng đáng chú ý tại Hội An – Đà Nẵng trong năm 2021 <br/> <br/> Được kiến tạo trên một vùng đất bồi lắng phù sa cách trung tâm phố cổ Hội An 800m, <strong>Hoi An D’Or</strong> là nơi đất vượng giao hòa, tôn tạo giá trị riêng, khơi lên chất sống mới của miền di sản, là mảnh ghép cuối cùng tạo nên một Hội An trọn vẹn.
+  title: Hoian d'Or
+  description: Dự án nghỉ dưỡng đáng chú ý tại Hội An – Đà Nẵng trong năm 2021 <br/> <br/> Được kiến tạo trên một vùng đất bồi lắng phù sa cách trung tâm phố cổ Hội An 800m, <strong>Hoian d'Or</strong> là nơi đất vượng giao hòa, tôn tạo giá trị riêng, khơi lên chất sống mới của miền di sản, là mảnh ghép cuối cùng tạo nên một Hội An trọn vẹn.
 about01:
   info:
-    title: Hội An D'Or
+    title: Hoian d'Or
     description: Thương cảng Vàng son – Liền kề phố hội
     details:
       - primary: "Tên pháp lý:"

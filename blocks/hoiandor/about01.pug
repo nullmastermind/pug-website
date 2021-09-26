@@ -22,8 +22,8 @@ section.about-section(style="background: #f5f6f6")
           .content-box
             .sec-title
               //p.color-primary Hội An D'Or
-              h2.color-primary Hội An D'Or
-              h3.text-pretty.color-primary.text-italic(style="margin-top: 0.5em") Thương cảng Vàng son – Liền kề phố hội
+              h2.color-primary!= about01.info.title
+              h3.text-pretty.color-primary.text-italic(style="margin-top: 0.5em")!= about01.info.description
             - for (let detail of about01.info.details)
               .text
                 p.color-text-primary
