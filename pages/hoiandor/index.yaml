@@ -32,9 +32,9 @@ header:
       href: /
   contact:
     facebook: https://www.facebook.com/anh.lan.779205
-    email: undefined@gmail.com
-    mobile: "+84376561156"
-    address: Hội An
+    email: la@pretty.girl
+    mobile: "+84327898395"
+    address: Cồn Bắp - Phường Cẩm Nam - Tp. Hội An - Quảng Nam
 banner:
   background: assets/images/nh-ban-m-2.jpg
   title: Hoian d'Or
@@ -164,3 +164,7 @@ posts01:
       image:
         src: assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
         alt: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
+foot:
+  logo:
+    src:
+    alt:

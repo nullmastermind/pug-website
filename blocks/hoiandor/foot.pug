@@ -1,0 +1,78 @@
+footer.main-footer.bg-color-2
+  .footer-top
+    .vector-bg(style="background-image: url(assets/themes/assets/images/shape/shape-11.png)")
+    .auto-container
+      .row.clearfix
+        .col-lg-3.col-md-6.col-sm-12.footer-column
+          .footer-widget.logo-widget
+            figure.footer-logo
+              a(href="/")
+                img(src=header.logo.src, alt=header.logo.alt)
+            ul.social-links.clearfix
+              li.centred(style="width: 100%")
+                a(href=header.contact.facebook)
+                  i.fab.fa-facebook-f
+        .col-lg-3.col-md-6.col-sm-12.footer-column
+          .footer-widget.links-widget
+            .widget-title
+              h3 Sitemaps
+            .widget-content
+              ul.links-list.clearfix
+                - for (let item of (header.menu||[]))
+                  li
+                    a(href=item.href) #{ item.label }
+        .col-lg-3.col-md-6.col-sm-12.footer-column
+          .footer-widget.gallery-widget
+            .widget-title
+              h3 Thư viện ảnh
+            .widget-content
+              ul.image-list.clearfix
+                li
+                  figure.image-box
+                    img.allow-viewer(src="assets/images/86af54abce8b38d5619a-cropped.png", alt)
+                li
+                  figure.image-box
+                    img.allow-viewer(src="assets/images/86af54abce8b38d5619a-cropped.png", alt)
+                li
+                  figure.image-box
+                    img.allow-viewer(src="assets/images/86af54abce8b38d5619a-cropped.png", alt)
+                li
+                  figure.image-box
+                    img.allow-viewer(src="assets/images/86af54abce8b38d5619a-cropped.png", alt)
+                li
+                  figure.image-box
+                    img.allow-viewer(src="assets/images/86af54abce8b38d5619a-cropped.png", alt)
+                li
+                  figure.image-box
+                    img.allow-viewer(src="assets/images/86af54abce8b38d5619a-cropped.png", alt)
+        .col-lg-3.col-md-6.col-sm-12.footer-column
+          .footer-widget.contact-widget
+            .widget-title
+              h3 Thông tin liên hệ
+            .widget-content
+              ul.info-list.clearfix
+                li
+                  i.fas.fa-map-marker-alt
+                  | #{ header.contact.address }
+                li
+                  i.fas.fa-phone
+                  a(href=`tel:${header.contact.mobile}`) #{ header.contact.mobile }
+                li
+                  i.fas.fa-envelope
+                  a(href=`mailto:${header.contact.email}`) #{ header.contact.email }
+  .footer-bottom
+    .auto-container
+      .bottom-inner.clearfix
+        .copyright.pull-left
+          p
+            a(href="/") Hoian d'Or
+            | © 2021 All Right Reserved
+        ul.footer-nav.pull-right
+          li
+            a(href="/") Terms of Service
+          li
+            a(href="/") Privacy Policy
+//  main-footer end 
+// Scroll to top
+button.scroll-top.scroll-to-target(data-target="html")
+  span.fal.fa-angle-up

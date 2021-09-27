@@ -201,3 +201,7 @@ strong {
 .la-rounded {
   border-radius: 2em !important;
 }
+
+.scroll-top {
+  border-radius: 50%;
+}
