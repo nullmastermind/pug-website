@@ -173,3 +173,7 @@ strong {
 .la-relative {
   position: relative;
 }
+
+.place-block-one .inner-box .image-box:before {
+  pointer-events: none;
+}
