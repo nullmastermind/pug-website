@@ -28,8 +28,8 @@ section.about-section(style="background: #f5f6f6")
             - for (let detail of about01.info.details)
               .text
                 p.color-text-primary
-                  b= detail.primary
-                  span= ' ' + detail.secondary
+                  b!= detail.primary
+                  span!= ' ' + detail.secondary
             //img(src="assets/images/partners.png", alt="Đơn vị hoian d'or")
             //                   <ul class="list clearfix">
             //                     <li>Ratione voluptatem.sequi nesciunt.</li>

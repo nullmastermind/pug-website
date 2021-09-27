@@ -42,7 +42,7 @@ banner:
 about01:
   info:
     title: Hoian d'Or
-    description: Thương cảng Vàng son <br /> Liền kề phố hội
+    description: Thương&nbsp;cảng&nbsp;“Vàng&nbsp;son“ <br /> Liền kề “Phố hội“
     video:
       href: https://www.youtube.com/watch?v=wIDjvxSLyIg
       caption: Video về Hoian&nbsp;d'Or
@@ -57,7 +57,7 @@ about01:
       - primary: "Tên pháp lý:"
         secondary: Khu du lịch sinh thái Cồn Bắp
       - primary: "Tên thương mại:"
-        secondary: Hoian d'Or
+        secondary: <strong>Hoian d'Or</strong>
       - primary: "Vị trí:"
         secondary: Cồn Bắp, Phường Cẩm Nam, Tp Hội An, tỉnh Quảng Nam
       - primary: "Quy mô:"
@@ -82,6 +82,7 @@ about2:
   image2:
     src: assets/images/ketnoivung-03.png
     alt: Vị trí Hoian d'Or 2
+  decoShape: assets/images/shape1.png
 about03:
   title: Hoi an d'Or
   description: Tiện ích Hoàn chỉnh & Đẳng cấp
@@ -108,3 +109,4 @@ about03:
         src: assets/images/Cong-vien-sinh-thai-cropped.png
         alt: Khu nông nghiệp sinh thái Hoi an d'Or
   background: assets/images/Anh-tong-quan-Hoian-dor-1-1536x845.png
+  decoShape: assets/images/shape1.png
