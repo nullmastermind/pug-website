@@ -182,3 +182,13 @@ strong {
 .banner-section:before {
   background: -webkit-linear-gradient(90deg, rgba(0, 45, 46, 0.6) 10%, rgba(0, 45, 46, 0) 100%);
 }
+
+.la-same-height-02,
+.la-same-height-03 {
+}
+
+/*.news-block-one .inner-box .lower-content .btn-box {*/
+/*  position: relative;*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*}*/

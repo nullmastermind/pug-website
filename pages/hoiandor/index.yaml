@@ -141,3 +141,26 @@ about04:
       caption: Condotel
       href: /
   decoShape: assets/images/shape1.png
+posts01:
+  title: Hoian d'Or
+  description: Tin tức nổi bật
+  viewAllHref: /
+  items:
+    - title: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
+      description: Hai năm chịu ảnh hưởng nặng nề từ đại dịch Covid-19, ngành du lịch đã [...]
+      href: /
+      image:
+        src: assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
+        alt: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
+    - title: Cố nhạc sĩ Trịnh Công Sơn – Nguồn cảm hứng bất tận cùng Hoian d’Or lan tỏa giá trị Vàng son miền di sản
+      description: Hai năm chịu ảnh hưởng nặng nề từ đại dịch Covid-19, ngành du lịch đã [...]
+      href: /
+      image:
+        src: assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
+        alt: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
+    - title: Chuẩn bị kích cầu du lịch, mở rộng đón khách quốc tế
+      description: Hai năm chịu ảnh hưởng nặng nề từ đại dịch Covid-19, ngành du lịch đã [...]
+      href: /
+      image:
+        src: assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
+        alt: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
