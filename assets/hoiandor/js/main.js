@@ -3,5 +3,8 @@ $(document).ready(function () {
     filter(image) {
       return $(image).hasClass("allow-viewer");
     },
+    url(image) {
+      return image.src.replace("-cropped.", ".");
+    },
   });
 });

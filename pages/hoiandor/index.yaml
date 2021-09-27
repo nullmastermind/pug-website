@@ -42,7 +42,17 @@ banner:
 about01:
   info:
     title: Hoian d'Or
-    description: Thương cảng Vàng son – Liền kề phố hội
+    description: Thương cảng Vàng son <br /> Liền kề phố hội
+    video:
+      href: https://www.youtube.com/watch?v=wIDjvxSLyIg
+      caption: Video về Hoian&nbsp;d'or
+    image1:
+      src: assets/images/86af54abce8b38d5619a-cropped.png
+      alt: Ảnh dự án Hoian d'Or 1
+    image2:
+      src: assets/images/logo-hoian-dor-bg.png
+      alt: Ảnh dự án Hoian d'Or 2
+    decoShape: assets/images/shape1.png
     details:
       - primary: "Tên pháp lý:"
         secondary: Khu du lịch sinh thái Cồn Bắp
