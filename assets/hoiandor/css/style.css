@@ -79,3 +79,51 @@
 
 .allow-viewer {
 }
+
+.border-primary-2 {
+  border: 2px solid var(--primary-color) !important;
+}
+
+.la-bottom-image {
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 2px;
+  left: 5%;
+  width: 90%;
+  padding: 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  background: white;
+}
+
+.la-text-justify {
+  text-align: justify;
+}
+
+.la-text-primary {
+  color: var(--color-text-primary) !important;
+}
+
+.la-shape {
+  position: absolute;
+  top: -60px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+
+strong {
+  color: var(--primary-color);
+}
+
+.la-z-index {
+  position: relative;
+  z-index: 2;
+}
+
+.la-first-letter::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--primary-color);
+}

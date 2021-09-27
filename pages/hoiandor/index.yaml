@@ -45,7 +45,7 @@ about01:
     description: Thương cảng Vàng son <br /> Liền kề phố hội
     video:
       href: https://www.youtube.com/watch?v=wIDjvxSLyIg
-      caption: Video về Hoian&nbsp;d'or
+      caption: Video về Hoian&nbsp;d'Or
     image1:
       src: assets/images/86af54abce8b38d5619a-cropped.png
       alt: Ảnh dự án Hoian d'Or 1
@@ -70,3 +70,15 @@ about01:
         secondary: 2.330 tỷ đồng
       - primary: "Sản phẩm/ Tiện ích dịch vụ:"
         secondary: "Dự án bao gồm 3 phân khu chính Village -Town – Garden các phân khu bao gồm các công trình sau: Shophouse/ Villa/ Khách sạn 5* tiêu chuẩn/ Khách sạn 5* VIP/ Condotel/ Boutique 3*/ Khu nông nghiệp sinh thái/ Không gian văn hoá/ Nhà hàng đặc sản/ Bến tàu/ Trung tâm thương mại/ Thương cảng Hoian d’Or"
+about2:
+  title: Hoian d'Or
+  description: Vị trí “Vàng” <br/ > Khởi ngàn “Tài lộc“
+  info:
+    content: Sở hữu vị trí vàng liền kề phố cổ Hội An, được bao quanh bởi sông Thu Bồn, <strong>Hoian d’Or</strong> là quần thể nghỉ dưỡng sinh thái và trải nghiệm văn hoá duy nhất tại trung tâm của miền di sản. Nơi đây sẽ là chiếc cầu nối giữa quá khứ vàng son và hiện tại tự hào để cùng hướng đến một tương lai khai mở.
+    decoShape: assets/images/shape1.png
+  image1:
+    src: assets/images/Sodo-vitri-04-04-1536x743.png
+    alt: Vị trí Hoian d’Or
+  image2:
+    src: assets/images/ketnoivung-03.png
+    alt: Vị trí Hoian d’Or 2

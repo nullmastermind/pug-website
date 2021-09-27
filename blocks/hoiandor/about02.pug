@@ -1,0 +1,17 @@
+section.map-section.bg-color-1(style="padding-bottom: 0; background: #ffffff")
+  .auto-container
+    .row
+      .col-lg-6.col-md-12.col-sm-12
+        .sec-title(style="text-align: left")
+          p.color-primary!= about2.title
+          h2.color-primary!= about2.description
+      .col-lg-6.col-md-12.col-sm-12(style="margin-bottom: 2em")
+        .shape-2.la-shape(style=`background-image: url(${about01.info.decoShape})`)
+        .la-text-justify.la-text-primary.la-z-index.la-first-letter!= about2.info.content
+      .col-12.pb-5
+        img.allow-viewer(src=about2.image2.src, alt=about2.image1.alt, style="width: 100%")
+    .map-inner
+      .map-content.clearfix(style="min-height: 0")
+        img.border-primary-2.allow-viewer(src=about2.image1.src, alt=about2.image1.alt, style="width: 100%; border-radius: 1em")
+        //.la-bottom-image
+        //  img.allow-viewer(src=about2.image2.src, alt=about2.image1.alt, style="width: 100%")
