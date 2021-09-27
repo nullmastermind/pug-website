@@ -169,3 +169,7 @@ strong {
   animation: slide 100s linear infinite;
   -webkit-animation: slide 100s linear infinite;
 }
+
+.la-relative {
+  position: relative;
+}

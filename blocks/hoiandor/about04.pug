@@ -1,0 +1,19 @@
+section.place-section.sec-pad.bg-color-1
+  .auto-container
+    .row.clearfix
+      .col-lg-4.col-md-6.col-sm-12.title-column
+        .sec-title.la-relative
+          p.color-primary.la-z-index!= about04.title
+          h2.color-primary.la-z-index!= about04.description
+          .la-shape(style=`background-image: url(${about04.decoShape});top: 20px;left: -20px;`)
+        .text
+          p.la-text-primary.la-text-justify!= about04.meta
+      - for(const item of about04.items)
+        .col-lg-4.col-md-6.col-sm-12.place-block
+          .place-block-one
+            .inner-box
+              figure.image-box
+                img.allow-viewer(src=item.image.src, alt=item.image.alt)
+              .text
+                h3
+                  a.text-pretty.text-italic(href=item.href)!= item.caption

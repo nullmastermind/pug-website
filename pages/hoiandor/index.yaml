@@ -110,3 +110,34 @@ about03:
         alt: Khu nông nghiệp sinh thái Hoi an d'Or
   background: assets/images/Anh-tong-quan-Hoian-dor-1-1536x845.png
   decoShape: assets/images/shape1.png
+about04:
+  title: Hoi an d'Or
+  description: Cơ cấu sản phẩm
+  meta: Tập trung vào việc đem lại <strong>trải nghiệm tốt nhất</strong> cho du khách nhờ tiêu chuẩn <strong>nghỉ dưỡng 5 sao</strong> cùng hệ thống <strong>100+ tiện ích</strong> nội khu <strong>“All In One”</strong> mới lạ, độc đáo, theo đó mỗi phân khu sẽ có đa dạng những tiện ích khách nhau, <strong>Hoian&nbsp;d’Or</strong> sẽ tạo nên một cuộc sống <strong>khởi sinh phú quý</strong> trên mảnh đất di sản.
+  items:
+    - image:
+        src: assets/images/shophouse-hoian-dor-cropped.jpg
+        alt: Shophouse – Maison De ville Hoian d'Or
+      caption: Shophouse
+      href: /
+    - image:
+        src: assets/images/Villa2-02-cropped.jpg
+        alt: Villa Hoian d'Or
+      caption: Villa
+      href: /
+    - image:
+        src: assets/images/khach-san-hoian-dor-cropped.jpg
+        alt: Khách sạn 5 sao Hoian d'Or
+      caption: Khách sạn 5 sao
+      href: /
+    - image:
+        src: assets/images/boutique-hoian-dor-cropped.jpg
+        alt: Boutique Hoian d'Or
+      caption: Boutique
+      href: /
+    - image:
+        src: assets/images/Condotel1-02-cropped.jpg
+        alt: Condotel Hoian d'Or
+      caption: Condotel
+      href: /
+  decoShape: assets/images/shape1.png
