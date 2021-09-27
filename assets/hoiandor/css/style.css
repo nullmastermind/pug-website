@@ -176,4 +176,9 @@ strong {
 
 .place-block-one .inner-box .image-box:before {
   pointer-events: none;
+  background: -webkit-linear-gradient(90deg, rgba(0, 45, 46, 0.6) 10%, rgba(0, 45, 46, 0) 100%);
+}
+
+.banner-section:before {
+  background: -webkit-linear-gradient(90deg, rgba(0, 45, 46, 0.6) 10%, rgba(0, 45, 46, 0) 100%);
 }
