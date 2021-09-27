@@ -1,0 +1,32 @@
+section.contact-section
+  .auto-container
+    .row.clearfix.border-primary-2.la-contact-container.p-sm-5.p-md-5
+      .col-lg-5.col-md-12.col-sm-12.content-column
+        .content_block_5
+          .content-box
+            .sec-title
+              p.color-primary Hoian d'Or
+              h2.color-primary Liên hệ
+              h3.color-primary.text-pretty.text-italic(style="margin-top: 1em") Nhận thông tin mới nhất về dự án chính thức từ chủ đầu tư
+            .text
+              p.la-text-primary!= 'Hãy để chúng tôi liên lạc với Quý Khách. Hệ thống chăm sóc khách hàng chuyên nghiệp <strong>phục vụ 24/7, tất cả các ngày trong tuần</strong> sẽ thông tin tới Quý Khách <strong>nhanh nhất</strong> về dự án <strong>Hoian d\'Or.</strong>'
+            ul.social-links.clearfix
+              li
+                a(href=header.contact.facebook)
+                  i.fab.fa-facebook-f
+      .col-lg-7.col-md-12.col-sm-12.form-column
+        .form-inner.la-rounded
+          form.default-form(method="post", action="sendemail.php", novalidate)
+            .row.clearfix
+              .col-lg-6.col-md-6.col-sm-12.form-group
+                input.la-rounded(type="text", name="username", placeholder="Tên của Quý Khách (*)", required)
+              .col-lg-6.col-md-6.col-sm-12.form-group
+                input.la-rounded(type="email", name="email", placeholder="Địa chỉ Email (nếu có)")
+              .col-lg-6.col-md-12.col-sm-12.form-group
+                input.la-rounded(type="text", name="phone", required, placeholder="Số điện thoại (*)")
+              .col-lg-6.col-md-12.col-sm-12.form-group
+                input.la-rounded(type="text", name="subject", placeholder="Địa chỉ (nếu có)")
+              .col-lg-12.col-md-12.col-sm-12.form-group
+                textarea.la-rounded(name="message", placeholder="Điền nội dung (nếu có)")
+              .col-lg-12.col-md-12.col-sm-12.form-group.message-btn
+                button.la-rounded.theme-btn(type="submit", name="submit-form") Nhận tư vấn
