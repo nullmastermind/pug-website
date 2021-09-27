@@ -1,0 +1,21 @@
+section.deals-style-two.sec-pad(style=`background-image: url(${about03.background})`)
+  .auto-container
+    .sec-title.centred.light
+      p!= about03.title
+      h2!= about03.description
+    .single-item-carousel.owl-carousel.owl-theme.owl-dots-none
+      - for (const item of about03.items)
+        .single-deals-box
+          .inner-box
+            figure.image-box
+              img.allow-viewer(src=item.image.src, alt=item.image.alt)
+            .content-box
+              span.la-fix-about03-title!= item.title
+              h3.la-fix-about03-title
+                a(href=item.href)!= item.subTitle
+              .la-fix-about03-description
+                p.la-text-primary.la-same-height-01.la-text-justify
+                  != item.description
+                .la-fix-about03-description-overlay
+              .btn-box
+                a.theme-btn(href=item.href) Xem chi tiết

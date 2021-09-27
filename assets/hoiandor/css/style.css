@@ -1,5 +1,6 @@
 :root {
   --primary-color: #72163b;
+  --secondary-color: #002d2e;
   --secondary-font: "Playfair Display", serif;
   --color-text-primary: #333333;
 }
@@ -126,4 +127,34 @@ strong {
   font-size: 2em;
   font-weight: bold;
   color: var(--primary-color);
+}
+
+.deals-style-two:before {
+  background: var(--secondary-color);
+  /*opacity: 1;*/
+}
+
+.la-same-height-01 {
+}
+
+.la-fix-about03-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.la-fix-about03-description {
+  position: relative;
+  height: 106px;
+  overflow: hidden;
+}
+
+.la-fix-about03-description-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 1) 100%);
+  height: 60px;
 }

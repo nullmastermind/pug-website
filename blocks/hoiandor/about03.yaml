@@ -1,0 +1,12 @@
+about03:
+  title: Hoi an d'Or
+  description: Tiện ích Hoàn chỉnh & Đẳng cấp
+  items:
+    - title: Không gian văn hóa
+      subTitle: Nối miền di sản
+      description: Không gian văn hoá như một sợi dây kết nối các giá trị trường tồn của mảnh đất Hội An để thế hệ sau có thể tiếp nối và phát huy tinh hoa di sản.
+      href: /
+      image:
+        src: http://hoiandor.com/wp-content/uploads/2021/07/Khong-gian-van-hoa-05-05.png
+        alt: Không gian văn hoá Hoi an d'or
+  background: assets/images/Anh-tong-quan-Hoian-dor-1-1536x845.png
