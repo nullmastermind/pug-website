@@ -15,3 +15,18 @@ section.map-section.bg-color-1(style="padding-bottom: 120px; background: #ffffff
         img.border-primary-2.allow-viewer(src=about2.image1.src, alt=about2.image1.alt, style="width: 100%; border-radius: 1em")
         //.la-bottom-image
         //  img.allow-viewer(src=about2.image2.src, alt=about2.image1.alt, style="width: 100%")
+section.map-section.bg-color-1(style="padding-bottom: 120px")
+  .auto-container
+    .row
+      .col-lg-6.col-md-12.col-sm-12(style="margin-bottom: 2em")
+        .la-text-justify.la-text-primary.la-z-index.la-first-letter!= about2.ground.info.content
+      .col-lg-6.col-md-12.col-sm-12
+        .shape-2.la-shape(style=`background-image: url(${about2.info.decoShape});left: unset;right:-10px`)
+        .sec-title.la-z-index(style="text-align: right")
+          p.color-primary!= about2.ground.description
+          h2.color-primary!= about2.ground.title
+          //p.la-small-note (Click vào ảnh để phóng to)
+      .map-inner
+        - for (const image of about2.ground.images)
+          .map-content.clearfix(style="min-height: 0")
+            img.border-primary-2.allow-viewer(src=image.src, alt=image.alt, style="width: 100%; border-radius: 1em")

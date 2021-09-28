@@ -223,3 +223,13 @@ strong {
 .la-text-light {
   color: white;
 }
+
+.map-inner .map-content:not(:first-child) {
+  margin-top: 2em;
+}
+
+.la-small-note {
+  font-style: italic;
+  font-size: 0.75em;
+  text-transform: unset !important;
+}

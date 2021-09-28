@@ -84,6 +84,18 @@ about2:
     src: assets/images/ketnoivung-03.png
     alt: Vị trí Hội An D'Or 2
   decoShape: assets/images/shape1.png
+  ground:
+    title: Mặt bằng
+    description: Hội An D'Or
+    info:
+      content: <strong>Hội An D'Or</strong> được quy hoạch trên tổng diện tích <strong>24.5ha</strong>, 3 mặt giáp sông và phía Bắc giáp khu dân cư, đạt được những hiệu cửa và điểm nhìn đô thị. Hơn <strong>80%</strong> diện tích được bao bọc bởi sông Thu Bồn, cây xanh, cảnh quan thiên.
+    images:
+      - src: assets/images/mat-bang.jpg
+        alt: Mặt bằng Hội An D'Or
+        caption: Mặt bằng Hội An D'Or
+      - src: assets/images/ban-do-quy-hoach.jpg
+        alt: Bản đồ quy hoạch Hội An D'Or
+        caption: Bản đồ quy hoạch Hội An D'Or
 about03:
   title: Hoi an d'Or
   description: Tiện ích Hoàn chỉnh & Đẳng cấp
