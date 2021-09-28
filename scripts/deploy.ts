@@ -294,13 +294,13 @@ async function _compressImage(filename: string) {
 }
 
 function deploy() {
-  exec(
-    "firebase deploy",
-    {
-      cwd: project.host,
-    },
-    (error, stdout, stderr) => console.log(error, stdout, stderr)
-  );
+  // exec(
+  //   "firebase deploy",
+  //   {
+  //     cwd: project.host,
+  //   },
+  //   (error, stdout, stderr) => console.log(error, stdout, stderr)
+  // );
 }
 
 pre().then(deploy).catch(console.error);
