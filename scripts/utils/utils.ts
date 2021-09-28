@@ -49,6 +49,8 @@ export function parseFilename(filename: string) {
 }
 
 export async function compressImage(filename: string): Promise<string> {
+  if (filename.endsWith(".webp")) return filename;
+
   const cachedDir = path.resolve("./.cached");
   const content = await fs.readFile(filename, "utf-8");
   const contentMd5 = md5(content);

@@ -11,6 +11,7 @@ import { exec } from "child_process";
 import htmlMinifier = require("html-minifier");
 import CleanCSS = require("clean-css");
 import moment = require("moment");
+import webp = require("webp-converter");
 
 declare global {
   var project: { name: string; dist: string; host: string };
@@ -164,6 +165,8 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
     const filename = path.join(dirname, src);
 
     await _compressImage(filename);
+
+    $element.attr("src", src + ".webp");
     // if (!alt) {
     //   console.error(src);
     //
@@ -226,6 +229,7 @@ async function _compressImage(filename: string) {
   const compressedSize = (await lstat(compressedImage)).size;
   const originSize = (await lstat(filename)).size;
 
+  console.log(await webp.cwebp(compressedImage, filename + ".webp", "-q 80"));
   await copy(compressedImage, filename);
 
   console.table({
@@ -249,13 +253,13 @@ async function _compressImage(filename: string) {
 }
 
 function deploy() {
-  exec(
-    "firebase deploy",
-    {
-      cwd: project.host,
-    },
-    (error, stdout, stderr) => console.log(error, stdout, stderr)
-  );
+  // exec(
+  //   "firebase deploy",
+  //   {
+  //     cwd: project.host,
+  //   },
+  //   (error, stdout, stderr) => console.log(error, stdout, stderr)
+  // );
 }
 
 pre().then(deploy).catch(console.error);
