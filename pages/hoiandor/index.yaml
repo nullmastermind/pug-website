@@ -1,10 +1,10 @@
-title: Hội An D'Or - Chính thức chủ đầu tư
+title: Hoian d’Or - Chính thức chủ đầu tư
 preloader:
-  text: Hội An D'Or
+  text: Hoian d’Or
 header:
   logo:
     src: assets/images/logo-hoian-dor.png
-    alt: Logo Hội An D'Or
+    alt: Logo Hoian d’Or
     href: /index.html
   menu:
     - label: Trang chủ
@@ -16,11 +16,11 @@ header:
       href: /
     - label: Phân khu
       children:
-        - label: Shophouse – Hội An D'Or
+        - label: Shophouse – Hoian d’Or
           href: /
-        - label: Villa – Hội An D'Or
+        - label: Villa – Hoian d’Or
           href: /
-        - label: Condotel – Hội An D'Or
+        - label: Condotel – Hoian d’Or
           href: /
         - label: Không gian văn hóa
           href: /
@@ -38,27 +38,25 @@ header:
     company: ConBap Ecological Tourist Co. LTD
 banner:
   background: assets/images/nh-ban-m-2.jpg
-  title: Hội An D'Or
-  description: Dự án nghỉ dưỡng đáng chú ý tại Hội An – Đà Nẵng trong năm 2021 <br/> <br/> Được kiến tạo trên một vùng đất bồi lắng phù sa cách trung tâm phố cổ Hội An 800m, <strong>Hội An D'Or</strong> là nơi đất vượng giao hòa, tôn tạo giá trị riêng, khơi lên chất sống mới của miền di sản, là mảnh ghép cuối cùng tạo nên một Hội An trọn vẹn.
+  title: Hoian d’Or
+  description: Di sản vượt thời gian <br/> <br/> Được kiến tạo trên một vùng đất bồi lắng phù sa cách trung tâm phố cổ Hội An 800m, <strong>Hoian d’Or</strong> là nơi đất vượng giao hòa, tôn tạo giá trị riêng, khơi lên chất sống mới của miền di sản, là mảnh ghép cuối cùng tạo nên một Hội An trọn vẹn.
 about01:
   info:
-    title: Hội An D'Or
+    title: Hoian d’Or
     description: Thương&nbsp;cảng&nbsp;“Vàng&nbsp;son“ <br /> Liền kề “Phố hội“
     video:
       href: https://www.youtube.com/watch?v=wIDjvxSLyIg
       caption: Video về Hoian&nbsp;d'Or
     image1:
       src: assets/images/86af54abce8b38d5619a-cropped.png
-      alt: Ảnh dự án Hội An D'Or 1
+      alt: Ảnh dự án Hoian d’Or 1
     image2:
       src: assets/images/logo-hoian-dor-bg.png
-      alt: Ảnh dự án Hội An D'Or 2
+      alt: Ảnh dự án Hoian d’Or 2
     decoShape: assets/images/shape1.png
     details:
-      - primary: "Tên pháp lý:"
-        secondary: Khu du lịch sinh thái Cồn Bắp
-      - primary: "Tên thương mại:"
-        secondary: <strong>Hội An D'Or</strong>
+      - primary: "Tên Pháp lý/ Thương mại"
+        secondary: Khu du lịch sinh thái Cồn Bắp/ <strong>Hoian d'Or</strong>
       - primary: "Vị trí:"
         secondary: Cồn Bắp, Phường Cẩm Nam, Tp Hội An, tỉnh Quảng Nam
       - primary: "Quy mô:"
@@ -69,33 +67,36 @@ about01:
         secondary: Công ty TNHH Du lịch Sinh thái Cồn Bắp
       - primary: "Tổng vốn đầu tư:"
         secondary: 2.330 tỷ đồng
-      - primary: "Sản phẩm/ Tiện ích dịch vụ:"
-        secondary: "Dự án bao gồm 3 phân khu chính Village -Town – Garden các phân khu bao gồm các công trình sau: Shophouse/ Villa/ Khách sạn 5* tiêu chuẩn/ Khách sạn 5* VIP/ Condotel/ Boutique 3*/ Khu nông nghiệp sinh thái/ Không gian văn hoá/ Nhà hàng đặc sản/ Bến tàu/ Trung tâm thương mại/ Thương cảng Hội An D'Or"
+      - primary: "Sản phẩm/ Dịch vụ/ Tiện ích:"
+        secondary: <br />– Shophouse, Villa, Hotel 5*, Boutique, Condotel<br /> – Bến du thuyền<br />– Không gian văn hóa<br />– Tuyến phố đi bộ<br />– Trung tâm thương mại<br />– Nhà hàng cao cấp<br />– Công viên sinh thái trải nghiệm
 about2:
-  title: Hội An D'Or
+  title: Hoian d’Or
   description: Vị trí “Vàng” <br/ > Khởi ngàn “Tài lộc“
   info:
-    content: Sở hữu vị trí vàng liền kề phố cổ Hội An, được bao quanh bởi sông Thu Bồn, <strong>Hội An D'Or</strong> là quần thể nghỉ dưỡng sinh thái và trải nghiệm văn hoá duy nhất tại trung tâm của miền di sản. Nơi đây sẽ là chiếc cầu nối giữa quá khứ vàng son và hiện tại tự hào để cùng hướng đến một tương lai khai mở.
+    content: Sở hữu vị trí vàng liền kề phố cổ Hội An, được bao quanh bởi sông Thu Bồn, <strong>Hoian d’Or</strong> là quần thể nghỉ dưỡng sinh thái và trải nghiệm văn hoá duy nhất tại trung tâm của miền di sản. Nơi đây sẽ là chiếc cầu nối giữa quá khứ vàng son và hiện tại tự hào để cùng hướng đến một tương lai khai mở.
     decoShape: assets/images/shape1.png
   image1:
     src: assets/images/Sodo-vitri-04-04-1536x743.png
-    alt: Vị trí Hội An D'Or
+    alt: Vị trí Hoian d’Or
   image2:
     src: assets/images/ketnoivung-03.png
-    alt: Vị trí Hội An D'Or 2
+    alt: Vị trí Hoian d’Or 2
   decoShape: assets/images/shape1.png
   ground:
     title: Mặt bằng
-    description: Hội An D'Or
+    description: Hoian d’Or
     info:
-      content: <strong>Hội An D'Or</strong> được quy hoạch trên tổng diện tích <strong>24.5ha</strong>, 3 mặt giáp sông và phía Bắc giáp khu dân cư, đạt được những hiệu cửa và điểm nhìn đô thị. Hơn <strong>80%</strong> diện tích được bao bọc bởi sông Thu Bồn, cây xanh, cảnh quan thiên.
+      content: "<strong>Hoian d’Or</strong> được quy hoạch trên tổng diện tích <strong>24.5ha</strong>, 3 mặt giáp sông và phía Bắc giáp khu dân cư, đạt được những hiệu cửa và điểm nhìn đô thị. Hơn <strong>80%</strong> diện tích được bao bọc bởi sông Thu Bồn, cây xanh, cảnh quan thiên.<br/><br/>Với sự quy hoạch độc đáo nhằm mang đến sự cân đối và hài hòa trong từng chuẩn mực sống, <strong>Hoian d’Or</strong> là sự kết hợp đầy uyển chuyển của 3 tổng thể kiến trúc với 3 tên gọi đã in dấu trong tiềm thức bao đời. Đó là: <strong>Phố</strong> – <strong>Làng</strong> – <strong>Vườn</strong>.<br/><br/>Đến với <strong>“Phố”</strong>, bạn sẽ được đắm mình trong một không gian nhộn nhịp mua sắm của những khu phố shophouse lấp lánh ánh đèn.<br/><br/>Đến với <strong>“Làng”</strong>, bạn sẽ tận hưởng một không gian nghỉ dưỡng thanh bình tại những khu biệt thự view sông, luôn mở đón những hương gió phù sa ngọt lành.<br/><br/>Đến với <strong>“Vườn”</strong>, bạn sẽ được được trải nghiệm những dịch vụ chăm sóc sức khỏe đẳng cấp quốc tế với liệu trình hoàn toàn từ thiên nhiên."
+      deco:
+        src: assets/images/Minh-hoa-1.png
+        alt: Ảnh minh họa Hoian d’Or
     images:
       - src: assets/images/mat-bang.jpg
-        alt: Mặt bằng Hội An D'Or
-        caption: Mặt bằng Hội An D'Or
+        alt: Mặt bằng Hoian d’Or
+        caption: Mặt bằng Hoian d’Or
       - src: assets/images/ban-do-quy-hoach.jpg
-        alt: Bản đồ quy hoạch Hội An D'Or
-        caption: Bản đồ quy hoạch Hội An D'Or
+        alt: Bản đồ quy hoạch Hoian d’Or
+        caption: Bản đồ quy hoạch Hoian d’Or
 about03:
   title: Hoi an d'Or
   description: Tiện ích Hoàn chỉnh & Đẳng cấp
@@ -130,32 +131,32 @@ about04:
   items:
     - image:
         src: assets/images/shophouse-hoian-dor-cropped.jpg
-        alt: Shophouse – Maison De ville Hội An D'Or
+        alt: Shophouse – Maison De ville Hoian d’Or
       caption: Shophouse
       href: /
     - image:
         src: assets/images/Villa2-02-cropped.jpg
-        alt: Villa Hội An D'Or
+        alt: Villa Hoian d’Or
       caption: Villa
       href: /
     - image:
         src: assets/images/khach-san-hoian-dor-cropped.jpg
-        alt: Khách sạn 5 sao Hội An D'Or
+        alt: Khách sạn 5 sao Hoian d’Or
       caption: Khách sạn 5 sao
       href: /
     - image:
         src: assets/images/boutique-hoian-dor-cropped.jpg
-        alt: Boutique Hội An D'Or
+        alt: Boutique Hoian d’Or
       caption: Boutique
       href: /
     - image:
         src: assets/images/Condotel1-02-cropped.jpg
-        alt: Condotel Hội An D'Or
+        alt: Condotel Hoian d’Or
       caption: Condotel
       href: /
   decoShape: assets/images/shape1.png
 posts01:
-  title: Hội An D'Or
+  title: Hoian d’Or
   description: Tin tức nổi bật
   viewAllHref: /
   items:

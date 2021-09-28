@@ -274,3 +274,34 @@ strong {
 .la-social-button span {
   margin-left: 0.5em;
 }
+
+.la-logo-box {
+  background: var(--primary-color);
+  padding: 1.25em !important;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.main-menu .navigation > li {
+  padding: 0.5em 0;
+}
+
+.main-menu .navigation > li.current {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+}
+
+.sticky-header .main-menu .navigation > li {
+  padding: 35px 0;
+}
+
+.sticky-header .main-menu .navigation > li.current {
+  background: unset;
+}
+
+@media only screen and (max-width: 399px) {
+  .la-logo-box {
+    background: unset !important;
+  }
+}

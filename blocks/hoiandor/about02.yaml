@@ -15,6 +15,9 @@ about2:
     description: Hoian d'Or
     info:
       content: <strong>Hoian d’Or</strong> được quy hoạch trên tổng diện tích 24.5ha, 3 mặt giáp sông và phía Bắc giáp khu dân cư, đạt được những hiệu cửa và điểm nhìn đô thị. Hơn 80% diện tích được bao bọc bởi sông Thu Bồn, cây xanh, cảnh quan thiên.
+      deco:
+        src: assets/images/Minh-hoa-1.png
+        alt: Ảnh minh họa Hội An D'Or
     images:
       - src: assets/images/mat-bang.jpg
         alt: Mặt bằng Hội An D'Or

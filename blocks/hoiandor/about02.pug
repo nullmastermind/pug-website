@@ -29,7 +29,7 @@ section.map-section.bg-color-1.la-cloud(style="padding-bottom: 120px")
         .sec-title.la-z-index(style="text-align: right")
           p.color-primary!= about2.ground.description
           h2.color-primary!= about2.ground.title
-          //p.la-small-note (Click vào ảnh để phóng to)
+          img(src=about2.ground.info.deco.src, alt=about2.ground.info.deco.alt)
       .map-inner
         - for (const image of about2.ground.images)
           .map-content.clearfix(style="min-height: 0")
