@@ -25,8 +25,23 @@ $(document).ready(function () {
     }
   }
 
-  $("ul.navigation li:not(.dropdown)").on("click", function () {
+  $(".dropdown-btn").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  $("ul.navigation li").on("click", function () {
     $(".close-btn").click();
+  });
+
+  $(".scroll-top.open").on("click", function () {
+    $("html, body").stop().animate(
+      {
+        scrollTop: 0,
+      },
+      300
+    );
+
+    console.log("click");
   });
 
   smartMenu();
@@ -53,19 +68,6 @@ function smartMenu() {
       .filter((v) => v !== undefined);
 
   // Bind click handler to menu items
-  // so we can get a fancy scroll animation
-  menuItems.click(function (e) {
-    var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
-
-    $("html, body").stop().animate(
-      {
-        scrollTop: offsetTop,
-      },
-      300
-    );
-    e.preventDefault();
-  });
 
   // Bind to scroll
   $(window).scroll(function () {
