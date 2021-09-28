@@ -10,12 +10,16 @@ import { existsSync } from "fs";
 import { exec } from "child_process";
 import htmlMinifier = require("html-minifier");
 import CleanCSS = require("clean-css");
+import moment = require("moment");
 
 declare global {
   var project: { name: string; dist: string; host: string };
+  var now: any;
 }
 
 async function pre() {
+  global.now = moment().format("YYYYMMDD-HHmmss");
+
   const rootDir = path.resolve("./");
   const distDir = path.resolve("./dist");
   const hostsDir = path.resolve("./hosts");
@@ -89,7 +93,6 @@ async function pre() {
 
     await processorImgTags(dirname, $);
     await processorBackgroundImages(dirname, content, config);
-    await writeFile(copies[file], $.html());
 
     const cssFiles = [];
 
@@ -110,6 +113,8 @@ async function pre() {
       await processorBackgroundImages(dirname, content, config);
     }
 
+    await processorVersion($);
+    await writeFile(copies[file], $.html());
     await _cleanHtml(copies[file]);
   }
 }
@@ -167,6 +172,34 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
   }
 }
 
+async function processorVersion($: cheerio.Root) {
+  const _newVersion = (url: string) => {
+    let sep = "?";
+
+    if (url.includes("?")) {
+      sep = "#";
+    }
+
+    return url + sep + "v=" + global.now;
+  };
+
+  $("link[href]").each((index, element) => {
+    const href = $(element).attr("href");
+
+    if (!href.startsWith("http")) {
+      $(element).attr("href", _newVersion(href));
+    }
+  });
+
+  $("script[src]").each((index, element) => {
+    const src = $(element).attr("src");
+
+    if (!src.startsWith("http")) {
+      $(element).attr("src", _newVersion(src));
+    }
+  });
+}
+
 async function _cleanCss(filename: string) {
   let content = await readFile(filename, "utf-8");
 
@@ -216,13 +249,13 @@ async function _compressImage(filename: string) {
 }
 
 function deploy() {
-  // exec(
-  //   "firebase deploy",
-  //   {
-  //     cwd: project.host,
-  //   },
-  //   (error, stdout, stderr) => console.log(error, stdout, stderr)
-  // );
+  exec(
+    "firebase deploy",
+    {
+      cwd: project.host,
+    },
+    (error, stdout, stderr) => console.log(error, stdout, stderr)
+  );
 }
 
 pre().then(deploy).catch(console.error);
