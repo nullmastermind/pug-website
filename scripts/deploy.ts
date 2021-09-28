@@ -81,12 +81,12 @@ async function pre() {
     const html = await readFile(htmlFile, "utf-8");
     const $ = load(html);
 
-    await processorImages(path.dirname(copies[htmlFile]), $);
+    await processorImgTags(path.dirname(copies[htmlFile]), $);
     await writeFile(copies[htmlFile], $.html());
   }
 }
 
-async function processorImages(dirname: string, $: cheerio.Root) {
+async function processorImgTags(dirname: string, $: cheerio.Root) {
   const elements: Array<cheerio.Cheerio> = [];
 
   $("img").each((index, element) => {
