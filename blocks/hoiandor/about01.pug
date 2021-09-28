@@ -14,9 +14,11 @@ section.about-section.la-cloud(style="background: #f5f6f6")
             figure.image.image-2
               img(src=about01.info.image2.src, alt=about01.info.image2.alt, style="border-radius: 0.5em")
             .video-content
-              h3.text-pretty.text-italic.color-primary!= about01.info.video.caption
               .video-btn
                 a.lightbox-image(href=about01.info.video.href, data-caption=about01.info.video.caption)
+                  span.text-pretty.text-italic.color-primary(
+                    style="font-size: 22px; font-weight: bold; display: block; line-height: 28px; margin-bottom: 13px"
+                  )!= about01.info.video.caption
                   i.icon-Video
       .col-lg-6.col-md-12.col-sm-12.content-column
         .content_block_1
