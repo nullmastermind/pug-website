@@ -1,18 +1,24 @@
-import { readdir } from "fs-extra";
+import { readdir, lstatSync } from "fs-extra";
 import path = require("path");
-import { lstatSync } from "fs";
 import prompts = require("prompts");
+import { exec } from "child_process";
+
+declare global {
+  var project: { name: string; dist: string; host: string };
+}
 
 async function pre() {
-  const dist = path.join(__dirname, "../dist");
-  const projects = (await readdir(dist))
+  const distDir = path.resolve("./dist");
+  const hostsDir = path.resolve("./hosts");
+  const projects = (await readdir(distDir))
     .map((filename) => ({
       name: filename,
-      path: path.join(dist, filename),
+      dist: path.join(distDir, filename),
+      host: path.join(hostsDir, filename),
     }))
-    .filter((project) => lstatSync(project.path).isDirectory());
+    .filter((project) => lstatSync(project.dist).isDirectory());
 
-  const selectedProject = (
+  global.project = (
     await prompts([
       {
         type: "select",
@@ -26,7 +32,17 @@ async function pre() {
     ])
   ).project;
 
-  console.log(selectedProject);
+  console.log(project);
 }
 
-pre().catch(console.error);
+pre()
+  .catch(console.error)
+  .then(() => {
+    exec(
+      "firebase deploy",
+      {
+        cwd: project.host,
+      },
+      (error, stdout, stderr) => console.log(error, stdout, stderr)
+    );
+  });
