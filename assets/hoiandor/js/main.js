@@ -33,17 +33,6 @@ $(document).ready(function () {
     $(".close-btn").click();
   });
 
-  $(".scroll-top.open").on("click", function () {
-    $("html, body").stop().animate(
-      {
-        scrollTop: 0,
-      },
-      300
-    );
-
-    console.log("click");
-  });
-
   smartMenu();
 });
 
