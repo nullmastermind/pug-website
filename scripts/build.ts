@@ -1,6 +1,6 @@
 import pug = require("pug");
 import path = require("path");
-import { getAllDirs, getAllFiles } from "../utils/utils";
+import { getAllDirs, getAllFiles } from "./utils/utils";
 import fs = require("fs-extra");
 import yaml = require("yaml");
 

@@ -1,5 +1,5 @@
-import { copy, ensureFile, lstatSync, readdir, readFile, writeFile } from "fs-extra";
-import { getAllFiles } from "../utils/utils";
+import { copy, ensureFile, lstat, lstatSync, readdir, readFile, writeFile } from "fs-extra";
+import { compressImage, fixedFloat, getAllFiles, relative } from "./utils/utils";
 import { load } from "cheerio";
 import path = require("path");
 import prompts = require("prompts");
@@ -87,19 +87,29 @@ async function pre() {
 }
 
 async function processorImages(dirname: string, $: cheerio.Root) {
+  const elements: Array<cheerio.Cheerio> = [];
+
   $("img").each((index, element) => {
-    const $element: cheerio.Cheerio = $(element);
-    const src = $(element).attr("src");
-    const alt = $(element).attr("alt").trim();
-
-    if (!alt) {
-      console.error(src);
-    }
-
-    console.log(path.join(dirname, src), alt);
-
-    $element.attr("alt", "=))");
+    elements.push($(element));
   });
+
+  for (const $element of elements) {
+    const src = $element.attr("src");
+    const alt = $element.attr("alt").trim();
+    const filename = path.join(dirname, src);
+
+    // if (!alt) {
+    //   console.error(src);
+    //
+    //   break;
+    // }
+
+    const compressedImage = await compressImage(filename);
+    const compressedSize = (await lstat(compressedImage)).size;
+    const originSize = (await lstat(filename)).size;
+
+    console.log(relative(filename), fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%");
+  }
 }
 
 function deploy() {

@@ -1,4 +1,4 @@
-import { getAllFiles } from "../utils/utils";
+import { getAllFiles } from "./utils/utils";
 import path = require("path");
 import _ = require("lodash");
 import html2pug = require("html2pug");
