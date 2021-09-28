@@ -8,6 +8,7 @@ import minimatch = require("minimatch");
 import _ = require("lodash");
 import { existsSync } from "fs";
 import { exec } from "child_process";
+import htmlMinifier = require("html-minifier");
 
 declare global {
   var project: { name: string; dist: string; host: string };
@@ -106,6 +107,8 @@ async function pre() {
 
       await processorBackgroundImages(dirname, content, config);
     }
+
+    await _minifyHtml(copies[file]);
   }
 }
 
@@ -160,6 +163,19 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
     //   break;
     // }
   }
+}
+
+async function _minifyHtml(filename: string) {
+  let content = await readFile(filename, "utf-8");
+
+  content = htmlMinifier.minify(content, {
+    removeAttributeQuotes: true,
+    collapseBooleanAttributes: true,
+    minifyCSS: true,
+    minifyJS: true,
+  });
+
+  await writeFile(filename, content);
 }
 
 async function _compressImage(filename: string) {
