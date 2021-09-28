@@ -51,6 +51,7 @@ async function pre() {
   const copies = {};
 
   config.ignores = config.ignores.map((v) => path.join(rootDir, v));
+  config.compressIgnores = config.compressIgnores.map((v) => path.join(rootDir, v));
 
   for (const file of allFiles) {
     let next = false;
@@ -83,9 +84,9 @@ async function pre() {
     const content = await readFile(file, "utf-8");
     const $ = load(content);
 
-    // await processorImgTags(dirname, $);
-    await processorBackgroundImages(dirname, content);
-    // await writeFile(copies[file], $.html());
+    await processorImgTags(dirname, $);
+    await processorBackgroundImages(dirname, content, config);
+    await writeFile(copies[file], $.html());
 
     const cssFiles = [];
 
@@ -102,12 +103,42 @@ async function pre() {
       const dirname = path.dirname(copies[file]);
       const content = await readFile(file, "utf-8");
 
-      await processorBackgroundImages(dirname, content);
+      await processorBackgroundImages(dirname, content, config);
     }
   }
 }
 
-async function processorBackgroundImages(dirname: string, content: string) {}
+async function processorBackgroundImages(dirname: string, content: string, config: any) {
+  const backgroundChunks = content.split("background");
+  const images = [];
+
+  _.forEach(backgroundChunks, (chunk) => {
+    if (chunk.includes("url")) {
+      try {
+        const url = path.join(dirname, chunk.split("url")[1].split("(")[1].split(")")[0].replace(/"/g, "").replace(/'/g, "").trim());
+
+        if (existsSync(url)) {
+          let next = false;
+
+          for (const pattern of config.compressIgnores) {
+            if (minimatch(url, pattern)) {
+              next = true;
+              break;
+            }
+          }
+
+          if (!next) {
+            images.push(url);
+          }
+        }
+      } catch (ignoreError) {}
+    }
+  });
+
+  for (const filename of images) {
+    await _compressImage(filename);
+  }
+}
 
 async function processorImgTags(dirname: string, $: cheerio.Root) {
   const elements: Array<cheerio.Cheerio> = [];
