@@ -170,7 +170,7 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
 async function _cleanCss(filename: string) {
   let content = await readFile(filename, "utf-8");
 
-  content = await new CleanCSS({}).minify(content).styles;
+  content = new CleanCSS({}).minify(content).styles;
 
   await writeFile(filename, content);
 }
