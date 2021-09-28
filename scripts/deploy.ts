@@ -6,6 +6,7 @@ import prompts = require("prompts");
 import yaml = require("yaml");
 import minimatch = require("minimatch");
 import _ = require("lodash");
+import { existsSync } from "fs";
 
 declare global {
   var project: { name: string; dist: string; host: string };
@@ -77,14 +78,36 @@ async function pre() {
     })
   );
 
-  for (const htmlFile of htmlFiles) {
-    const html = await readFile(htmlFile, "utf-8");
-    const $ = load(html);
+  for (const file of htmlFiles) {
+    const dirname = path.dirname(copies[file]);
+    const content = await readFile(file, "utf-8");
+    const $ = load(content);
 
-    await processorImgTags(path.dirname(copies[htmlFile]), $);
-    await writeFile(copies[htmlFile], $.html());
+    // await processorImgTags(dirname, $);
+    await processorBackgroundImages(dirname, content);
+    // await writeFile(copies[file], $.html());
+
+    const cssFiles = [];
+
+    $('link[rel="stylesheet"]').each((index, element) => {
+      const $element = $(element);
+      const cssFile = path.join(project.dist, $element.attr("href"));
+
+      if (existsSync(cssFile)) {
+        cssFiles.push(cssFile);
+      }
+    });
+
+    for (const file of cssFiles) {
+      const dirname = path.dirname(copies[file]);
+      const content = await readFile(file, "utf-8");
+
+      await processorBackgroundImages(dirname, content);
+    }
   }
 }
+
+async function processorBackgroundImages(dirname: string, content: string) {}
 
 async function processorImgTags(dirname: string, $: cheerio.Root) {
   const elements: Array<cheerio.Cheerio> = [];
