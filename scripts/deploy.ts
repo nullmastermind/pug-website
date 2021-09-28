@@ -93,17 +93,7 @@ async function processorImages(dirname: string, $: cheerio.Root) {
     elements.push($(element));
   });
 
-  for (const $element of elements) {
-    const src = $element.attr("src");
-    const alt = $element.attr("alt").trim();
-    const filename = path.join(dirname, src);
-
-    // if (!alt) {
-    //   console.error(src);
-    //
-    //   break;
-    // }
-
+  const _compressImage = async (filename: string) => {
     const compressedImage = await compressImage(filename);
     const compressedSize = (await lstat(compressedImage)).size;
     const originSize = (await lstat(filename)).size;
@@ -118,6 +108,19 @@ async function processorImages(dirname: string, $: cheerio.Root) {
       fixedFloat(compressedSize / 1024),
       "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%"
     );
+  };
+
+  for (const $element of elements) {
+    const src = $element.attr("src");
+    const alt = $element.attr("alt").trim();
+    const filename = path.join(dirname, src);
+
+    await _compressImage(filename);
+    // if (!alt) {
+    //   console.error(src);
+    //
+    //   break;
+    // }
   }
 }
 
