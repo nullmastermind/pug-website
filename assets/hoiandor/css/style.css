@@ -366,6 +366,10 @@ strong {
   color: var(--color-text-primary);
 }
 
+.place-block-one .inner-box .image-box img {
+  border-radius: 0.5em;
+}
+
 @media only screen and (max-width: 399px) {
   .la-logo-box {
     background: unset !important;
