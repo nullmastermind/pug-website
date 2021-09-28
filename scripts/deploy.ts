@@ -9,6 +9,7 @@ import _ = require("lodash");
 import { existsSync } from "fs";
 import { exec } from "child_process";
 import htmlMinifier = require("html-minifier");
+import CleanCSS = require("clean-css");
 
 declare global {
   var project: { name: string; dist: string; host: string };
@@ -102,9 +103,10 @@ async function pre() {
     });
 
     for (const file of cssFiles) {
+      await _cleanCss(copies[file]);
+
       const dirname = path.dirname(copies[file]);
       const content = await readFile(file, "utf-8");
-
       await processorBackgroundImages(dirname, content, config);
     }
 
@@ -163,6 +165,14 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
     //   break;
     // }
   }
+}
+
+async function _cleanCss(filename: string) {
+  let content = await readFile(filename, "utf-8");
+
+  content = await new CleanCSS({}).minify(content).styles;
+
+  await writeFile(filename, content);
 }
 
 async function _cleanHtml(filename: string) {
