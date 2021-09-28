@@ -260,7 +260,13 @@ async function _compressImage(filename: string) {
   const originSize = (await lstat(filename)).size;
 
   if (!filename.endsWith(".webp")) {
-    await webp.cwebp(compressedImage, filename + ".webp", "-q 80");
+    const webpFile = filename + ".webp";
+
+    await webp.cwebp(compressedImage, webpFile, "-q 80");
+
+    if (await pathExists(webpFile)) {
+      await copy(await compressImage(webpFile), webpFile);
+    }
   }
 
   if (compressedImage !== filename) {
