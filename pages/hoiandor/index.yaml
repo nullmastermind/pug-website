@@ -11,25 +11,29 @@ header:
       href: /
       active: true
     - label: Tổng quan
-      href: /
+      href: "#tong-quan"
     - label: Vị trí
-      href: /
-    - label: Phân khu
+      href: "#vi-tri"
+    - label: Mặt bằng
+      href: "#mat-bang"
+    - label: Tiện ích
+      href: "#tien-ich"
+    - label: Cơ cấu
       children:
-        - label: Shophouse – Hoian d’Or
-          href: /
-        - label: Villa – Hoian d’Or
-          href: /
-        - label: Condotel – Hoian d’Or
-          href: /
-        - label: Không gian văn hóa
-          href: /
-        - label: Khu nông nghiệp sinh thái
-          href: /
+        - label: Shophouse
+          href: "#co-cau"
+        - label: Villa
+          href: "#co-cau"
+        - label: Khách sạn 5 sao
+          href: "#co-cau"
+        - label: Boutique
+          href: "#co-cau"
+        - label: Condotel
+          href: "#co-cau"
     - label: Tin tức
-      href: /
+      href: "#tin-tuc"
     - label: Liên hệ
-      href: /
+      href: "#lien-he"
   contact:
     facebook: https://www.facebook.com/anh.lan.779205
     email: la@hoiandor.org
