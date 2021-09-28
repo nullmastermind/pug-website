@@ -205,3 +205,21 @@ strong {
 .scroll-top {
   border-radius: 50%;
 }
+
+.la-contact-info {
+  padding: 2em;
+  /*background: #f5f6f6;*/
+  border-radius: 2em;
+}
+
+.la-contact-info img {
+  width: 207px;
+}
+
+.la-contact-info .header-logo {
+  margin-bottom: 2em;
+}
+
+.la-text-light {
+  color: white;
+}

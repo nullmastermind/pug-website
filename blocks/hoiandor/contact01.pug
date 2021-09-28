@@ -1,33 +1,36 @@
 section.contact-section.la-cloud
   .pattern-layer(style="background-image: url(assets/themes/assets/images/shape/shape-10.png)")
   .auto-container
-    .row.clearfix.border-primary-2.la-contact-container.p-sm-5.p-md-5
+    .row.clearfix.border-primary-2.la-contact-container.p-sm-5.p-md-5.m-1
       .col-lg-5.col-md-12.col-sm-12.content-column
         .content_block_5
           .content-box
             .sec-title
-              p.color-primary Hoian d'Or
+              p.color-primary Hội An D'Or
               h2.color-primary Liên hệ
-              h3.color-primary.text-pretty.text-italic(style="margin-top: 1em") Nhận thông tin mới nhất về dự án chính thức từ chủ đầu tư
-            .text
-              p.la-text-primary!= 'Hãy để chúng tôi liên lạc với Quý Khách. Hệ thống chăm sóc khách hàng chuyên nghiệp <strong>phục vụ 24/7, tất cả các ngày trong tuần</strong> sẽ thông tin tới Quý Khách <strong>nhanh nhất</strong> về dự án <strong>Hoian d\'Or.</strong>'
-            ul.social-links.clearfix
-              li
-                a(href=header.contact.facebook)
-                  i.fab.fa-facebook-f
+              //h3.color-primary(style="margin-top: 1em") Nhận thông tin mới nhất về dự án chính thức từ chủ đầu tư
+            //.text
+            //  p.la-text-primary!= 'Hãy để chúng tôi liên lạc với Quý Khách. Hệ thống chăm sóc khách hàng chuyên nghiệp <strong>phục vụ 24/7, tất cả các ngày trong tuần</strong> sẽ thông tin tới Quý Khách <strong>nhanh nhất</strong> về dự án <strong>Hoian d\'Or.</strong>'
+            //ul.social-links.clearfix
+            //  li
+            //    a(href=header.contact.facebook, target="_blank")
+            //      i.fab.fa-facebook-f
+            .la-contact-info
+              .centred.header-logo
+                img(src=header.logo.src, alt=header.logo.alt, width=207)
+              .text.centred
+                p.centred!= header.contact.company
+                p.centred!= header.contact.address
+                p.centred!= header.contact.email
       .col-lg-7.col-md-12.col-sm-12.form-column
         .form-inner.la-rounded
           form.default-form(method="post", action="sendemail.php", novalidate)
             .row.clearfix
-              .col-lg-6.col-md-6.col-sm-12.form-group
-                input.la-rounded(type="text", name="username", placeholder="Tên của Quý Khách (*)", required)
-              .col-lg-6.col-md-6.col-sm-12.form-group
-                input.la-rounded(type="email", name="email", placeholder="Địa chỉ Email (nếu có)")
-              .col-lg-6.col-md-12.col-sm-12.form-group
+              .col-12.form-group
+                input.la-rounded(type="text", name="username", placeholder="Họ và tên (*)", required)
+              .col-12.form-group
+                input.la-rounded(type="email", name="email", placeholder="Email (nếu có)")
+              .col-12.form-group
                 input.la-rounded(type="text", name="phone", required, placeholder="Số điện thoại (*)")
-              .col-lg-6.col-md-12.col-sm-12.form-group
-                input.la-rounded(type="text", name="subject", placeholder="Địa chỉ (nếu có)")
-              .col-lg-12.col-md-12.col-sm-12.form-group
-                textarea.la-rounded(name="message", placeholder="Điền nội dung (nếu có)")
               .col-lg-12.col-md-12.col-sm-12.form-group.message-btn
                 button.la-rounded.theme-btn(type="submit", name="submit-form") Nhận tư vấn
