@@ -7,6 +7,7 @@ import yaml = require("yaml");
 import minimatch = require("minimatch");
 import _ = require("lodash");
 import { existsSync } from "fs";
+import { exec } from "child_process";
 
 declare global {
   var project: { name: string; dist: string; host: string };
@@ -189,13 +190,13 @@ async function _compressImage(filename: string) {
 }
 
 function deploy() {
-  // exec(
-  //   "firebase deploy",
-  //   {
-  //     cwd: project.host,
-  //   },
-  //   (error, stdout, stderr) => console.log(error, stdout, stderr)
-  // );
+  exec(
+    "firebase deploy",
+    {
+      cwd: project.host,
+    },
+    (error, stdout, stderr) => console.log(error, stdout, stderr)
+  );
 }
 
 pre().then(deploy).catch(console.error);
