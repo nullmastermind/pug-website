@@ -108,7 +108,7 @@ async function pre() {
       await processorBackgroundImages(dirname, content, config);
     }
 
-    await _minifyHtml(copies[file]);
+    await _cleanHtml(copies[file]);
   }
 }
 
@@ -165,7 +165,7 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
   }
 }
 
-async function _minifyHtml(filename: string) {
+async function _cleanHtml(filename: string) {
   let content = await readFile(filename, "utf-8");
 
   content = htmlMinifier.minify(content, {
