@@ -35,14 +35,14 @@ async function pre() {
   console.log(project);
 }
 
-pre()
-  .catch(console.error)
-  .then(() => {
-    exec(
-      "firebase deploy",
-      {
-        cwd: project.host,
-      },
-      (error, stdout, stderr) => console.log(error, stdout, stderr)
-    );
-  });
+function deploy() {
+  exec(
+    "firebase deploy",
+    {
+      cwd: project.host,
+    },
+    (error, stdout, stderr) => console.log(error, stdout, stderr)
+  );
+}
+
+pre().then(deploy).catch(console.error);
