@@ -23,9 +23,9 @@ section#lien-he.contact-section.la-cloud
               .centred.header-logo
                 img(src=header.logo.src, alt=header.logo.alt, width=207)
               .text.centred
-                p.centred!= header.contact.company
-                p.centred!= header.contact.address
-                p.centred!= header.contact.email
+                p.centred.la-text-primary!= header.contact.company
+                p.centred.la-text-primary!= header.contact.address
+                p.centred.la-text-primary!= header.contact.email
       .col-lg-7.col-md-12.col-sm-12.form-column
         .form-inner.la-rounded
           form.default-form(method="post", action="sendemail.php", novalidate)

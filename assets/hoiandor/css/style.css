@@ -6,6 +6,12 @@
   --color-fancy: #ecd9b0;
 }
 
+html,
+body,
+::placeholder {
+  color: var(--color-text-primary);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -345,6 +351,12 @@ strong {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.contact-section .form-inner .form-group input[type="email"],
+.contact-section .form-inner .form-group input[type="text"],
+.contact-section .form-inner .form-group textarea {
+  color: var(--color-text-primary);
 }
 
 @media only screen and (max-width: 399px) {
