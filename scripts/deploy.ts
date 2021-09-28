@@ -4,6 +4,8 @@ import prompts = require("prompts");
 import { exec } from "child_process";
 import { getAllFiles } from "../utils/utils";
 import { load } from "cheerio";
+import yaml = require("yaml");
+import minimatch = require("minimatch");
 
 declare global {
   var project: { name: string; dist: string; host: string };
@@ -44,8 +46,22 @@ async function pre() {
   const copyTo = path.join(project.host, "./public");
   const allFiles = await getAllFiles(project.dist);
   const htmlFiles: Array<string> = [];
+  const config = yaml.parse(await readFile(path.join(__dirname, "deploy.yaml"), "utf-8"));
+
+  config.ignores = config.ignores.map((v) => path.join(rootDir, v));
 
   for (const file of allFiles) {
+    let next = false;
+
+    for (const pattern of config.ignores) {
+      if (minimatch(file, pattern)) {
+        next = true;
+        break;
+      }
+    }
+
+    if (next) continue;
+
     const to = file.replace(path.join(distDir, project.name), copyTo);
 
     await ensureFile(to);
@@ -55,17 +71,25 @@ async function pre() {
       htmlFiles.push(file);
     }
 
-    console.log(file.replace(rootDir, ""), "->", to.replace(rootDir, ""));
+    console.log("copy:", file.replace(rootDir, ""), "->", to.replace(rootDir, ""));
   }
 
   for (const htmlFile of htmlFiles) {
     const html = await readFile(htmlFile, "utf-8");
     const $ = load(html);
 
-    $("img").each((index, element) => {
-      console.log($(element).attr("src"));
-    });
+    await processorImages(path.dirname(htmlFile), $);
   }
+}
+
+async function processorImages(dirname: string, $: cheerio.Root) {
+  $("img").each((index, element) => {
+    const $element: cheerio.Cheerio = $(element);
+    const src = $(element).attr("src");
+    const alt = $(element).attr("alt");
+
+    console.log(path.join(dirname, src), alt);
+  });
 }
 
 function deploy() {
