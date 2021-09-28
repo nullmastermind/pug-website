@@ -7,14 +7,17 @@
     "hello-ts": "ts-node scripts/hello.ts",
     "html-to-pug": "ts-node scripts/htmlToPug.ts",
     "build": "ts-node scripts/build.ts",
-    "build-watch": "chokidar \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*\" --initial -c \"npm run build\""
+    "build-watch": "chokidar \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*\" --initial -c \"npm run build\"",
+    "deploy": "ts-node scripts/deploy.ts"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",
+    "@types/cheerio": "^0.22.30",
     "@types/glob": "^7.1.4",
     "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.6",
     "@types/prettier": "^2.4.0",
+    "@types/prompts": "^2.0.14",
     "@types/pug": "^2.0.5",
     "@types/yaml": "^1.9.7",
     "chokidar-cli": "^3.0.0",
@@ -25,9 +28,11 @@
   },
   "dependencies": {
     "@types/fs-extra": "^9.0.13",
+    "cheerio": "^1.0.0-rc.10",
     "fs-extra": "^10.0.0",
     "glob": "^7.2.0",
     "lodash": "^4.17.21",
+    "prompts": "^2.4.1",
     "pug": "^3.0.2",
     "yaml": "^1.10.2"
   }
