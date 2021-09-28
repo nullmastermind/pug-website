@@ -264,3 +264,13 @@ strong {
   -webkit-animation: unset !important;
   animation: unset !important;
 }
+
+.la-social-button {
+  border-radius: 2em !important;
+  width: auto !important;
+  padding: 0 1.5em;
+}
+
+.la-social-button span {
+  margin-left: 0.5em;
+}
