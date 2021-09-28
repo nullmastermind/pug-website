@@ -207,7 +207,7 @@ strong {
 }
 
 .la-contact-info {
-  padding: 2em;
+  padding: 2em 0;
   /*background: #f5f6f6;*/
   border-radius: 2em;
 }
