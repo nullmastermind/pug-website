@@ -1,4 +1,4 @@
-import { copy, ensureFile, lstat, lstatSync, readdir, readFile, writeFile } from "fs-extra";
+import { copy, ensureFile, lstat, lstatSync, pathExists, readdir, readFile, writeFile } from "fs-extra";
 import { compressImage, fixedFloat, getAllFiles, parseFilename, relative } from "./utils/utils";
 import { load } from "cheerio";
 import path = require("path");
@@ -180,7 +180,11 @@ async function _compressImage(filename: string) {
   const fileParsed = parseFilename(filename);
 
   if (fileParsed.onlyName.endsWith("-cropped")) {
-    return await _compressImage(filename.replace("-cropped", ""));
+    const originFile = filename.replace("-cropped", "");
+
+    if (await pathExists(originFile)) {
+      return await _compressImage(originFile);
+    }
   }
 }
 
