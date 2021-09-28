@@ -15,7 +15,7 @@ header.main-header.style-one
             i.icon-bar
           nav.main-menu.navbar-expand-md.navbar-light
             #navbarSupportedContent.collapse.navbar-collapse.show.clearfix
-              ul.navigation.clearfix
+              ul#top-menu.navigation.clearfix
                 - for (let item of (header.menu||[]))
                   li(class=`${item.active ? 'current' : ''} ${item.children ? 'dropdown' : ''}`.trim())
                     a(href=item.href) #{ item.label }

@@ -6,6 +6,10 @@
   --color-fancy: #ecd9b0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .la-contact-form .form-group input {
   position: relative;
   max-width: 286px;

@@ -9,7 +9,6 @@ header:
   menu:
     - label: Trang chủ
       href: /
-      active: true
     - label: Tổng quan
       href: "#tong-quan"
     - label: Vị trí
@@ -19,6 +18,7 @@ header:
     - label: Tiện ích
       href: "#tien-ich"
     - label: Cơ cấu
+      href: "#co-cau"
       children:
         - label: Shophouse
           href: "#co-cau"
