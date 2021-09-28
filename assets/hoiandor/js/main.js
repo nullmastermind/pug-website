@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  _autoGallery();
   new Viewer(document.getElementById("images-viewer"), {
     filter(image) {
       return $(image).hasClass("allow-viewer");
@@ -33,10 +34,10 @@ $(document).ready(function () {
     $(".close-btn").click();
   });
 
-  smartMenu();
+  _smartMenu();
 });
 
-function smartMenu() {
+function _smartMenu() {
   // Cache selectors
   var lastId,
     topMenu = $("#top-menu"),
@@ -85,4 +86,49 @@ function smartMenu() {
       $(`#top-menu a[href="#${id}"]`).parent().addClass("current");
     }
   });
+}
+
+function _autoGallery() {
+  if ($("#auto-gallery").length) {
+    var $images = $(".allow-viewer:not(.la-ignore-gallery)");
+    var maxImages = 9;
+    var showed = {};
+
+    // https://stackoverflow.com/a/2450976/6435579
+    function shuffle(array) {
+      let currentIndex = array.length,
+        randomIndex;
+
+      // While there remain elements to shuffle...
+      while (currentIndex !== 0) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+
+      return array;
+    }
+
+    shuffle($images);
+
+    $images.each(function () {
+      var src = $(this).attr("src");
+      var alt = $(this).attr("alt");
+      var width = $(this).attr("width");
+      var height = $(this).attr("height");
+
+      if (src && !showed[src] && Object.keys(showed).length < maxImages) {
+        $("#auto-gallery").append(
+          `<li><figure class="image-box"><img src="${src}" alt="${alt}" width="${width}" height="${height}" class="allow-viewer la-ignore-gallery"/></figure></li>`
+        );
+
+        showed[src] = true;
+      }
+    });
+
+    console.log($images);
+  }
 }
