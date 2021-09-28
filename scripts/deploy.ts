@@ -93,23 +93,6 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
     elements.push($(element));
   });
 
-  const _compressImage = async (filename: string) => {
-    const compressedImage = await compressImage(filename);
-    const compressedSize = (await lstat(compressedImage)).size;
-    const originSize = (await lstat(filename)).size;
-
-    await copy(compressedImage, filename);
-
-    console.table({
-      filename: relative(filename),
-      to: relative(compressedImage),
-      origin: fixedFloat(originSize / 1024),
-      compressed: fixedFloat(compressedSize / 1024),
-      reduce: fixedFloat(originSize / 1024 - compressedSize / 1024),
-      result: "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%",
-    });
-  };
-
   for (const $element of elements) {
     const src = $element.attr("src");
     const alt = $element.attr("alt").trim();
@@ -122,6 +105,23 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
     //   break;
     // }
   }
+}
+
+async function _compressImage(filename: string) {
+  const compressedImage = await compressImage(filename);
+  const compressedSize = (await lstat(compressedImage)).size;
+  const originSize = (await lstat(filename)).size;
+
+  await copy(compressedImage, filename);
+
+  console.table({
+    filename: relative(filename),
+    to: relative(compressedImage),
+    origin: fixedFloat(originSize / 1024),
+    compressed: fixedFloat(compressedSize / 1024),
+    reduce: fixedFloat(originSize / 1024 - compressedSize / 1024),
+    result: "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%",
+  });
 }
 
 function deploy() {
