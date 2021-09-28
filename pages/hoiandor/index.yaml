@@ -90,6 +90,19 @@ about2:
       deco:
         src: assets/images/Minh-hoa-1.png
         alt: Ảnh minh họa Hoian d’Or
+      more:
+        - count: 202
+          digits: Căn
+          variant: Shophouse
+        - count: 52
+          digits: Căn
+          variant: Biệt thự ven sông
+        - count: 230
+          digits: Căn
+          variant: Condotel
+        - count: 192
+          digits: Căn
+          variant: Boutique
     images:
       - src: assets/images/mat-bang.jpg
         alt: Mặt bằng Hoian d’Or

@@ -300,6 +300,43 @@ strong {
   background: unset;
 }
 
+.la-col-info {
+  padding: 1em;
+  text-align: center;
+  border-left: 1px solid var(--primary-color);
+  border-right: 1px solid var(--primary-color);
+  border-radius: 0.5em;
+}
+
+.la-col-info:first-child {
+  border-left: 0;
+}
+
+.la-col-info:last-child {
+  border-right: 0;
+}
+
+.la-col-info .la-number {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.la-col-info .la-digits {
+  margin-left: 0.5em;
+}
+
+.la-col-info div {
+  text-align: center;
+}
+
+.la-col-info:nth-child(2) {
+  border-right-width: 2px;
+}
+
+.la-col-info:nth-child(3) {
+  border-left-width: 2px;
+}
+
 @media only screen and (max-width: 399px) {
   .la-logo-box {
     background: unset !important;

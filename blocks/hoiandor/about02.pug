@@ -29,13 +29,20 @@ section.map-section.bg-color-1.la-cloud(style="padding-bottom: 120px")
         .sec-title.la-z-index(style="text-align: right")
           p.color-primary!= about2.ground.description
           h2.color-primary!= about2.ground.title
-          img.d-none.d-lg-block(
-            src=about2.ground.info.deco.src,
-            alt=about2.ground.info.deco.alt,
-            width=about2.ground.info.deco.width,
-            height=about2.ground.info.deco.height
-          )
-      .map-inner
-        - for (const image of about2.ground.images)
-          .map-content.clearfix(style="min-height: 0")
-            img.border-primary-2.allow-viewer(src=image.src, alt=image.alt, style="width: 100%; border-radius: 1em")
+          .pl-5.pt-3
+            img.d-none.d-lg-block(
+              src=about2.ground.info.deco.src,
+              alt=about2.ground.info.deco.alt,
+              width=about2.ground.info.deco.width,
+              height=about2.ground.info.deco.height
+            )
+    .row.mb-4.pb-5.pt-5
+      - for(const info of about2.ground.info.more)
+        .col-6.col-lg-3.col-md-3.col-sm-3.la-col-info
+          span.la-number.text-pretty.color-primary!= info.count
+          span.la-digits.color-primary!= info.digits
+          .la-text-primary!= info.variant
+    .map-inner
+      - for (const image of about2.ground.images)
+        .map-content.clearfix(style="min-height: 0")
+          img.border-primary-2.allow-viewer(src=image.src, alt=image.alt, style="width: 100%; border-radius: 1em")
