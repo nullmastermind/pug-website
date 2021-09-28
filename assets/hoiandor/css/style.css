@@ -16,6 +16,13 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .la-contact-form .form-group input {
   position: relative;
   max-width: 286px;

@@ -13,6 +13,8 @@ import CleanCSS = require("clean-css");
 import moment = require("moment");
 import webp = require("webp-converter");
 
+const sizeOf = require("image-size");
+
 declare global {
   var project: { name: string; dist: string; host: string };
   var now: any;
@@ -190,6 +192,11 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
     if (src && !src.endsWith(".webp")) {
       $element.attr("src", src + ".webp");
     }
+
+    const dimensions = sizeOf(filename);
+
+    $element.attr("width", dimensions.width);
+    $element.attr("height", dimensions.height);
     // if (!alt) {
     //   console.error(src);
     //
@@ -281,13 +288,13 @@ async function _compressImage(filename: string) {
 }
 
 function deploy() {
-  exec(
-    "firebase deploy",
-    {
-      cwd: project.host,
-    },
-    (error, stdout, stderr) => console.log(error, stdout, stderr)
-  );
+  // exec(
+  //   "firebase deploy",
+  //   {
+  //     cwd: project.host,
+  //   },
+  //   (error, stdout, stderr) => console.log(error, stdout, stderr)
+  // );
 }
 
 pre().then(deploy).catch(console.error);
