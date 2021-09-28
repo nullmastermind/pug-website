@@ -1,5 +1,5 @@
 import { copy, ensureFile, lstat, lstatSync, readdir, readFile, writeFile } from "fs-extra";
-import { compressImage, fixedFloat, getAllFiles, relative } from "./utils/utils";
+import { compressImage, fixedFloat, getAllFiles, parseFilename, relative } from "./utils/utils";
 import { load } from "cheerio";
 import path = require("path");
 import prompts = require("prompts");
@@ -176,6 +176,12 @@ async function _compressImage(filename: string) {
     reduce: fixedFloat(originSize / 1024 - compressedSize / 1024),
     result: "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%",
   });
+
+  const fileParsed = parseFilename(filename);
+
+  if (fileParsed.onlyName.endsWith("-cropped")) {
+    return await _compressImage(filename.replace("-cropped", ""));
+  }
 }
 
 function deploy() {
