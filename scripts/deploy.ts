@@ -59,7 +59,7 @@ async function pre() {
   const copies = {};
 
   config.ignores = config.ignores.map((v) => path.join(rootDir, v));
-  config.compressIgnores = config.compressIgnores.map((v) => path.join(rootDir, v));
+  config.compressIgnores = (config.compressIgnores || []).map((v) => path.join(rootDir, v));
 
   for (const file of allFiles) {
     let next = false;
@@ -89,11 +89,12 @@ async function pre() {
 
   for (const file of htmlFiles) {
     const dirname = path.dirname(copies[file]);
-    const content = await readFile(file, "utf-8");
-    const $ = load(content);
+    let content = await readFile(file, "utf-8");
 
+    content = await processorBackgroundImages(dirname, content, config);
+
+    const $ = load(content);
     await processorImgTags(dirname, $);
-    await processorBackgroundImages(dirname, content, config);
 
     const cssFiles = [];
 
@@ -110,8 +111,11 @@ async function pre() {
       await _cleanCss(copies[file]);
 
       const dirname = path.dirname(copies[file]);
-      const content = await readFile(file, "utf-8");
-      await processorBackgroundImages(dirname, content, config);
+      let content = await readFile(file, "utf-8");
+
+      content = await processorBackgroundImages(dirname, content, config);
+
+      await writeFile(file, content);
     }
 
     await processorVersion($);
@@ -123,11 +127,13 @@ async function pre() {
 async function processorBackgroundImages(dirname: string, content: string, config: any) {
   const backgroundChunks = content.split("background");
   const images = [];
+  const mapNames = {};
 
   _.forEach(backgroundChunks, (chunk) => {
     if (chunk.includes("url")) {
       try {
-        const url = path.join(dirname, chunk.split("url")[1].split("(")[1].split(")")[0].replace(/"/g, "").replace(/'/g, "").trim());
+        const detectedName = chunk.split("url")[1].split("(")[1].split(")")[0].replace(/"/g, "").replace(/'/g, "").trim();
+        const url = path.join(dirname, detectedName);
 
         if (existsSync(url)) {
           let next = false;
@@ -140,6 +146,7 @@ async function processorBackgroundImages(dirname: string, content: string, confi
           }
 
           if (!next) {
+            mapNames[url] = detectedName;
             images.push(url);
           }
         }
@@ -147,9 +154,23 @@ async function processorBackgroundImages(dirname: string, content: string, confi
     }
   });
 
+  const replaces = {};
+
   for (const filename of images) {
     await _compressImage(filename);
+
+    const webp = filename + ".webp";
+
+    if (!filename.endsWith(".webp") && (await pathExists(webp))) {
+      replaces[mapNames[filename]] = mapNames[filename] + ".webp";
+    }
   }
+
+  _.forEach(replaces, (v, k) => {
+    content = content.replace(new RegExp(k, "g"), v);
+  });
+
+  return content;
 }
 
 async function processorImgTags(dirname: string, $: cheerio.Root) {
@@ -166,7 +187,9 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
 
     await _compressImage(filename);
 
-    $element.attr("src", src + ".webp");
+    if (src && !src.endsWith(".webp")) {
+      $element.attr("src", src + ".webp");
+    }
     // if (!alt) {
     //   console.error(src);
     //
@@ -229,8 +252,13 @@ async function _compressImage(filename: string) {
   const compressedSize = (await lstat(compressedImage)).size;
   const originSize = (await lstat(filename)).size;
 
-  console.log(await webp.cwebp(compressedImage, filename + ".webp", "-q 80"));
-  await copy(compressedImage, filename);
+  if (!filename.endsWith(".webp")) {
+    await webp.cwebp(compressedImage, filename + ".webp", "-q 80");
+  }
+
+  if (compressedImage !== filename) {
+    await copy(compressedImage, filename);
+  }
 
   console.table({
     filename: relative(filename),
@@ -253,13 +281,13 @@ async function _compressImage(filename: string) {
 }
 
 function deploy() {
-  // exec(
-  //   "firebase deploy",
-  //   {
-  //     cwd: project.host,
-  //   },
-  //   (error, stdout, stderr) => console.log(error, stdout, stderr)
-  // );
+  exec(
+    "firebase deploy",
+    {
+      cwd: project.host,
+    },
+    (error, stdout, stderr) => console.log(error, stdout, stderr)
+  );
 }
 
 pre().then(deploy).catch(console.error);
