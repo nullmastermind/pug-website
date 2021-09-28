@@ -108,7 +108,16 @@ async function processorImages(dirname: string, $: cheerio.Root) {
     const compressedSize = (await lstat(compressedImage)).size;
     const originSize = (await lstat(filename)).size;
 
-    console.log(relative(filename), fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%");
+    // await copy(compressedImage, filename);
+
+    console.log(
+      relative(filename),
+      "=>",
+      relative(compressedImage),
+      fixedFloat(originSize / 1024),
+      fixedFloat(compressedSize / 1024),
+      "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%"
+    );
   }
 }
 
