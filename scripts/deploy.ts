@@ -1,11 +1,11 @@
-import { readdir, lstatSync, copy, ensureFile, readFile } from "fs-extra";
-import path = require("path");
-import prompts = require("prompts");
-import { exec } from "child_process";
+import { copy, ensureFile, lstatSync, readdir, readFile, writeFile } from "fs-extra";
 import { getAllFiles } from "../utils/utils";
 import { load } from "cheerio";
+import path = require("path");
+import prompts = require("prompts");
 import yaml = require("yaml");
 import minimatch = require("minimatch");
+import _ = require("lodash");
 
 declare global {
   var project: { name: string; dist: string; host: string };
@@ -47,6 +47,7 @@ async function pre() {
   const allFiles = await getAllFiles(project.dist);
   const htmlFiles: Array<string> = [];
   const config = yaml.parse(await readFile(path.join(__dirname, "deploy.yaml"), "utf-8"));
+  const copies = {};
 
   config.ignores = config.ignores.map((v) => path.join(rootDir, v));
 
@@ -62,23 +63,26 @@ async function pre() {
 
     if (next) continue;
 
-    const to = file.replace(path.join(distDir, project.name), copyTo);
-
-    await ensureFile(to);
-    await copy(file, to);
-
     if (file.endsWith(".html")) {
       htmlFiles.push(file);
     }
 
-    console.log("copy:", file.replace(rootDir, ""), "->", to.replace(rootDir, ""));
+    copies[file] = file.replace(path.join(distDir, project.name), copyTo);
   }
+
+  await Promise.all(
+    _.map(copies, async (to, file) => {
+      await ensureFile(to);
+      await copy(file, to);
+    })
+  );
 
   for (const htmlFile of htmlFiles) {
     const html = await readFile(htmlFile, "utf-8");
     const $ = load(html);
 
     await processorImages(path.dirname(htmlFile), $);
+    await writeFile(copies[htmlFile], $.html());
   }
 }
 
@@ -86,9 +90,15 @@ async function processorImages(dirname: string, $: cheerio.Root) {
   $("img").each((index, element) => {
     const $element: cheerio.Cheerio = $(element);
     const src = $(element).attr("src");
-    const alt = $(element).attr("alt");
+    const alt = $(element).attr("alt").trim();
+
+    if (!alt) {
+      console.error(src);
+    }
 
     console.log(path.join(dirname, src), alt);
+
+    $element.attr("alt", "=))");
   });
 }
 
