@@ -18,6 +18,8 @@ about2:
       deco:
         src: assets/images/Minh-hoa-1.png
         alt: Ảnh minh họa Hội An D'Or
+        width: 570
+        height: 415
     images:
       - src: assets/images/mat-bang.jpg
         alt: Mặt bằng Hội An D'Or
