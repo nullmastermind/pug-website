@@ -128,7 +128,5 @@ function _autoGallery() {
         showed[src] = true;
       }
     });
-
-    console.log($images);
   }
 }
