@@ -100,14 +100,14 @@ async function processorImages(dirname: string, $: cheerio.Root) {
 
     await copy(compressedImage, filename);
 
-    console.log(
-      relative(filename),
-      "=>",
-      relative(compressedImage),
-      fixedFloat(originSize / 1024),
-      fixedFloat(compressedSize / 1024),
-      "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%"
-    );
+    console.table({
+      filename: relative(filename),
+      to: relative(compressedImage),
+      origin: fixedFloat(originSize / 1024),
+      compressed: fixedFloat(compressedSize / 1024),
+      reduce: fixedFloat(originSize / 1024 - compressedSize / 1024),
+      result: "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%",
+    });
   };
 
   for (const $element of elements) {
