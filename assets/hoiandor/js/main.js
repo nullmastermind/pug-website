@@ -24,4 +24,8 @@ $(document).ready(function () {
       $(sameHeightClasses[i]).css("height", maxHeight + "px");
     }
   }
+
+  $("ul.navigation li:not(.dropdown)").on("click", function () {
+    $(".close-btn").click();
+  });
 });
