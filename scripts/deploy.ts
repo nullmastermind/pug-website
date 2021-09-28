@@ -108,7 +108,7 @@ async function processorImages(dirname: string, $: cheerio.Root) {
     const compressedSize = (await lstat(compressedImage)).size;
     const originSize = (await lstat(filename)).size;
 
-    // await copy(compressedImage, filename);
+    await copy(compressedImage, filename);
 
     console.log(
       relative(filename),
