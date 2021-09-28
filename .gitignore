@@ -118,4 +118,4 @@ dist
 .pnp.*
 
 .idea
-./host/public
+hosts/**/public
