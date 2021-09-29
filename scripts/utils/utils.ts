@@ -3,6 +3,7 @@ import fs = require("fs-extra");
 import tinify = require("tinify");
 import _ = require("lodash");
 import md5 = require("md5");
+import os = require("os");
 
 export async function getAllFiles(dir: string): Promise<Array<string>> {
   let result: Array<string> = [];
@@ -49,7 +50,7 @@ export function parseFilename(filename: string) {
 }
 
 export async function compressImage(filename: string): Promise<string> {
-  const cachedDir = path.resolve("./.cached");
+  const cachedDir = path.join(os.tmpdir(), "./.cached");
   const content = await fs.readFile(filename, "utf-8");
   const contentMd5 = md5(content);
   const cachedFile: string = path.join(cachedDir, contentMd5);
