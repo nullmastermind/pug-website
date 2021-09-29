@@ -50,7 +50,7 @@ export function parseFilename(filename: string) {
 }
 
 export async function compressImage(filename: string): Promise<string> {
-  const cachedDir = path.resolve("./cached");
+  const cachedDir = path.resolve("./.cached");
 
   await ensureDir(cachedDir);
 
