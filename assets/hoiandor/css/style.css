@@ -370,8 +370,28 @@ strong {
   border-radius: 0.5em;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 399px) {
   .la-logo-box {
     background: unset !important;
   }
+}
+
+.place-block-one .inner-box .image-box {
+  margin-bottom: 0;
 }

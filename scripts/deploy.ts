@@ -12,6 +12,7 @@ import htmlMinifier = require("html-minifier");
 import CleanCSS = require("clean-css");
 import moment = require("moment");
 import webp = require("webp-converter");
+import UglifyJS = require("uglify-js");
 
 const sizeOf = require("image-size");
 
@@ -57,6 +58,7 @@ async function pre() {
   const copyTo = path.join(project.host, "./public");
   const allFiles = await getAllFiles(project.dist);
   const htmlFiles: Array<string> = [];
+  const jsFiles: Array<string> = [];
   const config = yaml.parse(await readFile(path.join(__dirname, "deploy.yaml"), "utf-8"));
   const copies = {};
 
@@ -98,6 +100,15 @@ async function pre() {
     const $ = load(content);
     await processorImgTags(dirname, $);
 
+    $("script[src]").each((index, element) => {
+      const $element = $(element);
+      const file = path.join(project.dist, $element.attr("src"));
+
+      if (existsSync(file)) {
+        jsFiles.push(copies[file]);
+      }
+    });
+
     const cssFiles = [];
 
     $('link[rel="stylesheet"]').each((index, element) => {
@@ -124,6 +135,8 @@ async function pre() {
     await writeFile(copies[file], $.html());
     await _cleanHtml(copies[file]);
   }
+
+  await _cleanJs(jsFiles);
 }
 
 async function processorBackgroundImages(dirname: string, content: string, config: any) {
@@ -231,6 +244,31 @@ async function processorVersion($: cheerio.Root) {
       $(element).attr("src", _newVersion(src));
     }
   });
+}
+
+async function _cleanJs(jsFiles) {
+  const options = {
+    mangle: {
+      toplevel: true,
+    },
+    nameCache: {},
+    webkit: true,
+    // toplevel: true,
+  };
+
+  for (const file of jsFiles) {
+    const code = UglifyJS.minify(
+      {
+        [file]: await readFile(file, "utf-8"),
+      },
+      options
+    ).code;
+
+    // console.log(relative(file), code);
+    await writeFile(file, code);
+
+    console.log("clean:", relative(file));
+  }
 }
 
 async function _cleanCss(filename: string) {
