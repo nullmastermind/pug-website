@@ -8,7 +8,8 @@
     "html-to-pug": "ts-node scripts/htmlToPug.ts",
     "build": "ts-node scripts/build.ts",
     "build-watch": "chokidar \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*\" --initial -c \"npm run build\"",
-    "deploy": "ts-node scripts/deploy.ts"
+    "deploy": "ts-node scripts/deploy.ts",
+    "vercel": "npm run build && npm run deploy"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",
