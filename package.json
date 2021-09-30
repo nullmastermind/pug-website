@@ -52,6 +52,7 @@
     "slug": "^5.1.0",
     "tinify": "^1.6.0-beta.2",
     "uglify-js": "^3.14.2",
+    "uncss": "^0.17.3",
     "webp-converter": "^2.3.3",
     "yaml": "^1.10.2"
   }

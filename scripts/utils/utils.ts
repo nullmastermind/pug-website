@@ -62,7 +62,7 @@ export async function compressImage(filename: string): Promise<string> {
   if (await fs.pathExists(cachedFile)) return cachedFile;
   if (await fs.pathExists(cachedFileRef)) return path.join(cachedDir, await fs.readFile(cachedFileRef, "utf-8"));
 
-  const apiKeys = ["cLH8b75hpcXHxy202hg3XdjJDbh27wLS", "V76Fv6wT6kM9CWYS6bZKrqg6PGZgLKcz"];
+  const apiKeys = ["cLH8b75hpcXHxy202hg3XdjJDbh27wLS", "YBg9YR2P4H3qjF0MlddSk985R8Qlykf2"];
 
   tinify.key = apiKeys[_.random(0, apiKeys.length - 1)];
 
