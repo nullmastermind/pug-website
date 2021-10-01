@@ -1,17 +1,17 @@
 import puppeteer = require("puppeteer");
 import _ = require("lodash");
 import path = require("path");
-import { pathExists } from "fs-extra";
+import { pathExists, writeFile } from "fs-extra";
 import { getAllFiles, relative } from "./utils/utils";
 
 const sizeOf = require("image-size");
 
 async function main() {
-  const root = path.resolve("./dist/hoiandor");
-  const routes = (await getAllFiles(root))
+  const projectDir = path.resolve("./dist/hoiandor");
+  const routes = (await getAllFiles(projectDir))
     .filter((v) => v.endsWith(".html"))
-    .filter((v) => !path.relative(root, v).startsWith("assets"))
-    .map((v) => path.resolve(root, v))
+    .filter((v) => !path.relative(projectDir, v).startsWith("assets"))
+    .map((v) => path.resolve(projectDir, v))
     .map((v) => "file://" + v);
 
   const browser = await puppeteer.launch({
@@ -66,17 +66,19 @@ async function main() {
           .filter((v) => v !== undefined);
       });
 
+      await writeFile(path.join(projectDir, "images.json"), JSON.stringify(images, null, 2));
+
       images = images.concat(
         backgrounds.map((v) => ({
           ...v,
-          src: path.relative(root, v.src),
+          src: path.relative(projectDir, v.src),
         }))
       );
       images.sort((a, b) => b.width * b.height - a.width * a.height);
       images = _.uniqBy(images, "src");
 
       for (const image of images) {
-        const filename = path.join(root, image.src);
+        const filename = path.join(projectDir, image.src);
 
         if (await pathExists(filename)) {
           const real = sizeOf(filename);
