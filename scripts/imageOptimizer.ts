@@ -45,7 +45,33 @@ async function main() {
           })
           .filter((v) => v !== undefined);
       });
+      const backgrounds = await page.$$eval("[style]", (elements) => {
+        return elements
+          .map((element) => {
+            const $ = (window as any).jQuery;
+            const rect = element.getBoundingClientRect();
+            let image = $(element).css("background-image");
 
+            if (typeof image === "string" && image.includes("url")) {
+              image = image.split("url")[1].split('"')[1].split('"')[0];
+
+              return {
+                src: image.replace("file:///", ""),
+                width: Math.round(rect.width),
+                height: Math.round(rect.height),
+                alt: "",
+              };
+            }
+          })
+          .filter((v) => v !== undefined);
+      });
+
+      images = images.concat(
+        backgrounds.map((v) => ({
+          ...v,
+          src: path.relative(root, v.src),
+        }))
+      );
       images.sort((a, b) => b.width * b.height - a.width * a.height);
       images = _.uniqBy(images, "src");
 
@@ -63,7 +89,7 @@ async function main() {
     })
   );
 
-  // await browser.close();
+  await browser.close();
 }
 
 main().catch(console.error);
