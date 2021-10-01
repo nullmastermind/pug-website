@@ -1,6 +1,5 @@
 /* playfair-display-regular - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 400;
@@ -15,7 +14,6 @@
 }
 /* playfair-display-600 - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 600;
@@ -29,7 +27,6 @@
 }
 /* playfair-display-700 - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 700;
@@ -43,7 +40,6 @@
 }
 /* playfair-display-900 - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 900;
@@ -57,7 +53,6 @@
 }
 /* playfair-display-600italic - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Playfair Display";
   font-style: italic;
   font-weight: 600;
@@ -74,7 +69,6 @@
 
 /* work-sans-regular - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
@@ -87,7 +81,6 @@
 }
 /* work-sans-500 - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 500;
@@ -100,7 +93,6 @@
 }
 /* work-sans-700 - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
@@ -113,7 +105,6 @@
 }
 /* work-sans-600 - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
@@ -126,7 +117,6 @@
 }
 /* work-sans-italic - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Work Sans";
   font-style: italic;
   font-weight: 400;
@@ -139,7 +129,6 @@
 }
 /* work-sans-600italic - vietnamese */
 @font-face {
-  font-display: swap;
   font-family: "Work Sans";
   font-style: italic;
   font-weight: 600;
