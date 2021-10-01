@@ -2,7 +2,7 @@ import puppeteer = require("puppeteer");
 import _ = require("lodash");
 import path = require("path");
 import { pathExists } from "fs-extra";
-import { getAllFiles } from "./utils/utils";
+import { getAllFiles, relative } from "./utils/utils";
 
 const sizeOf = require("image-size");
 
@@ -82,7 +82,7 @@ async function main() {
           const real = sizeOf(filename);
 
           if (real.width * real.height > image.width * image.height) {
-            console.log(filename, image.width, image.height, real.width, real.height);
+            console.log(relative(filename), [image.width, image.height], [real.width, real.height]);
           }
         }
       }
