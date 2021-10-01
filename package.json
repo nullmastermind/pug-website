@@ -11,7 +11,8 @@
     "deploy": "ts-node scripts/deploy.ts",
     "vercel": "npm run build && npm run deploy",
     "static-server-dist": "static-server ./dist/hoiandor",
-    "static-server-release": "static-server ./hosts/hoiandor/public"
+    "static-server-release": "static-server ./hosts/hoiandor/public",
+    "image-optimizer": "ts-node scripts/imageOptimizer.ts"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",
@@ -27,6 +28,7 @@
     "@types/prettier": "^2.4.0",
     "@types/prompts": "^2.0.14",
     "@types/pug": "^2.0.5",
+    "@types/puppeteer": "^5.4.4",
     "@types/slug": "^5.0.2",
     "@types/uglify-js": "^3.13.1",
     "@types/yaml": "^1.9.7",
@@ -52,6 +54,7 @@
     "moment": "^2.29.1",
     "prompts": "^2.4.1",
     "pug": "^3.0.2",
+    "puppeteer": "^10.4.0",
     "slug": "^5.1.0",
     "tinify": "^1.6.0-beta.2",
     "uglify-js": "^3.14.2",
