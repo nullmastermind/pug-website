@@ -9,7 +9,9 @@
     "build": "ts-node scripts/build.ts",
     "build-watch": "chokidar \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*\" --initial -c \"npm run build\"",
     "deploy": "ts-node scripts/deploy.ts",
-    "vercel": "npm run build && npm run deploy"
+    "vercel": "npm run build && npm run deploy",
+    "static-server-dist": "static-server ./dist/hoiandor",
+    "static-server-release": "static-server ./hosts/hoiandor/public"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",
@@ -31,6 +33,7 @@
     "chokidar-cli": "^3.0.0",
     "html2pug": "^4.0.0",
     "prettier": "^2.4.1",
+    "static-server": "^2.2.1",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
