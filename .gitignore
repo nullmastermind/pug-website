@@ -119,4 +119,3 @@ dist
 
 .idea
 hosts/**/public
-.cached
