@@ -17,8 +17,8 @@ async function main() {
   const browser = await puppeteer.launch({
     // headless: false,
     defaultViewport: {
-      width: 1366,
-      height: 768,
+      width: 1920,
+      height: 1080,
     },
   });
 
@@ -62,7 +62,8 @@ async function main() {
       }
     })
   );
-  await browser.close();
+
+  // await browser.close();
 }
 
 main().catch(console.error);
