@@ -291,7 +291,7 @@ async function _cleanHtml(filename: string) {
   await writeFile(filename, content);
 }
 
-async function _compressImage(filename: string, quality = 80) {
+async function _compressImage(filename: string, quality = 60) {
   const compressedImage = await compressImage(filename);
   const compressedSize = (await lstat(compressedImage)).size;
   const originSize = (await lstat(filename)).size;
