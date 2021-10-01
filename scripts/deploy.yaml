@@ -2,5 +2,6 @@ ignores:
   - dist/hoiandor/assets/themes/**/*.html
   - dist/hoiandor/assets/themes/**/*.pug
 compressIgnores:
+  - hosts/hoiandor/public/assets/fonts/**/*
 keywords:
   - Hoian dO'r

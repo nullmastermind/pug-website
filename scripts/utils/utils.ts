@@ -50,32 +50,38 @@ export function parseFilename(filename: string) {
 }
 
 export async function compressImage(filename: string): Promise<string> {
-  const cachedDir = path.resolve("./.cached");
+  try {
+    const cachedDir = path.resolve("./.cached");
 
-  await ensureDir(cachedDir);
+    await ensureDir(cachedDir);
 
-  const content = await fs.readFile(filename, "utf-8");
-  const contentMd5 = md5(content);
-  const cachedFile: string = path.join(cachedDir, contentMd5);
-  const cachedFileRef: string = path.join(cachedDir, contentMd5 + ".ref");
+    const content = await fs.readFile(filename, "utf-8");
+    const contentMd5 = md5(content);
+    const cachedFile: string = path.join(cachedDir, contentMd5);
+    const cachedFileRef: string = path.join(cachedDir, contentMd5 + ".ref");
 
-  if (await fs.pathExists(cachedFile)) return cachedFile;
-  if (await fs.pathExists(cachedFileRef)) return path.join(cachedDir, await fs.readFile(cachedFileRef, "utf-8"));
+    if (await fs.pathExists(cachedFile)) return cachedFile;
+    if (await fs.pathExists(cachedFileRef)) return path.join(cachedDir, await fs.readFile(cachedFileRef, "utf-8"));
 
-  const apiKeys = ["cLH8b75hpcXHxy202hg3XdjJDbh27wLS", "YBg9YR2P4H3qjF0MlddSk985R8Qlykf2", "GSh0VNTpw0XMkG3YNvxfvJkscvFVhH85"];
+    const apiKeys = ["cLH8b75hpcXHxy202hg3XdjJDbh27wLS", "YBg9YR2P4H3qjF0MlddSk985R8Qlykf2", "GSh0VNTpw0XMkG3YNvxfvJkscvFVhH85"];
 
-  tinify.key = apiKeys[_.random(0, apiKeys.length - 1)];
+    tinify.key = apiKeys[_.random(0, apiKeys.length - 1)];
 
-  const source = tinify.fromFile(filename);
+    const source = tinify.fromFile(filename);
 
-  await source.toFile(cachedFile);
+    await source.toFile(cachedFile);
 
-  const newContent = await fs.readFile(cachedFile, "utf-8");
-  const newContentMd5 = md5(newContent);
+    const newContent = await fs.readFile(cachedFile, "utf-8");
+    const newContentMd5 = md5(newContent);
 
-  await fs.writeFile(path.join(cachedDir, newContentMd5 + ".ref"), contentMd5);
+    await fs.writeFile(path.join(cachedDir, newContentMd5 + ".ref"), contentMd5);
 
-  return cachedFile;
+    return cachedFile;
+  } catch (e) {
+    console.log(filename);
+
+    throw e;
+  }
 }
 
 export function relative(filename: string): string {
