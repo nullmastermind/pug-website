@@ -7,7 +7,6 @@ import yaml = require("yaml");
 import minimatch = require("minimatch");
 import _ = require("lodash");
 import { existsSync } from "fs";
-import { exec } from "child_process";
 import htmlMinifier = require("html-minifier");
 import CleanCSS = require("clean-css");
 import moment = require("moment");
@@ -292,7 +291,7 @@ async function _cleanHtml(filename: string) {
   await writeFile(filename, content);
 }
 
-async function _compressImage(filename: string) {
+async function _compressImage(filename: string, quality = 80) {
   const compressedImage = await compressImage(filename);
   const compressedSize = (await lstat(compressedImage)).size;
   const originSize = (await lstat(filename)).size;
@@ -300,7 +299,7 @@ async function _compressImage(filename: string) {
   if (!filename.endsWith(".webp")) {
     const webpFile = filename + ".webp";
 
-    await webp.cwebp(compressedImage, webpFile, "-q 80");
+    await webp.cwebp(compressedImage, webpFile, "-q " + quality);
 
     if (await pathExists(webpFile)) {
       await copy(await compressImage(webpFile), webpFile);
@@ -326,19 +325,11 @@ async function _compressImage(filename: string) {
     const originFile = filename.replace("-cropped", "");
 
     if (await pathExists(originFile)) {
-      return await _compressImage(originFile);
+      return await _compressImage(originFile, 100);
     }
   }
 }
 
-function deploy() {
-  // exec(
-  //   "firebase deploy",
-  //   {
-  //     cwd: project.host,
-  //   },
-  //   (error, stdout, stderr) => console.log(error, stdout, stderr)
-  // );
-}
+function deploy() {}
 
 pre().then(deploy).catch(console.error);
