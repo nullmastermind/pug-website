@@ -22,6 +22,19 @@ async function main() {
 
   await fs.remove(distDir);
 
+  const buildData: Array<{
+    filename: string;
+    saveTo: string;
+    locals: any;
+    project: string;
+  }> = [];
+  const posts: Array<{
+    title: string;
+    description: string;
+    url: string;
+    cover: string;
+  }> = [];
+
   for (const filename of pageFiles) {
     const project = path.dirname(filename).split(path.sep).pop();
 
@@ -79,14 +92,6 @@ async function main() {
         ...locals,
       };
     }
-
-    const buildData = [];
-    const posts: Array<{
-      title: string;
-      description: string;
-      url: string;
-      cover: string;
-    }> = [];
 
     if (locals.template === "post") {
       const parsedFilename = parseFilename(filename);
@@ -234,6 +239,8 @@ async function main() {
           const saveTo = path.join(chunks.join(".pug"), categoryURL, path.basename(child)).replace(pagesDir, distDir);
 
           buildData.push({
+            project: project,
+            filename: filename,
             saveTo: saveTo,
             locals: {
               ...locals,
@@ -256,23 +263,27 @@ async function main() {
       }
     } else {
       buildData.push({
+        project: project,
+        filename: filename,
         locals: locals,
         saveTo: saveTo,
       });
     }
+  }
 
-    for (const cd of buildData) {
-      const fn = pug.compileFile(filename);
-      const html = fn({
-        posts: posts,
-        ...cd.locals,
-      });
+  for (const cd of buildData) {
+    const project = cd.project;
+    const filename = cd.filename;
+    const fn = pug.compileFile(filename);
+    const html = fn({
+      ...cd.locals,
+      posts: posts,
+    });
 
-      await fs.ensureFile(cd.saveTo);
-      await fs.writeFile(cd.saveTo, html);
+    await fs.ensureFile(cd.saveTo);
+    await fs.writeFile(cd.saveTo, html);
 
-      console.log(project, filename.replace(workingDir, ""), "->", cd.saveTo.replace(workingDir, ""));
-    }
+    console.log(project, filename.replace(workingDir, ""), "->", cd.saveTo.replace(workingDir, ""));
   }
 }
 

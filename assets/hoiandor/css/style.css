@@ -429,11 +429,13 @@ a:active {
   margin-left: 2em;
 }
 
-.toctext {
+.toctext,
+.posttext {
   margin-left: 0.5em;
 }
 
-.tocnumber {
+.tocnumber,
+.postnumber {
   color: var(--color-text-primary) !important;
 }
 
@@ -472,4 +474,15 @@ a:active {
   max-width: calc(100vw - 20px);
   font-size: 1em;
   line-height: 0;
+}
+
+.default-sidebar .post-widget .post {
+  min-height: unset;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+ul.post-inner {
+  list-style: decimal;
 }

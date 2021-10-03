@@ -6,16 +6,17 @@ section#tin-tuc.news-section.home-4.sec-pad.la-cloud(style="background: #f5f6f6"
       h2.color-primary!= posts01.description
       a.theme-btn-two(href=posts01.viewAllHref) Xem tất cả
     .row.clearfix
-      - for (const item of posts01.items)
-        .col-lg-4.col-md-6.col-sm-12.news-block
-          .news-block-one.wow.fadeInUp.animated.animated(data-wow-delay="00ms", data-wow-duration="1500ms")
-            .inner-box
-              figure.image-box
-                a(href=item.href)
-                  img(src=item.image.src, alt=item.image.alt)
-              .lower-content
-                h3.la-same-height-02(data-offset=35)
-                  a(href=item.href)!= item.title
-                p.la-same-height-03.la-text-primary(data-offset=0)!= item.description
-                .btn-box
-                  a.theme-btn-two(href=item.href) Xem chi tiết
+      - for (let i=0;i<Math.min(3, posts.length);i++)
+        - var item = posts[i];
+          .col-lg-4.col-md-6.col-sm-12.news-block
+            .news-block-one.wow.fadeInUp.animated.animated(data-wow-delay="00ms", data-wow-duration="1500ms")
+              .inner-box
+                figure.image-box
+                  a(href=item.url)
+                    img(src=item.cover, alt=item.title)
+                .lower-content
+                  h3.la-same-height-02(data-offset=35)
+                    a(href=item.url)!= item.title
+                  p.la-same-height-03.la-text-primary(data-offset=0)!= item.description
+                  .btn-box
+                    a.theme-btn-two(href=item.url) Xem chi tiết
