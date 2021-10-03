@@ -201,8 +201,6 @@ async function main() {
           });
         }
       }
-
-      console.log(JSON.stringify(posts, null, 2));
     } else {
       buildData.push({
         locals: locals,
