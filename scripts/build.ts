@@ -90,6 +90,7 @@ async function main() {
       const parsedFilename = parseFilename(filename);
       const dir = path.dirname(filename);
       const childrenDir = path.join(dir, parsedFilename.onlyName);
+      const projectDir = path.resolve("./dist/" + project);
 
       if (await pathExists(childrenDir)) {
         const children = await getAllFiles(childrenDir);
@@ -196,7 +197,7 @@ async function main() {
             title: title,
             description: description,
             cover: background,
-            url: saveTo,
+            url: saveTo.replace(projectDir, "").split("\\").join("/"),
           });
         }
       }

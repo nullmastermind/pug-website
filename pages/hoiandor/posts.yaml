@@ -23,3 +23,8 @@ contents:
         href:
   - name: Không gian biểu diễn ngoài trời
     href:
+posts:
+  - title: lorem ipsum title
+    description: lorem ipsum description
+    cover: lorem ipsum background
+    url: lorem ipsum url
