@@ -130,7 +130,7 @@ async function main() {
               $element.find("img").attr("alt", $caption.text().trim());
             }
           });
-          $("h1, h2, h3").each((index, element) => {
+          $("h2, h3").each((index, element) => {
             $(element).attr("id", slug($(element).text()));
           });
           $("figure").each((index, element) => {
@@ -143,6 +143,11 @@ async function main() {
           $("p").each((index, element) => {
             if (index === 0) {
               $(element).remove();
+            }
+          });
+          $("a").each((index, element) => {
+            if ($(element).attr("href").startsWith("http")) {
+              $(element).attr("rel", "noreferrer");
             }
           });
           $("article").replaceWith($("article").html());
