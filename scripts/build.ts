@@ -104,7 +104,7 @@ async function main() {
             .join("/");
           const category = path.dirname(child).replace(childrenDir, "").split(path.sep).pop();
           const html = await fs.readFile(child, "utf-8");
-          const $ = cheerio.load(html);
+          let $ = cheerio.load(html);
           const $article = $("article");
           const title = $("h1.page-title").html();
           const description = $("p").html();
@@ -151,6 +151,29 @@ async function main() {
             }
           });
           $("article").replaceWith($("article").html());
+          $ = cheerio.load($.html());
+
+          let contents = [];
+
+          $("h2, h3").each((index, element) => {
+            const name = slug($(element).text());
+
+            if ($(element).prop("tagName") === "H2") {
+              contents.push({
+                name: $(element).text().trim(),
+                href: "#" + name,
+              });
+            } else if ($(element).prop("tagName") === "H3" && contents.length > 0) {
+              if (!contents[contents.length - 1].children) {
+                contents[contents.length - 1].children = [];
+              }
+
+              contents[contents.length - 1].children.push({
+                name: $(element).text().trim(),
+                href: "#" + name,
+              });
+            }
+          });
 
           const content = $article.html();
           const saveTo = path.join(chunks.join(".pug"), categoryURL, path.basename(child)).replace(pagesDir, distDir);
@@ -165,6 +188,7 @@ async function main() {
               description,
               content,
               background,
+              contents,
             },
           });
         }
