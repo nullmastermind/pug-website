@@ -1,6 +1,6 @@
 import pug = require("pug");
 import path = require("path");
-import { getAllDirs, getAllFiles, parseFilename, relative } from "./utils/utils";
+import { getAllDirs, getAllFiles, parseDescription, parseFilename, relative } from "./utils/utils";
 import fs = require("fs-extra");
 import yaml = require("yaml");
 import { pathExists } from "fs-extra";
@@ -81,6 +81,12 @@ async function main() {
     const buildData = [];
 
     if (locals.template === "post") {
+      const posts: Array<{
+        title: string;
+        description: string;
+        url: string;
+        cover: string;
+      }> = [];
       const parsedFilename = parseFilename(filename);
       const dir = path.dirname(filename);
       const childrenDir = path.join(dir, parsedFilename.onlyName);
@@ -102,7 +108,7 @@ async function main() {
           let $ = cheerio.load(html);
           const $article = $("article");
           const title = $("h1.page-title").html();
-          const description = $("p").html();
+          const description = parseDescription($($("p").get(0)).text());
           const background = $("img").attr("src");
 
           $("p").addClass("color-text-primary la-text-justify");
@@ -186,8 +192,16 @@ async function main() {
               contents,
             },
           });
+          posts.push({
+            title: title,
+            description: description,
+            cover: background,
+            url: saveTo,
+          });
         }
       }
+
+      console.log(JSON.stringify(posts, null, 2));
     } else {
       buildData.push({
         locals: locals,

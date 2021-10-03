@@ -4,6 +4,7 @@ import tinify = require("tinify");
 import _ = require("lodash");
 import md5 = require("md5");
 import { ensureDir } from "fs-extra";
+import { max } from "lodash";
 
 export async function getAllFiles(dir: string): Promise<Array<string>> {
   let result: Array<string> = [];
@@ -90,4 +91,22 @@ export function relative(filename: string): string {
 
 export function fixedFloat(n: any, fractionDigits: number = 2) {
   return parseFloat(parseFloat(n).toFixed(fractionDigits));
+}
+
+export function parseDescription(baseDesc: string, maxLength = 160) {
+  baseDesc = baseDesc.trim().replace(/\n/g, " ");
+
+  while (true) {
+    if (baseDesc.includes("  ")) {
+      baseDesc = baseDesc.replace("  ", " ");
+    } else {
+      break;
+    }
+  }
+
+  if (baseDesc.length > maxLength) {
+    baseDesc = baseDesc.substr(0, maxLength) + "...";
+  }
+
+  return baseDesc;
 }

@@ -7,7 +7,7 @@
     "hello-ts": "ts-node scripts/hello.ts",
     "html-to-pug": "ts-node scripts/htmlToPug.ts",
     "build": "ts-node scripts/build.ts",
-    "build-watch": "chokidar \"./scripts/build.ts\" \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*\" --initial -c \"npm run build\"",
+    "build-watch": "chokidar \"./scripts/build.ts\" \"./scripts/utils/**/*\" \"./blocks/**/*\" \"./layouts/**/*\" \"./pages/**/*\" \"./assets/**/*\" --initial -c \"npm run build\"",
     "deploy": "ts-node scripts/deploy.ts",
     "vercel": "npm run build && npm run deploy",
     "static-server-dist": "static-server ./dist/hoiandor",
