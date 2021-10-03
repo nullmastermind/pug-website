@@ -110,7 +110,11 @@ async function main() {
           const description = $(".page-body p:first-child").html();
           const background = $("img").attr("src");
 
-          $("figure:first-child").remove();
+          $("figure").each((index, element) => {
+            if (index === 0) {
+              $(element).remove();
+            }
+          });
           $("h1.page-title").remove();
           $(".page-body p:first-child").remove();
           $("p").addClass("color-text-primary la-text-justify");
