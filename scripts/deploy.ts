@@ -94,10 +94,10 @@ async function pre() {
     const dirname = path.dirname(copies[file]);
     let content = await readFile(file, "utf-8");
 
-    content = await processorBackgroundImages(dirname, content, config);
+    content = await processorBackgroundImages(path.join(project.host, "public"), content, config);
 
     const $ = load(content);
-    await processorImgTags(dirname, $);
+    await processorImgTags(path.join(project.host, "public"), $);
 
     $("script[src]").each((index, element) => {
       const $element = $(element);
@@ -125,7 +125,7 @@ async function pre() {
       const dirname = path.dirname(copies[file]);
       let content = await readFile(file, "utf-8");
 
-      content = await processorBackgroundImages(dirname, content, config);
+      content = await processorBackgroundImages(path.join(project.host, "public"), content, config);
 
       await writeFile(file, content);
     }
