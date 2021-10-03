@@ -78,12 +78,7 @@ async function main() {
       };
     }
 
-    const compileData = [
-      {
-        locals: locals,
-        saveTo: saveTo,
-      },
-    ];
+    const buildData = [];
 
     if (locals.template === "post") {
       const parsedFilename = parseFilename(filename);
@@ -178,7 +173,7 @@ async function main() {
           const content = $article.html();
           const saveTo = path.join(chunks.join(".pug"), categoryURL, path.basename(child)).replace(pagesDir, distDir);
 
-          compileData.push({
+          buildData.push({
             saveTo: saveTo,
             locals: {
               ...locals,
@@ -193,9 +188,14 @@ async function main() {
           });
         }
       }
+    } else {
+      buildData.push({
+        locals: locals,
+        saveTo: saveTo,
+      });
     }
 
-    for (const cd of compileData) {
+    for (const cd of buildData) {
       const fn = pug.compileFile(filename);
       const html = fn(cd.locals);
 
