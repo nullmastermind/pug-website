@@ -106,8 +106,37 @@ async function main() {
           const html = await fs.readFile(child, "utf-8");
           const $ = cheerio.load(html);
           const $article = $("article");
-          const title = $("header h1").html();
+          const title = $("h1.page-title").html();
           const description = $(".page-body p:first-child").html();
+          const background = $("figure:first-child").find("img").attr("src");
+
+          $("figure:first-child").remove();
+          $("h1.page-title").remove();
+          $(".page-body p:first-child").remove();
+          $("p").addClass("color-text-primary la-text-justify");
+          $("figcaption").addClass("la-figcaption");
+          $("figure").addClass("la-figure");
+          $("h2").addClass("la-post-h2");
+          $("h3").addClass("text-pretty");
+          $("img").addClass("allow-viewer");
+          $("li").addClass("la-list-style");
+          $("a").each((index, element) => {
+            if ($(element).find("img")) {
+              $(element).replaceWith($(element).find("img"));
+            }
+          });
+          $("figure").each((index, element) => {
+            const $element = $(element);
+            const $caption = $element.find("figcaption");
+
+            if ($caption.length) {
+              $element.find("img").attr("alt", $caption.text().trim());
+            }
+          });
+          $("h1, h2, h3").each((index, element) => {
+            $(element).attr("id", slug($(element).text()));
+          });
+
           const content = $article.html();
           const saveTo = path.join(chunks.join(".pug"), categoryURL, path.basename(child)).replace(pagesDir, distDir);
 
@@ -116,10 +145,11 @@ async function main() {
             locals: {
               ...locals,
               category,
-              categoryURL,
+              categoryURL: "/" + path.basename(childrenDir) + categoryURL,
               title,
               description,
               content,
+              background,
             },
           });
         }

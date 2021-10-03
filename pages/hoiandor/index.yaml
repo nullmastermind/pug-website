@@ -3,7 +3,7 @@ preloader:
   text: Hoian d’Or
 header:
   logo:
-    src: assets/images/logo-hoian-dor.png
+    src: /assets/images/logo-hoian-dor.png
     alt: Logo Hoian d’Or
     href: /index.html
   menu:
@@ -41,7 +41,7 @@ header:
     address: Con Bap, Cam Nam Ward Hoi An, Quang Nam
     company: ConBap Ecological Tourist Co. LTD
 banner:
-  background: assets/images/nh-ban-m-2.jpg
+  background: /assets/images/nh-ban-m-2.jpg
   title: Hoian d’Or
   description: Di sản vượt thời gian <br/> <br/> Được kiến tạo trên một vùng đất bồi lắng phù sa cách trung tâm phố cổ Hội An 800m, <strong>Hoian d’Or</strong> là nơi đất vượng giao hòa, tôn tạo giá trị riêng, khơi lên chất sống mới của miền di sản, là mảnh ghép cuối cùng tạo nên một Hội An trọn vẹn.
 about01:
@@ -52,12 +52,12 @@ about01:
       href: https://www.youtube.com/watch?v=wIDjvxSLyIg
       caption: Video về Hoian&nbsp;d'Or
     image1:
-      src: assets/images/86af54abce8b38d5619a-cropped.png
+      src: /assets/images/86af54abce8b38d5619a-cropped.png
       alt: Ảnh dự án Hoian d’Or 1
     image2:
-      src: assets/images/logo-hoian-dor-bg.png
+      src: /assets/images/logo-hoian-dor-bg.png
       alt: Ảnh dự án Hoian d’Or 2
-    decoShape: assets/images/shape1.png
+    decoShape: /assets/images/shape1.png
     details:
       - primary: "Tên Pháp lý/ Thương mại"
         secondary: Khu du lịch sinh thái Cồn Bắp/ <strong>Hoian d'Or</strong>
@@ -78,21 +78,21 @@ about2:
   description: Vị trí “Vàng” <br/ > Khởi ngàn “Tài lộc“
   info:
     content: Sở hữu vị trí vàng liền kề phố cổ Hội An, được bao quanh bởi sông Thu Bồn, <strong>Hoian d’Or</strong> là quần thể nghỉ dưỡng sinh thái và trải nghiệm văn hoá duy nhất tại trung tâm của miền di sản. Nơi đây sẽ là chiếc cầu nối giữa quá khứ vàng son và hiện tại tự hào để cùng hướng đến một tương lai khai mở.
-    decoShape: assets/images/shape1.png
+    decoShape: /assets/images/shape1.png
   image1:
-    src: assets/images/Sodo-vitri-04-04-1536x743.png
+    src: /assets/images/Sodo-vitri-04-04-1536x743.png
     alt: Vị trí Hoian d’Or
   image2:
-    src: assets/images/ketnoivung-03.png
+    src: /assets/images/ketnoivung-03.png
     alt: Vị trí Hoian d’Or 2
-  decoShape: assets/images/shape1.png
+  decoShape: /assets/images/shape1.png
   ground:
     title: Mặt bằng
     description: Hoian d’Or
     info:
       content: "<strong>Hoian d’Or</strong> được quy hoạch trên tổng diện tích <strong>24.5ha</strong>, 3 mặt giáp sông và phía Bắc giáp khu dân cư, đạt được những hiệu cửa và điểm nhìn đô thị. Hơn <strong>80%</strong> diện tích được bao bọc bởi sông Thu Bồn, cây xanh, cảnh quan thiên.<br/><br/>Với sự quy hoạch độc đáo nhằm mang đến sự cân đối và hài hòa trong từng chuẩn mực sống, <strong>Hoian d’Or</strong> là sự kết hợp đầy uyển chuyển của 3 tổng thể kiến trúc với 3 tên gọi đã in dấu trong tiềm thức bao đời. Đó là: <strong>Phố</strong> – <strong>Làng</strong> – <strong>Vườn</strong>.<br/><br/>Đến với <strong>“Phố”</strong>, bạn sẽ được đắm mình trong một không gian nhộn nhịp mua sắm của những khu phố shophouse lấp lánh ánh đèn.<br/><br/>Đến với <strong>“Làng”</strong>, bạn sẽ tận hưởng một không gian nghỉ dưỡng thanh bình tại những khu biệt thự view sông, luôn mở đón những hương gió phù sa ngọt lành.<br/><br/>Đến với <strong>“Vườn”</strong>, bạn sẽ được được trải nghiệm những dịch vụ chăm sóc sức khỏe đẳng cấp quốc tế với liệu trình hoàn toàn từ thiên nhiên."
       deco:
-        src: assets/images/Minh-hoa-1.png
+        src: /assets/images/Minh-hoa-1.png
         alt: Ảnh minh họa Hoian d’Or
       more:
         - count: 202
@@ -108,10 +108,10 @@ about2:
           digits: Căn
           variant: Boutique
     images:
-      - src: assets/images/mat-bang.jpg
+      - src: /assets/images/mat-bang.jpg
         alt: Mặt bằng Hoian d’Or
         caption: Mặt bằng Hoian d’Or
-      - src: assets/images/ban-do-quy-hoach.jpg
+      - src: /assets/images/ban-do-quy-hoach.jpg
         alt: Bản đồ quy hoạch Hoian d’Or
         caption: Bản đồ quy hoạch Hoian d’Or
 about03:
@@ -123,55 +123,55 @@ about03:
       description: Không gian văn hoá như một sợi dây kết nối các giá trị trường tồn của mảnh đất Hội An để thế hệ sau có thể tiếp nối và phát huy tinh hoa di sản.
       href: /
       image:
-        src: assets/images/Khong-gian-van-hoa-05-05-cropped.png
+        src: /assets/images/Khong-gian-van-hoa-05-05-cropped.png
         alt: Không gian văn hoá Hoi an d'Or
     - title: Thương cảng <strong>Hoi an d'Or</strong>
       subTitle: Thương cảng “Vàng son“
       description: Tái hiện lại một hình bóng Hội An trên bến dưới thuyền sầm uất một thời. Kết nối với Quảng trường cộng hưởng, nơi đây sẽ là điểm kết nối con đường tơ lụa, mở ra một thế giới huyền ảo cùng hòa âm ánh sáng.
       href: /
       image:
-        src: assets/images/Thuong-cang-cropped.png
+        src: /assets/images/Thuong-cang-cropped.png
         alt: Thương cảng Hoi an d'Or
     - title: Khu nông nghiệp sinh thái <strong>Hoi an d'Or</strong>
       subTitle: Chạm vào “Thiên nhiên“
       description: Khu nông nghiệp sinh thái phía Đông là nơi để bạn và gia đình hoà tâm hồn cùng thiên nhiên, tận hưởng những trải nghiệm sinh thái đầy độc đáo và mới lạ.
       href: /
       image:
-        src: assets/images/Cong-vien-sinh-thai-cropped.png
+        src: /assets/images/Cong-vien-sinh-thai-cropped.png
         alt: Khu nông nghiệp sinh thái Hoi an d'Or
-  background: assets/images/Anh-tong-quan-Hoian-dor-1-1536x845.png
-  decoShape: assets/images/shape1.png
+  background: /assets/images/Anh-tong-quan-Hoian-dor-1-1536x845.png
+  decoShape: /assets/images/shape1.png
 about04:
   title: Hoi an d'Or
   description: Cơ cấu sản phẩm
   meta: Tập trung vào việc đem lại <strong>trải nghiệm tốt nhất</strong> cho du khách nhờ tiêu chuẩn <strong>nghỉ dưỡng 5 sao</strong> cùng hệ thống <strong>100+ tiện ích</strong> nội khu <strong>“All In One”</strong> mới lạ, độc đáo, theo đó mỗi phân khu sẽ có đa dạng những tiện ích khách nhau, <strong>Hoian&nbsp;d’Or</strong> sẽ tạo nên một cuộc sống <strong>khởi sinh phú quý</strong> trên mảnh đất di sản.
   items:
     - image:
-        src: assets/images/shophouse-hoian-dor-cropped.jpg
+        src: /assets/images/shophouse-hoian-dor-cropped.jpg
         alt: Shophouse – Maison De ville Hoian d’Or
       caption: Shophouse
       href: /
     - image:
-        src: assets/images/Villa2-02-cropped.jpg
+        src: /assets/images/Villa2-02-cropped.jpg
         alt: Villa Hoian d’Or
       caption: Villa
       href: /
     - image:
-        src: assets/images/khach-san-hoian-dor-cropped.jpg
+        src: /assets/images/khach-san-hoian-dor-cropped.jpg
         alt: Khách sạn 5 sao Hoian d’Or
       caption: Khách sạn 5 sao
       href: /
     - image:
-        src: assets/images/boutique-hoian-dor-cropped.jpg
+        src: /assets/images/boutique-hoian-dor-cropped.jpg
         alt: Boutique Hoian d’Or
       caption: Boutique
       href: /
     - image:
-        src: assets/images/Condotel1-02-cropped.jpg
+        src: /assets/images/Condotel1-02-cropped.jpg
         alt: Condotel Hoian d’Or
       caption: Condotel
       href: /
-  decoShape: assets/images/shape1.png
+  decoShape: /assets/images/shape1.png
 posts01:
   title: Hoian d’Or
   description: Tin tức nổi bật
@@ -181,19 +181,19 @@ posts01:
       description: Hai năm chịu ảnh hưởng nặng nề từ đại dịch Covid-19, ngành du lịch đã [...]
       href: /
       image:
-        src: assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
+        src: /assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
         alt: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
     - title: Cố nhạc sĩ Trịnh Công Sơn – Nguồn cảm hứng bất tận cùng Hoian d’Or lan tỏa giá trị Vàng son miền di sản
       description: Hai năm chịu ảnh hưởng nặng nề từ đại dịch Covid-19, ngành du lịch đã [...]
       href: /
       image:
-        src: assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
+        src: /assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
         alt: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
     - title: Chuẩn bị kích cầu du lịch, mở rộng đón khách quốc tế
       description: Hai năm chịu ảnh hưởng nặng nề từ đại dịch Covid-19, ngành du lịch đã [...]
       href: /
       image:
-        src: assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
+        src: /assets/images/hoi-an-dorbai-pr1ha-hoi-sinh-sau-dai-dichduyet-bao1809docx-1632105019176-cropped.jpg
         alt: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
 foot:
   logo:

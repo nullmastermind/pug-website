@@ -2,21 +2,23 @@ extends ../../layouts/hoiandor/home
 
 block body
   include ../../blocks/hoiandor/header
-  section.page-title.centred(style="background-image: url(assets/images/background/page-title-5.jpg)")
+  section.page-title(style=`background-image: url(${background})`)
     .auto-container
       .content-box(style="margin-top: 100px")
-        h1!= title
-        p!= description
-  section.sidebar-page-container
+        .row
+          .col-lg-8.col-md-12.col-sm-12.content-side
+            h1!= title
+            p.la-text-justify!= description
+  section.sidebar-page-container(style="padding-top: 0")
     .auto-container
       .row.clearfix
         .col-lg-8.col-md-12.col-sm-12.content-side
           .blog-details-content
-            .news-block-one
-              .inner-box
-                .lower-content
-                  .category
-                    a(href=categoryURL)!= category
+            //.news-block-one
+            //  .inner-box
+            //    .lower-content
+            //      .category
+            //        a(href=categoryURL)!= category
             .text!= content
   include ../../blocks/hoiandor/contact01
   include ../../blocks/hoiandor/foot

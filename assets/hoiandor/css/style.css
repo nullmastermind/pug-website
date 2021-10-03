@@ -395,3 +395,29 @@ a:active {
 .place-block-one .inner-box .image-box {
   margin-bottom: 0;
 }
+
+.la-figcaption {
+  opacity: 0.8;
+  padding: 0.25em;
+}
+
+.la-figure {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.la-figure img {
+  border-radius: 0.5em;
+}
+
+.la-post-h2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.la-list-style {
+  list-style: unset;
+}
