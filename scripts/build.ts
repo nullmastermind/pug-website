@@ -1,8 +1,11 @@
 import pug = require("pug");
 import path = require("path");
-import { getAllDirs, getAllFiles } from "./utils/utils";
+import { getAllDirs, getAllFiles, parseFilename, relative } from "./utils/utils";
 import fs = require("fs-extra");
 import yaml = require("yaml");
+import { pathExists } from "fs-extra";
+import cheerio = require("cheerio");
+import slug = require("slug");
 
 async function main() {
   const workingDir = path.join(__dirname, "../.");
@@ -55,28 +58,83 @@ async function main() {
     }
 
     if (Array.isArray(locals.includes)) {
+      let includeLocals = {};
+
       for (const include of locals.includes) {
         const dir = path.dirname(dataFile);
         const inc = path.join(dir, include);
 
         if (await fs.pathExists(inc)) {
-          locals = {
+          includeLocals = {
+            ...includeLocals,
             ...yaml.parse(await fs.readFile(inc, "utf-8")),
-            ...locals,
           };
+        }
+      }
+
+      locals = {
+        ...includeLocals,
+        ...locals,
+      };
+    }
+
+    const compileData = [
+      {
+        locals: locals,
+        saveTo: saveTo,
+      },
+    ];
+
+    if (locals.template === "post") {
+      const parsedFilename = parseFilename(filename);
+      const dir = path.dirname(filename);
+      const childrenDir = path.join(dir, parsedFilename.onlyName);
+
+      if (await pathExists(childrenDir)) {
+        const children = await getAllFiles(childrenDir);
+
+        for (const child of children) {
+          if (!child.endsWith(".html")) continue;
+
+          const categoryURL = path
+            .dirname(child)
+            .replace(childrenDir, "")
+            .split(path.sep)
+            .map((v) => slug(v))
+            .join("/");
+          const category = path.dirname(child).replace(childrenDir, "").split(path.sep).pop();
+          const html = await fs.readFile(child, "utf-8");
+          const $ = cheerio.load(html);
+          const $article = $("article");
+          const title = $("header h1").html();
+          const description = $(".page-body p:first-child").html();
+          const content = $article.html();
+          const saveTo = path.join(chunks.join(".pug"), categoryURL, path.basename(child)).replace(pagesDir, distDir);
+
+          compileData.push({
+            saveTo: saveTo,
+            locals: {
+              ...locals,
+              category,
+              categoryURL,
+              title,
+              description,
+              content,
+            },
+          });
         }
       }
     }
 
-    const fn = pug.compileFile(filename);
-    const html = fn({
-      ...locals,
-    });
+    for (const cd of compileData) {
+      const fn = pug.compileFile(filename);
+      const html = fn(cd.locals);
 
-    await fs.ensureFile(saveTo);
-    await fs.writeFile(saveTo, html);
+      await fs.ensureFile(cd.saveTo);
+      await fs.writeFile(cd.saveTo, html);
 
-    console.log(project, filename.replace(workingDir, ""), "->", saveTo.replace(workingDir, ""));
+      console.log(project, filename.replace(workingDir, ""), "->", cd.saveTo.replace(workingDir, ""));
+    }
   }
 }
 

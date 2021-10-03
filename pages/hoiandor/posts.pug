@@ -5,5 +5,18 @@ block body
   section.page-title.centred(style="background-image: url(assets/images/background/page-title-5.jpg)")
     .auto-container
       .content-box(style="margin-top: 100px")
-        h1 Blog Details
-        p Discover your next great adventure
+        h1!= title
+        p!= description
+  section.sidebar-page-container
+    .auto-container
+      .row.clearfix
+        .col-lg-8.col-md-12.col-sm-12.content-side
+          .blog-details-content
+            .news-block-one
+              .inner-box
+                .lower-content
+                  .category
+                    a(href=categoryURL)!= category
+            .text!= content
+  include ../../blocks/hoiandor/contact01
+  include ../../blocks/hoiandor/foot

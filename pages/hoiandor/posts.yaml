@@ -1,4 +1,9 @@
-template: md
+template: post
 includes:
   - index.yaml
 title: Hoian d’Or - Chính thức chủ đầu tư
+description: lorem ipsum description
+content: lorem ipsum content
+category: Category name
+categoryURL: /posts/category-name.html
+date: 12/08/1996
