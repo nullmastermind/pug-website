@@ -24,7 +24,7 @@ async function main() {
       const project = path.dirname(filename).split(path.sep).pop();
 
       for (const asset of assets) {
-        if (!(await fs.lstat(asset)).isDirectory()) return;
+        if (!(await fs.lstat(asset)).isDirectory()) continue;
 
         if (asset.split(path.sep).pop() === project) {
           const parent = path.dirname(asset);
@@ -40,7 +40,7 @@ async function main() {
       processed[project] = true;
     }
 
-    if (!filename.endsWith(".pug")) return;
+    if (!filename.endsWith(".pug")) continue;
 
     const chunks: Array<string> = filename.split(".pug");
 
@@ -48,14 +48,30 @@ async function main() {
 
     const saveTo = (chunks.join(".pug") + ".html").replace(pagesDir, distDir);
     const dataFile = chunks.join(".pug") + ".yaml";
-    let locals = {};
+    let locals: { [key: string]: any } = {};
 
     if (fs.existsSync(dataFile)) {
       locals = yaml.parse(await fs.readFile(dataFile, "utf-8"));
     }
 
+    if (Array.isArray(locals.includes)) {
+      for (const include of locals.includes) {
+        const dir = path.dirname(dataFile);
+        const inc = path.join(dir, include);
+
+        if (await fs.pathExists(inc)) {
+          locals = {
+            ...yaml.parse(await fs.readFile(inc, "utf-8")),
+            ...locals,
+          };
+        }
+      }
+    }
+
     const fn = pug.compileFile(filename);
-    const html = fn(locals);
+    const html = fn({
+      ...locals,
+    });
 
     await fs.ensureFile(saveTo);
     await fs.writeFile(saveTo, html);

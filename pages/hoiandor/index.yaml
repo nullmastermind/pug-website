@@ -10,30 +10,30 @@ header:
     - label: Trang chủ
       href: /
     - label: Tổng quan
-      href: "#tong-quan"
+      href: "/#tong-quan"
     - label: Vị trí
-      href: "#vi-tri"
+      href: "/#vi-tri"
     - label: Mặt bằng
-      href: "#mat-bang"
+      href: "/#mat-bang"
     - label: Tiện ích
-      href: "#tien-ich"
+      href: "/#tien-ich"
     - label: Cơ cấu
-      href: "#co-cau"
+      href: "/#co-cau"
       children:
         - label: Shophouse
-          href: "#co-cau"
+          href: "/#co-cau"
         - label: Villa
-          href: "#co-cau"
+          href: "/#co-cau"
         - label: Khách sạn 5 sao
-          href: "#co-cau"
+          href: "/#co-cau"
         - label: Boutique
-          href: "#co-cau"
+          href: "/#co-cau"
         - label: Condotel
-          href: "#co-cau"
+          href: "/#co-cau"
     - label: Tin tức
-      href: "#tin-tuc"
+      href: "/#tin-tuc"
     - label: Liên hệ
-      href: "#lien-he"
+      href: "/#lien-he"
   contact:
     facebook: https://www.facebook.com/anh.lan.779205
     email: la@hoiandor.org
