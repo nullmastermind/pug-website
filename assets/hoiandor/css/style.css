@@ -421,3 +421,33 @@ a:active {
 .la-list-style {
   list-style: unset;
 }
+
+.toclevel-1 ul,
+.toclevel-2 ul {
+  margin-left: 2em;
+}
+
+.toctext {
+  margin-left: 0.5em;
+}
+
+.tocnumber {
+  color: var(--color-text-primary) !important;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.toc {
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+  padding: 1em;
+  margin-top: 4em;
+  display: inline-block;
+}
+
+#mw-toc-heading {
+  font-size: 100%;
+}

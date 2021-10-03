@@ -7,3 +7,19 @@ content: lorem ipsum content
 category: Category name
 categoryURL: /posts/category-name.html
 date: 12/08/1996
+contents:
+  - name: Nối miền di sản
+    href: "#noi-mien-di-san"
+  - name: Các không gian trưng bày
+    href:
+    children:
+      - name: Không gian trưng bày gốm Chu Đậu
+        href:
+      - name: Không gian văn hoá Hội An
+        href:
+      - name: Không gian trưng bày nhạc cụ dân tộc
+        href:
+      - name: Không gian hình ảnh về cố nhạc sĩ Trịnh Công Sơn
+        href:
+  - name: Không gian biểu diễn ngoài trời
+    href:
