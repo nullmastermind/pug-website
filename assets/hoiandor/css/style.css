@@ -411,8 +411,8 @@ a:active {
 }
 
 .la-post-h2 {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   font-family: var(--secondary-font);
   color: var(--primary-color);
   font-weight: bold;
@@ -452,4 +452,24 @@ a:active {
 
 #mw-toc-heading {
   font-size: 100%;
+}
+
+.la-sticky-love {
+  margin-top: 0;
+  margin-bottom: 0;
+  background: #ffffff;
+  padding: 0 1em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  z-index: 10;
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.08);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: calc(100vw - 20px);
+  font-size: 1em;
+  line-height: 0;
 }

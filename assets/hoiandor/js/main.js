@@ -20,6 +20,7 @@ jQuery.event.special.mousewheel = {
 };
 
 $(document).ready(function () {
+  new Sticky(".la-sticky");
   $(".share-facebook").attr(
     "href",
     `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}&t=${document.title}`

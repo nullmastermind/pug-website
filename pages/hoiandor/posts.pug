@@ -39,7 +39,7 @@ block body
               //    .lower-content
               //      .category
               //        a(href=categoryURL)!= category
-              .text!= content
+              .text(data-sticky-container)!= content
               .post-share-option.clearfix
                 .text.pull-left
                   h3.text-pretty.color-primary Chia sẻ bài viết:
@@ -58,5 +58,30 @@ block body
                       rel="noreferrer"
                     )
                       i.fab.fa-twitter
+          .col-lg-4.col-md-12.col-sm-12.sidebar-side(data-sticky-container)
+            .blog-sidebar.default-sidebar.la-see-also
+              .sidebar-widget.post-widget.la-sticky(data-sticky-wrap="true", data-sticky-for="992", data-margin-top="120")
+                .widget-title(style="margin-bottom: 3em")
+                  h2#see-also.text-pretty.color-primary.font-weight-bold Xem thêm
+                .post-inner
+                  .post
+                    figure.post-thumb
+                      a(href="blog-details.html")
+                        img(src="assets/images/news/post-1.png", alt)
+                    h4
+                      a(href="blog-details.html") Consequntur eos magni dolore.
+                    //p!= description
+                  .post
+                    figure.post-thumb
+                      a(href="blog-details.html")
+                        img(src="assets/images/news/post-2.png", alt)
+                    h4
+                      a(href="blog-details.html") Magni dolore qui ratione seque.
+                  .post
+                    figure.post-thumb
+                      a(href="blog-details.html")
+                        img(src="assets/images/news/post-3.png", alt)
+                    h4
+                      a(href="blog-details.html") Ratone magni sed dolore eos.
   include ../../blocks/hoiandor/contact01
   include ../../blocks/hoiandor/foot

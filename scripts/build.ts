@@ -81,14 +81,14 @@ async function main() {
     }
 
     const buildData = [];
+    const posts: Array<{
+      title: string;
+      description: string;
+      url: string;
+      cover: string;
+    }> = [];
 
     if (locals.template === "post") {
-      const posts: Array<{
-        title: string;
-        description: string;
-        url: string;
-        cover: string;
-      }> = [];
       const parsedFilename = parseFilename(filename);
       const dir = path.dirname(filename);
       const childrenDir = path.join(dir, parsedFilename.onlyName);
@@ -204,6 +204,10 @@ async function main() {
           $("h2, h3").each((index, element) => {
             const name = slug($(element).text());
 
+            $(element).addClass("la-sticky");
+            $(element).attr("data-sticky-wrap", "true");
+            $(element).attr("data-sticky-class", "la-sticky-love");
+
             if ($(element).prop("tagName") === "H2") {
               contents.push({
                 name: $(element).text().trim(),
@@ -234,7 +238,7 @@ async function main() {
               description,
               content,
               background,
-              contents,
+              contents: [...contents, { name: "Xem thêm", href: "#see-also" }],
             },
           });
           posts.push({
@@ -254,7 +258,10 @@ async function main() {
 
     for (const cd of buildData) {
       const fn = pug.compileFile(filename);
-      const html = fn(cd.locals);
+      const html = fn({
+        posts: posts,
+        ...cd.locals,
+      });
 
       await fs.ensureFile(cd.saveTo);
       await fs.writeFile(cd.saveTo, html);
