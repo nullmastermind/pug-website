@@ -107,7 +107,7 @@ async function main() {
           const $ = cheerio.load(html);
           const $article = $("article");
           const title = $("h1.page-title").html();
-          const description = $(".page-body p:first-child").html();
+          const description = $("p").html();
           const background = $("img").attr("src");
 
           $("figure").each((index, element) => {
@@ -116,7 +116,12 @@ async function main() {
             }
           });
           $("h1.page-title").remove();
-          $(".page-body p:first-child").remove();
+          $("header").remove();
+          $("p").each((index, element) => {
+            if (index === 0) {
+              $(element).remove();
+            }
+          });
           $("p").addClass("color-text-primary la-text-justify");
           $("figcaption").addClass("la-figcaption");
           $("figure").addClass("la-figure");
@@ -124,8 +129,9 @@ async function main() {
           $("h3").addClass("text-pretty");
           $("img").addClass("allow-viewer");
           $("li").addClass("la-list-style");
+          $("article").replaceWith($("article").html());
           $("a").each((index, element) => {
-            if ($(element).find("img")) {
+            if ($(element).find("img").length === 1) {
               $(element).replaceWith($(element).find("img"));
             }
           });
@@ -134,6 +140,8 @@ async function main() {
             const $caption = $element.find("figcaption");
 
             if ($caption.length) {
+              console.log($caption.text().trim());
+
               $element.find("img").attr("alt", $caption.text().trim());
             }
           });
