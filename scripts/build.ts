@@ -108,7 +108,7 @@ async function main() {
           const $article = $("article");
           const title = $("h1.page-title").html();
           const description = $(".page-body p:first-child").html();
-          const background = $("figure:first-child").find("img").attr("src");
+          const background = $("img").attr("src");
 
           $("figure:first-child").remove();
           $("h1.page-title").remove();
