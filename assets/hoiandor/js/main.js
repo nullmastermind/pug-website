@@ -20,6 +20,15 @@ jQuery.event.special.mousewheel = {
 };
 
 $(document).ready(function () {
+  $(".share-facebook").attr(
+    "href",
+    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}&t=${document.title}`
+  );
+  $(".share-twitter").attr(
+    "href",
+    `https://twitter.com/share?url=${encodeURIComponent(location.href)}&via=hoiandor&text=${document.title}`
+  );
+
   _autoGallery();
   new Viewer(document.getElementById("images-viewer"), {
     filter(image) {

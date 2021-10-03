@@ -3,14 +3,15 @@ extends ../../layouts/hoiandor/home
 block body
   include ../../blocks/hoiandor/header
   article#content
-    section.page-title(style=`background-image: url(${background})`)
+    section.page-title.la-cloud(style=`background-image: url(${background})`)
+      .pattern-layer.la-no-animation(style="background-image: url(/assets/themes/assets/images/shape/shape-20.png)")
       .auto-container
         .content-box(style="margin-top: 100px")
           .row
             header.col-lg-8.col-md-12.col-sm-12.content-side
               h1#firstHeading!= title
               p.la-text-justify!= description
-    section.sidebar-page-container(style="padding-top: 0")
+    section.sidebar-page-container(style="padding-top: 0; padding-bottom: 0")
       .auto-container
         .row.clearfix
           .col-lg-8.col-md-12.col-sm-12.content-side
@@ -39,5 +40,23 @@ block body
               //      .category
               //        a(href=categoryURL)!= category
               .text!= content
+              .post-share-option.clearfix
+                .text.pull-left
+                  h3.text-pretty.color-primary Chia sẻ bài viết:
+                ul.social-links.pull-right.clearfix(style="margin-bottom: 0")
+                  li
+                    a.share-facebook(
+                      target="_blank",
+                      onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;",
+                      rel="noreferrer"
+                    )
+                      i.fab.fa-facebook-f
+                  li
+                    a.share-twitter(
+                      target="_blank",
+                      onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;",
+                      rel="noreferrer"
+                    )
+                      i.fab.fa-twitter
   include ../../blocks/hoiandor/contact01
   include ../../blocks/hoiandor/foot

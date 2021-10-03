@@ -420,6 +420,8 @@ a:active {
 
 .la-list-style {
   list-style: unset;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .toclevel-1 ul,
