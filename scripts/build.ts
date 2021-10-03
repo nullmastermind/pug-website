@@ -200,6 +200,7 @@ async function main() {
           $ = cheerio.load($.html());
 
           let contents = [];
+          let lastContentHref = "";
 
           $("h2, h3").each((index, element) => {
             const name = slug($(element).text());
@@ -213,6 +214,7 @@ async function main() {
                 name: $(element).text().trim(),
                 href: "#" + name,
               });
+              lastContentHref = "#" + name;
             } else if ($(element).prop("tagName") === "H3" && contents.length > 0) {
               if (!contents[contents.length - 1].children) {
                 contents[contents.length - 1].children = [];
@@ -222,7 +224,10 @@ async function main() {
                 name: $(element).text().trim(),
                 href: "#" + name,
               });
+              lastContentHref = "#" + name;
             }
+
+            $(element).attr("data-last-content-href", lastContentHref);
           });
 
           const content = $("article").html();
