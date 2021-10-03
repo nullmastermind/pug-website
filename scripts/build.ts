@@ -110,6 +110,29 @@ async function main() {
           const description = $("p").html();
           const background = $("img").attr("src");
 
+          $("p").addClass("color-text-primary la-text-justify");
+          $("figcaption").addClass("la-figcaption");
+          $("figure").addClass("la-figure");
+          $("h2").addClass("la-post-h2");
+          $("h3").addClass("text-pretty");
+          $("img").addClass("allow-viewer");
+          $("li").addClass("la-list-style");
+          $("a").each((index, element) => {
+            if ($(element).find("img").length === 1) {
+              $(element).replaceWith($(element).find("img"));
+            }
+          });
+          $("figure").each((index, element) => {
+            const $element = $(element);
+            const $caption = $element.find("figcaption");
+
+            if ($caption.length) {
+              $element.find("img").attr("alt", $caption.text().trim());
+            }
+          });
+          $("h1, h2, h3").each((index, element) => {
+            $(element).attr("id", slug($(element).text()));
+          });
           $("figure").each((index, element) => {
             if (index === 0) {
               $(element).remove();
@@ -122,32 +145,7 @@ async function main() {
               $(element).remove();
             }
           });
-          $("p").addClass("color-text-primary la-text-justify");
-          $("figcaption").addClass("la-figcaption");
-          $("figure").addClass("la-figure");
-          $("h2").addClass("la-post-h2");
-          $("h3").addClass("text-pretty");
-          $("img").addClass("allow-viewer");
-          $("li").addClass("la-list-style");
           $("article").replaceWith($("article").html());
-          $("a").each((index, element) => {
-            if ($(element).find("img").length === 1) {
-              $(element).replaceWith($(element).find("img"));
-            }
-          });
-          $("figure").each((index, element) => {
-            const $element = $(element);
-            const $caption = $element.find("figcaption");
-
-            if ($caption.length) {
-              console.log($caption.text().trim());
-
-              $element.find("img").attr("alt", $caption.text().trim());
-            }
-          });
-          $("h1, h2, h3").each((index, element) => {
-            $(element).attr("id", slug($(element).text()));
-          });
 
           const content = $article.html();
           const saveTo = path.join(chunks.join(".pug"), categoryURL, path.basename(child)).replace(pagesDir, distDir);
