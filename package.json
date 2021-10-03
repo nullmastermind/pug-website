@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^1.16.6",
+    "@types/axios": "^0.14.0",
     "@types/cheerio": "^0.22.30",
     "@types/clean-css": "^4.2.5",
     "@types/glob": "^7.1.4",
@@ -42,6 +43,7 @@
   "dependencies": {
     "@types/fs-extra": "^9.0.13",
     "@types/minimatch": "^3.0.5",
+    "axios": "^0.22.0",
     "cheerio": "^1.0.0-rc.10",
     "clean-css": "^5.2.0",
     "fs-extra": "^10.0.0",

@@ -3,8 +3,10 @@ import fs = require("fs-extra");
 import tinify = require("tinify");
 import _ = require("lodash");
 import md5 = require("md5");
-import { ensureDir } from "fs-extra";
+import { ensureDir, pathExists } from "fs-extra";
 import { max } from "lodash";
+import axios from "axios";
+import { createWriteStream } from "fs";
 
 export async function getAllFiles(dir: string): Promise<Array<string>> {
   let result: Array<string> = [];
@@ -109,4 +111,39 @@ export function parseDescription(baseDesc: string, maxLength = 160) {
   }
 
   return baseDesc;
+}
+
+// https://stackoverflow.com/a/61269447/6435579
+export async function downloadFile(fileUrl: string, outputLocationPath: string) {
+  if (await pathExists(outputLocationPath)) {
+    return true;
+  }
+
+  const writer = createWriteStream(outputLocationPath);
+
+  return axios({
+    method: "get",
+    url: fileUrl,
+    responseType: "stream",
+  }).then((response: any) => {
+    //ensure that the user can call `then()` only when the file has
+    //been downloaded entirely.
+
+    return new Promise((resolve, reject) => {
+      response.data.pipe(writer);
+      let error = null;
+      writer.on("error", (err) => {
+        error = err;
+        writer.close();
+        reject(err);
+      });
+      writer.on("close", () => {
+        if (!error) {
+          resolve(true);
+        }
+        //no need to call the reject here, as it will have been called in the
+        //'error' stream;
+      });
+    });
+  });
 }

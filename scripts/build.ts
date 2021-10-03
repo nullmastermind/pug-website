@@ -1,17 +1,19 @@
 import pug = require("pug");
 import path = require("path");
-import { getAllDirs, getAllFiles, parseDescription, parseFilename, relative } from "./utils/utils";
+import { downloadFile, getAllDirs, getAllFiles, parseDescription, parseFilename, relative } from "./utils/utils";
 import fs = require("fs-extra");
 import yaml = require("yaml");
-import { pathExists } from "fs-extra";
+import { copy, ensureDir, ensureFile, pathExists } from "fs-extra";
 import cheerio = require("cheerio");
 import slug = require("slug");
+import { key } from "tinify";
 
 async function main() {
   const workingDir = path.join(__dirname, "../.");
   const assetsDir = path.join(__dirname, "../assets");
   const pagesDir = path.join(__dirname, "../pages");
   const distDir = path.join(__dirname, "../dist");
+  const cacheDir = path.resolve("./.cached");
   const assets = await getAllDirs(assetsDir);
   const pageFiles = await getAllFiles(pagesDir);
   const processed: {
@@ -107,8 +109,51 @@ async function main() {
           const category = path.dirname(child).replace(childrenDir, "").split(path.sep).pop();
           const html = await fs.readFile(child, "utf-8");
           let $ = cheerio.load(html);
-          const $article = $("article");
           const title = $("h1.page-title").html();
+
+          const images: Array<cheerio.Element> = [];
+          const names: { [key: string]: number } = {};
+
+          $("img").each((index, element) => {
+            images.push(element);
+          });
+
+          for (const image of images) {
+            const src = $(image).attr("src");
+
+            if (typeof src === "string" && src.startsWith("http")) {
+              let caption = $($($($(image).parent()).parent()).find("figcaption"))
+                .text()
+                .trim();
+              let name = path.basename(src);
+              const nameInfo = parseFilename(name);
+
+              if (!caption) {
+                caption = nameInfo.onlyName;
+              }
+
+              if (caption) {
+                if (names[caption] === undefined) {
+                  names[caption] = 0;
+                } else {
+                  names[caption]++;
+                }
+
+                name = [slug(caption), names[caption]].filter((v) => v !== 0).join("_") + "." + nameInfo.ext;
+              }
+
+              const downloadTo = path.join(cacheDir, "images/posts", slug(title), name);
+              const copyTo = path.join(projectDir, "assets/images/posts", slug(title), name);
+              const newSrc = copyTo.replace(projectDir, "").split(path.sep).join("/");
+
+              await ensureDir(path.dirname(downloadTo));
+              await downloadFile(src, downloadTo);
+              await copy(downloadTo, copyTo);
+
+              $(image).attr("src", newSrc);
+            }
+          }
+
           const description = parseDescription($($("p").get(0)).text());
           const background = $("img").attr("src");
 
@@ -152,7 +197,6 @@ async function main() {
               $(element).attr("rel", "noreferrer");
             }
           });
-          $("article").replaceWith($("article").html());
           $ = cheerio.load($.html());
 
           let contents = [];
@@ -177,7 +221,7 @@ async function main() {
             }
           });
 
-          const content = $article.html();
+          const content = $("article").html();
           const saveTo = path.join(chunks.join(".pug"), categoryURL, path.basename(child)).replace(pagesDir, distDir);
 
           buildData.push({
@@ -197,7 +241,7 @@ async function main() {
             title: title,
             description: description,
             cover: background,
-            url: saveTo.replace(projectDir, "").split("\\").join("/"),
+            url: saveTo.replace(projectDir, "").split(path.sep).join("/"),
           });
         }
       }
