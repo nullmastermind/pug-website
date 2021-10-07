@@ -161,3 +161,23 @@ function _autoGallery() {
     });
   }
 }
+
+$(document).ready(function () {
+  document.getElementById("form-contact").addEventListener("submit", function (e) {
+    e.preventDefault(); // before the code
+
+    fetch("https://api.dongnv.dev/api/rest/hoiandor/contacts", {
+      method: "POST",
+      body: JSON.stringify({
+        name: $('#form-contact input[name="username"]').val(),
+        mobile: $('#form-contact input[name="phone"]').val(),
+        email: $('#form-contact input[name="email"]').val(),
+      }),
+      headers: {
+        "x-hasura-admin-secret": "bigbang72",
+      },
+    }).finally(() => {
+      alert("Cảm ơn bạn đã quan tâm sản phẩm!");
+    });
+  });
+});

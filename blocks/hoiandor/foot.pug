@@ -77,3 +77,7 @@ footer.main-footer.bg-color-2
 // Scroll to top
 button.scroll-top.scroll-to-target(data-target="html", aria-label="Lên đầu trang")
   span.fal.fa-angle-up
+button.la-contact-pin(style=`background-image: url(${about01.info.decoShape});`)
+  a(href=`tel:${header.contact.mobile}`)
+    i.fas.fa-phone
+    span!= header.contact.mobileDisplay

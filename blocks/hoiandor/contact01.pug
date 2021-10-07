@@ -28,12 +28,12 @@ section#lien-he.contact-section.la-cloud
                 p.centred.la-text-primary!= header.contact.email
       .col-lg-7.col-md-12.col-sm-12.form-column
         .form-inner.la-rounded
-          form.default-form(method="post", action="sendemail.php", novalidate)
+          form#form-contact.default-form(method="post")
             .row.clearfix
               .col-12.form-group
-                input.la-rounded(type="text", name="username", placeholder="Họ và tên (*)", required)
+                input.la-rounded(type="text", name="username", placeholder="Họ và tên")
               .col-12.form-group
-                input.la-rounded(type="email", name="email", placeholder="Email (nếu có)")
+                input.la-rounded(type="email", name="email", placeholder="Email")
               .col-12.form-group
                 input.la-rounded(type="text", name="phone", required, placeholder="Số điện thoại (*)")
               .col-lg-12.col-md-12.col-sm-12.form-group.message-btn
