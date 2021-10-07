@@ -498,6 +498,7 @@ ul.post-inner {
   box-shadow: 0px 15px 25px 0px rgb(255 124 91 / 30%);
   font-weight: bold;
   background-position: -50px -75px;
+  border: 2px solid var(--color-fancy);
 }
 
 .la-contact-pin i,

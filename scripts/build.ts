@@ -210,9 +210,9 @@ async function main() {
           $("h2, h3").each((index, element) => {
             const name = slug($(element).text());
 
-            $(element).addClass("la-sticky");
-            $(element).attr("data-sticky-wrap", "true");
-            $(element).attr("data-sticky-class", "la-sticky-love");
+            // $(element).addClass("la-sticky");
+            // $(element).attr("data-sticky-wrap", "true");
+            // $(element).attr("data-sticky-class", "la-sticky-love");
 
             if ($(element).prop("tagName") === "H2") {
               contents.push({
