@@ -166,6 +166,11 @@ $(document).ready(function () {
   document.getElementById("form-contact").addEventListener("submit", function (e) {
     e.preventDefault(); // before the code
 
+    var $btn = $('#form-contact input[name="submit-form"]');
+    var oldBtnContent = $btn.html();
+
+    $btn.html('<i class="far fa-spin fa-spinner-third"></i>');
+
     fetch("https://api.dongnv.dev/api/rest/hoiandor/contacts", {
       method: "POST",
       body: JSON.stringify({
@@ -178,6 +183,7 @@ $(document).ready(function () {
       },
     }).finally(() => {
       alert("Cảm ơn bạn đã quan tâm sản phẩm!");
+      $btn.html(oldBtnContent);
     });
   });
 });
