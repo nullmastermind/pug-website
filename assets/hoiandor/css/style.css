@@ -509,3 +509,16 @@ ul.post-inner {
 .la-contact-pin a span {
   margin-left: 0.5em;
 }
+
+.la-message-btn {
+  width: 190px;
+  text-align: center;
+}
+
+.la-thanks {
+  font-size: 2em;
+  font-weight: bold;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}

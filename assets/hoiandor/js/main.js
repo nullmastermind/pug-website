@@ -163,13 +163,18 @@ function _autoGallery() {
 }
 
 $(document).ready(function () {
+  if (!($(".la-thanks-2").length > 0)) return;
+
   document.getElementById("form-contact").addEventListener("submit", function (e) {
     e.preventDefault(); // before the code
 
-    var $btn = $('#form-contact input[name="submit-form"]');
+    var $btn = $('#form-contact [name="submit-form"]');
     var oldBtnContent = $btn.html();
+    var height = $(".la-thanks-2").height();
 
     $btn.html('<i class="far fa-spin fa-spinner-third"></i>');
+    $(".la-thanks").css("display", "none");
+    $(".la-thanks-2").css("display", "block");
 
     fetch("https://api.dongnv.dev/api/rest/hoiandor/contacts", {
       method: "POST",
@@ -182,7 +187,9 @@ $(document).ready(function () {
         "x-hasura-admin-secret": "bigbang72",
       },
     }).finally(() => {
-      alert("Cảm ơn bạn đã quan tâm sản phẩm!");
+      $(".la-thanks").css("display", "flex");
+      $(".la-thanks").css("height", height + "px");
+      $(".la-thanks-2").css("display", "none");
       $btn.html(oldBtnContent);
     });
   });

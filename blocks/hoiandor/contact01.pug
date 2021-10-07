@@ -30,11 +30,14 @@ section#lien-he.contact-section.la-cloud
         .form-inner.la-rounded
           form#form-contact.default-form(method="post")
             .row.clearfix
-              .col-12.form-group
-                input.la-rounded(type="text", name="username", placeholder="Họ và tên")
-              .col-12.form-group
-                input.la-rounded(type="email", name="email", placeholder="Email")
-              .col-12.form-group
-                input.la-rounded(type="text", name="phone", required, placeholder="Số điện thoại (*)")
-              .col-lg-12.col-md-12.col-sm-12.form-group.message-btn
-                button.la-rounded.theme-btn(type="submit", name="submit-form") Nhận tư vấn
+              .col-12.form-group.la-thanks.text-justify
+                span.color-primary.text-pretty!= 'Cảm ơn bạn đã quan tâm sản phẩm. Chúng tôi sẽ liên hệ bạn sớm nhất'
+              .la-thanks-2.col-12
+                .col-12.form-group
+                  input.la-rounded(type="text", name="username", placeholder="Họ và tên")
+                .col-12.form-group
+                  input.la-rounded(type="email", name="email", placeholder="Email")
+                .col-12.form-group
+                  input.la-rounded(type="text", name="phone", required, placeholder="Số điện thoại (*)")
+                .col-lg-12.col-md-12.col-sm-12.form-group.message-btn
+                  button.la-message-btn.la-rounded.theme-btn(type="submit", name="submit-form") Nhận tư vấn
