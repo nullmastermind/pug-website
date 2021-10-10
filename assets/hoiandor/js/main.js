@@ -36,7 +36,8 @@ $(document).ready(function () {
       return $(image).hasClass("allow-viewer");
     },
     url(image) {
-      return image.src.replace("-cropped.", ".");
+      // return image.src.replace("-cropped.", ".");
+      return $(image).attr("data-origin");
     },
   });
 

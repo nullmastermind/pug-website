@@ -3,10 +3,11 @@ import path = require("path");
 import { downloadFile, getAllDirs, getAllFiles, parseDescription, parseFilename, relative } from "./utils/utils";
 import fs = require("fs-extra");
 import yaml = require("yaml");
-import { copy, ensureDir, ensureFile, pathExists } from "fs-extra";
+import { copy, ensureDir, pathExists, writeFile } from "fs-extra";
 import cheerio = require("cheerio");
 import slug = require("slug");
-import { key } from "tinify";
+
+const sharp = require("sharp");
 
 async function main() {
   const workingDir = path.join(__dirname, "../.");
@@ -259,10 +260,19 @@ async function main() {
               contents: [...contents, { name: "Xem thêm", href: "#see-also" }],
             },
           });
+
+          const parsedBackground = parseFilename(background);
+          const croppedBackgroundUrl = path.join(parsedBackground.dir, parsedBackground.onlyName + "-cropped.png");
+          const croppedBackgroundFilename = path.join(distDir, project, croppedBackgroundUrl);
+          const originBackgroundFilename = path.join(distDir, project, background);
+
+          await ensureDir(path.dirname(croppedBackgroundFilename));
+          await writeFile(croppedBackgroundFilename, await sharp(originBackgroundFilename).resize(370, 217).png().toBuffer());
+
           posts.push({
             title: title,
             description: description,
-            cover: background,
+            cover: croppedBackgroundUrl,
             url: saveTo.replace(projectDir, "").split(path.sep).join("/"),
           });
         }
