@@ -258,7 +258,11 @@ async function _cleanJs(jsFiles) {
     // toplevel: true,
   };
 
+  const cleaned: { [key: string]: boolean } = {};
+
   for (const file of jsFiles) {
+    if (cleaned[file]) continue;
+
     const code = UglifyJS.minify(
       {
         [file]: await readFile(file, "utf-8"),
@@ -268,6 +272,8 @@ async function _cleanJs(jsFiles) {
 
     // console.log(relative(file), code);
     await writeFile(file, code);
+
+    cleaned[file] = true;
 
     console.log("clean:", relative(file));
   }
