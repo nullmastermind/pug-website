@@ -255,28 +255,49 @@ async function _cleanJs(jsFiles) {
     },
     nameCache: {},
     webkit: true,
-    // toplevel: true,
+    toplevel: true,
   };
 
   const cleaned: { [key: string]: boolean } = {};
+  const files: { [key: string]: string } = {};
+
+  for (const file of jsFiles) {
+    files[file] = await readFile(file, "utf-8");
+  }
 
   for (const file of jsFiles) {
     if (cleaned[file]) continue;
 
-    const code = UglifyJS.minify(
-      {
-        [file]: await readFile(file, "utf-8"),
-      },
-      options
-    ).code;
+    if (file.endsWith("main.js")) {
+      const code = UglifyJS.minify(files, options).code;
 
-    // console.log(relative(file), code);
-    await writeFile(file, code);
+      await writeFile(file, code);
+    } else {
+      await writeFile(file, "");
+    }
 
     cleaned[file] = true;
 
     console.log("clean:", relative(file));
   }
+
+  // for (const file of jsFiles) {
+  //   if (cleaned[file]) continue;
+  //
+  //   const code = UglifyJS.minify(
+  //     {
+  //       [file]: await readFile(file, "utf-8"),
+  //     },
+  //     options
+  //   ).code;
+  //
+  //   // console.log(relative(file), code);
+  //   await writeFile(file, code);
+  //
+  //   cleaned[file] = true;
+  //
+  //   console.log("clean:", relative(file));
+  // }
 }
 
 async function _cleanCss(filename: string) {
@@ -349,6 +370,18 @@ async function _cleanImages(htmlFiles: Array<string>) {
     const content = await readFile(filename, "utf-8");
     const $ = load(content);
     const $elements: Array<cheerio.Cheerio> = [];
+
+    $("script").each((index, element) => {
+      let src = $(element).attr("src");
+
+      if (src) {
+        src = src.split("?")[0];
+
+        if (!(src.startsWith("http") || src.endsWith("main.js"))) {
+          $(element).remove();
+        }
+      }
+    });
 
     $("img").each((index, element) => {
       $elements.push($(element));
