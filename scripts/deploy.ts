@@ -1,5 +1,5 @@
 import { copy, ensureFile, lstat, lstatSync, pathExists, readdir, readFile, writeFile } from "fs-extra";
-import { compressImage, fixedFloat, getAllFiles, parseFilename, relative } from "./utils/utils";
+import { compressImage, findName, fixedFloat, getAllFiles, parseFilename, relative } from "./utils/utils";
 import { load } from "cheerio";
 import path = require("path");
 import prompts = require("prompts");
@@ -12,6 +12,8 @@ import CleanCSS = require("clean-css");
 import moment = require("moment");
 import webp = require("webp-converter");
 import UglifyJS = require("uglify-js");
+import slug = require("slug");
+import { key } from "tinify";
 
 const sizeOf = require("image-size");
 
@@ -136,6 +138,7 @@ async function pre() {
   }
 
   await _cleanJs(jsFiles);
+  await _cleanImages(htmlFiles.map((v) => copies[v]));
 }
 
 async function processorBackgroundImages(dirname: string, content: string, config: any) {
@@ -310,14 +313,15 @@ async function _compressImage(filename: string, quality = 60) {
     await copy(compressedImage, filename);
   }
 
-  console.table({
-    filename: relative(filename),
-    to: relative(compressedImage),
-    origin: fixedFloat(originSize / 1024),
-    compressed: fixedFloat(compressedSize / 1024),
-    reduce: fixedFloat(originSize / 1024 - compressedSize / 1024),
-    result: "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%",
-  });
+  // console.table({
+  //   filename: relative(filename),
+  //   to: relative(compressedImage),
+  //   origin: fixedFloat(originSize / 1024),
+  //   compressed: fixedFloat(compressedSize / 1024),
+  //   reduce: fixedFloat(originSize / 1024 - compressedSize / 1024),
+  //   result: "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%",
+  // });
+  console.log(relative(filename), "-" + fixedFloat(((originSize - compressedSize) / originSize) * 100) + "%");
 
   const fileParsed = parseFilename(filename);
 
@@ -327,6 +331,47 @@ async function _compressImage(filename: string, quality = 60) {
     if (await pathExists(originFile)) {
       return await _compressImage(originFile, 100);
     }
+  }
+}
+
+async function _cleanImages(htmlFiles: Array<string>) {
+  const dir = path.join(project.host, "./public");
+  const cache: { [key: string]: string } = {};
+
+  for (const filename of htmlFiles) {
+    const parsedFilename = parseFilename(filename);
+    const content = await readFile(filename, "utf-8");
+    const $ = load(content);
+    const $elements: Array<cheerio.Cheerio> = [];
+
+    $("img").each((index, element) => {
+      $elements.push($(element));
+    });
+
+    for (const $element of $elements) {
+      $element.attr("data-origin", $element.attr("src").replace("-cropped.", "."));
+
+      const alt = ($element.attr("alt") || "").trim();
+
+      if (alt.length > 0) {
+        const src = $element.attr("src");
+        const imageFile = path.join(dir, src);
+
+        if (!cache[imageFile]) {
+          const parsedImageFilename = parseFilename(imageFile);
+          const newFilename = slug(alt);
+          const newFile = await findName(path.join(parsedImageFilename.dir, newFilename + "." + parsedImageFilename.ext));
+
+          cache[imageFile] = newFile;
+
+          await copy(imageFile, newFile);
+        }
+
+        $element.attr("src", cache[imageFile].replace(dir, "").split(path.sep).join("/"));
+      }
+    }
+
+    await writeFile(filename, $.html());
   }
 }
 

@@ -66,6 +66,8 @@ export async function compressImage(filename: string): Promise<string> {
     if (await fs.pathExists(cachedFile)) return cachedFile;
     if (await fs.pathExists(cachedFileRef)) return path.join(cachedDir, await fs.readFile(cachedFileRef, "utf-8"));
 
+    console.log("call API:", relative(filename));
+
     const apiKeys = ["cLH8b75hpcXHxy202hg3XdjJDbh27wLS", "YBg9YR2P4H3qjF0MlddSk985R8Qlykf2", "GSh0VNTpw0XMkG3YNvxfvJkscvFVhH85"];
 
     tinify.key = apiKeys[_.random(0, apiKeys.length - 1)];
@@ -146,4 +148,21 @@ export async function downloadFile(fileUrl: string, outputLocationPath: string) 
       });
     });
   });
+}
+
+export async function findName(originName: string) {
+  const parsedFileName = parseFilename(originName);
+  let i = 1;
+
+  while (true) {
+    if (!(await pathExists(originName))) {
+      break;
+    }
+
+    originName = path.join(parsedFileName.dir, parsedFileName.onlyName + "_" + ("0" + i).slice(-2) + "." + parsedFileName.ext);
+
+    i += 1;
+  }
+
+  return originName;
 }
