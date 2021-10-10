@@ -151,10 +151,11 @@ function _autoGallery() {
       var alt = $(this).attr("alt");
       var width = $(this).attr("width");
       var height = $(this).attr("height");
+      var origin = $(this).attr("data-origin");
 
       if (src && !showed[src] && Object.keys(showed).length < maxImages) {
         $("#auto-gallery").append(
-          `<li><figure class="image-box"><img src="${src}" alt="${alt}" width="${width}" height="${height}" class="allow-viewer la-ignore-gallery"/></figure></li>`
+          `<li><figure class="image-box"><img data-origin="${origin}" src="${src}" alt="${alt}" width="${width}" height="${height}" class="allow-viewer la-ignore-gallery"/></figure></li>`
         );
 
         showed[src] = true;
