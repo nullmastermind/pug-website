@@ -22,13 +22,13 @@ async function main() {
     [key: string]: boolean;
   } = {};
 
-  while (true) {
-    try {
-      await fs.remove(distDir);
-      break;
-    } catch (e) {}
-    await new Promise((rel) => setTimeout(rel, 1000));
-  }
+  // while (true) {
+  //   try {
+  await fs.remove(distDir);
+  //     break;
+  //   } catch (e) {}
+  //   await new Promise((rel) => setTimeout(rel, 1000));
+  // }
 
   const buildData: Array<{
     filename: string;
