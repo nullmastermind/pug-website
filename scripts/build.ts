@@ -6,6 +6,7 @@ import yaml = require("yaml");
 import { copy, ensureDir, pathExists, writeFile } from "fs-extra";
 import cheerio = require("cheerio");
 import slug = require("slug");
+import _ = require("lodash");
 
 const sharp = require("sharp");
 
@@ -40,6 +41,7 @@ async function main() {
     description: string;
     url: string;
     cover: string;
+    id: string;
   }> = [];
 
   for (const filename of pageFiles) {
@@ -244,6 +246,7 @@ async function main() {
 
           const content = $("article").html();
           const saveTo = path.join(chunks.join(".pug"), categoryURL, path.basename(child)).replace(pagesDir, distDir);
+          const postId = saveTo.replace(projectDir, "").split(path.sep).join("/");
 
           buildData.push({
             project: project,
@@ -258,6 +261,7 @@ async function main() {
               content,
               background,
               contents: [...contents, { name: "Xem thêm", href: "#see-also" }],
+              postId: postId,
             },
           });
 
@@ -273,7 +277,8 @@ async function main() {
             title: title,
             description: description,
             cover: croppedBackgroundUrl,
-            url: saveTo.replace(projectDir, "").split(path.sep).join("/"),
+            url: postId,
+            id: postId,
           });
         }
       }
@@ -293,7 +298,7 @@ async function main() {
     const fn = pug.compileFile(filename);
     const html = fn({
       ...cd.locals,
-      posts: posts,
+      posts: rollPosts(cd.locals.postId, posts),
     });
 
     await fs.ensureFile(cd.saveTo);
@@ -301,6 +306,24 @@ async function main() {
 
     console.log(project, filename.replace(workingDir, ""), "->", cd.saveTo.replace(workingDir, ""));
   }
+}
+
+function rollPosts(postId, posts) {
+  posts = _.cloneDeep(posts);
+
+  const index = _.findIndex(posts, (v: any) => v.id === postId);
+
+  if (index !== -1) {
+    posts = rotateLeft(index, posts).filter((v) => v.id !== postId);
+  }
+
+  return posts;
+}
+
+function rotateLeft(d, arr) {
+  // Write your code here
+  for (let i = d; i < arr.length; i++) arr.unshift(arr.pop());
+  return arr;
 }
 
 main().catch(console.error);

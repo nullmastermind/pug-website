@@ -3,7 +3,7 @@ import fs = require("fs-extra");
 import tinify = require("tinify");
 import _ = require("lodash");
 import md5 = require("md5");
-import { ensureDir, pathExists } from "fs-extra";
+import { ensureDir, pathExists, remove } from "fs-extra";
 import { max } from "lodash";
 import axios from "axios";
 import { createWriteStream } from "fs";
@@ -137,6 +137,7 @@ export async function downloadFile(fileUrl: string, outputLocationPath: string) 
       writer.on("error", (err) => {
         error = err;
         writer.close();
+        remove(outputLocationPath);
         reject(err);
       });
       writer.on("close", () => {

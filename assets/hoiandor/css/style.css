@@ -522,3 +522,13 @@ ul.post-inner {
   align-items: center;
   justify-content: center;
 }
+
+.blog-details-content .collection-content th .icon {
+  display: none;
+}
+
+.blog-details-content .collection-content td,
+.blog-details-content .collection-content th {
+  border: 1px solid #e6ebeb;
+  padding: 0.25em 1em;
+}
