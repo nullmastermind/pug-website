@@ -4,7 +4,10 @@ import _ = require("lodash");
 import { ensureDir, readFile, writeFile } from "fs-extra";
 import yaml = require("yaml");
 import path = require("path");
-import { getProject, relative, toUUID } from "./utils/utils";
+import { getProject, parseFilename, relative, toUUID } from "./utils/utils";
+import slug = require("slug");
+import cheerio = require("cheerio");
+import { startsWith } from "lodash";
 
 async function exportBlock(token: string, id: string, saveTo: string, exportType: "html" | "markdown" = "html") {
   id = toUUID(id);
@@ -54,17 +57,52 @@ async function exportBlock(token: string, id: string, saveTo: string, exportType
   const project = await getProject();
 
   for (const entry of entries) {
-    saveTo = path.resolve(saveTo);
-
     if (entry.entryName.endsWith(".html")) {
+      const saveTo2 = path.resolve(saveTo);
+
+      const html = entry.getData().toString();
+      const $ = cheerio.load(html);
+
+      $("img").each((index, element) => {
+        let src = $(element).attr("src");
+
+        if (!src.startsWith("http")) {
+          src = path.join(project.distAssets, "images", parseEntryName(src)).replace(project.dist, "").split(path.sep).join("/");
+
+          $(element).attr("src", src);
+        }
+      });
+
+      await ensureDir(path.dirname(saveTo2));
+      await writeFile(saveTo2, $.html(), "utf-8");
     } else {
+      saveTo = path.join(project.assets, "images", parseEntryName(entry.entryName));
+
+      await ensureDir(path.dirname(saveTo));
+      await writeFile(saveTo, entry.getData());
+      console.log(saveTo);
     }
-
-    // await ensureDir(path.dirname(saveTo));
-    // await writeFile(saveTo, entry.getData());
-
-    console.log(entry.entryName, relative(saveTo), project);
   }
+}
+
+function parseEntryName(entryName: string) {
+  entryName = decodeURIComponent(entryName);
+
+  return entryName
+    .split(path.sep)
+    .join("/")
+    .split("/")
+    .map((v) => v.trim())
+    .filter((v) => v.length)
+    .map((v) => {
+      const parsed = parseFilename(v);
+
+      return [parsed.onlyName, parsed.ext]
+        .filter((v) => v.length > 0)
+        .map((v) => slug(v))
+        .join(".");
+    })
+    .join("/");
 }
 
 async function main() {

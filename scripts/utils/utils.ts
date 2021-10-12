@@ -50,8 +50,13 @@ export function parseFilename(filename: string) {
   const dir = path.dirname(filename);
   const fullName = path.basename(filename);
   const chunks = fullName.split(".");
-  const ext = chunks.pop();
-  const onlyName = chunks.join(".");
+  let ext = chunks.pop();
+  let onlyName = chunks.join(".");
+
+  if (onlyName.length === 0 && ext === fullName) {
+    onlyName = ext;
+    ext = "";
+  }
 
   return { dir, ext, fullName, onlyName };
 }
@@ -213,6 +218,7 @@ export function toUUID(value: string) {
 export type IProject = {
   name: string;
   dist: string;
+  distAssets: string;
   host: string;
   public: string;
   page: string;
@@ -229,6 +235,7 @@ export async function getProject() {
       .map((dirname) => ({
         name: dirname,
         dist: path.join(distDir, dirname),
+        distAssets: path.join(distDir, dirname, "assets"),
         host: path.join(hostsDir, dirname),
         public: path.join(hostsDir, dirname, "public"),
         page: path.join(pagesDir, dirname),
