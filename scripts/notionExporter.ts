@@ -1,13 +1,11 @@
 import axios from "axios";
 import AdmZip = require("adm-zip");
-import _ = require("lodash");
 import { ensureDir, readFile, writeFile } from "fs-extra";
 import yaml = require("yaml");
 import path = require("path");
-import { getProject, parseFilename, relative, toUUID } from "./utils/utils";
+import { getProject, parseFilename, toUUID } from "./utils/utils";
 import slug = require("slug");
 import cheerio = require("cheerio");
-import { startsWith } from "lodash";
 
 async function exportBlock(token: string, id: string, saveTo: string, exportType: "html" | "markdown" = "html") {
   id = toUUID(id);

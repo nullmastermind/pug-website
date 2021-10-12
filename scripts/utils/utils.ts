@@ -246,6 +246,7 @@ export type IProject = {
   public: string;
   page: string;
   assets: string;
+  cache: string;
 };
 
 export async function getProject() {
@@ -255,15 +256,18 @@ export async function getProject() {
     const pagesDir = path.resolve("./pages");
     const assetsDir = path.resolve("./assets");
     const projects = (await readdir(distDir))
-      .map((dirname) => ({
-        name: dirname,
-        dist: path.join(distDir, dirname),
-        distAssets: path.join(distDir, dirname, "assets"),
-        host: path.join(hostsDir, dirname),
-        public: path.join(hostsDir, dirname, "public"),
-        page: path.join(pagesDir, dirname),
-        assets: path.join(assetsDir, dirname),
-      }))
+      .map(
+        (dirname): IProject => ({
+          name: dirname,
+          dist: path.join(distDir, dirname),
+          distAssets: path.join(distDir, dirname, "assets"),
+          host: path.join(hostsDir, dirname),
+          public: path.join(hostsDir, dirname, "public"),
+          page: path.join(pagesDir, dirname),
+          assets: path.join(assetsDir, dirname),
+          cache: path.resolve("./.cached"),
+        })
+      )
       .filter((project) => lstatSync(project.dist).isDirectory());
 
     if (projects.length > 1) {
