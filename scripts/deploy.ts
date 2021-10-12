@@ -336,7 +336,8 @@ async function _compressImage(filename: string, quality = 60) {
 }
 
 async function _cleanImages(htmlFiles: Array<string>) {
-  const dir = path.join(project.host, "./public");
+  const project = await getProject();
+  const dir = project.public;
   const cache: { [key: string]: string } = {};
 
   for (const filename of htmlFiles) {
@@ -373,7 +374,8 @@ async function _cleanImages(htmlFiles: Array<string>) {
         if (!cache[imageFile]) {
           const parsedImageFilename = parseFilename(imageFile);
           const newFilename = slug(alt);
-          const newFile = await findName(path.join(parsedImageFilename.dir, newFilename + "." + parsedImageFilename.ext));
+          const newDir = path.join(path.dirname(parsedImageFilename.dir), parsedFilename.onlyName);
+          const newFile = await findName(path.join(newDir, newFilename + "." + parsedImageFilename.ext));
 
           cache[imageFile] = newFile;
 
