@@ -63,6 +63,14 @@ async function exportBlock(token: string, id: string, saveTo: string, exportType
       const html = entry.getData().toString();
       const $ = cheerio.load(html);
 
+      $("p").each((index, element) => {
+        const text = ($(element).text() || "").trim();
+
+        if (text.length === 0) {
+          $(element).remove();
+        }
+      });
+
       $("img").each((index, element) => {
         let src = $(element).attr("src");
 
