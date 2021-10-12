@@ -1,5 +1,15 @@
 token: 07941f4d1f4ecf75d27363349a80d0a2b52ba60164d3308c64ef1cc4a4e72052b3f84aa1e754aa81aa64e34b86ca7eac32cc14d60058287947c904399044cf2d11e03956104b4ce9297c3ade2804
 posts:
+  - id: a673567bdee847319f97bc184a83ea09
+    path: pages/hoiandor/bai-viet/cong-vien-sinh-thai-hoian-dor.html
+  - id: 2ee8383189134faf94ded2dc1d8263d0
+    path: pages/hoiandor/bai-viet/villa-hoian-dor.html
+  - id: c6a1b9730473462da0f6ad3f83aa1675
+    path: pages/hoiandor/bai-viet/condotel-hoian-dor.html
+  - id: a5da709f82c240fbb125c514ada726a2
+    path: pages/hoiandor/bai-viet/khach-san-hoian-dor.html
+  - id: 6255ff8644b548bbad2051ca95d03bad
+    path: pages/hoiandor/bai-viet/boutique-hoian-dor.html
   - id: f18935f759664135b35ff8996bace5b4
     path: pages/hoiandor/bai-viet/khong-gian-van-hoa-hoian-dor.html
   - id: c7786f8c4e9045418697d7e551461d01

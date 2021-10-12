@@ -66,7 +66,8 @@ block body
                 .widget-title(style="margin-bottom: 1em")
                   h2#see-also.text-pretty.color-primary.font-weight-bold Xem thêm
                 ul.post-inner
-                  - for (const post of posts)
+                  - for (let i=0;i<Math.min(posts.length, 6);i++)
+                    - var post = posts[i];
                     li.post
                       a(href=post.url, title=post.description)
                         span.postnumber &bull;

@@ -24,13 +24,13 @@ header:
         - label: Shophouse
           href: "/bai-viet/shophouse-maison-de-ville.html"
         - label: Villa
-          href: "/#co-cau"
+          href: "/bai-viet/villa-hoian-dor.html"
         - label: Khách sạn 5 sao
-          href: "/#co-cau"
+          href: "/bai-viet/khach-san-hoian-dor.html"
         - label: Boutique
-          href: "/#co-cau"
+          href: "/bai-viet/boutique-hoian-dor.html"
         - label: Condotel
-          href: "/#co-cau"
+          href: "/bai-viet/condotel-hoian-dor.html"
     - label: Tin tức
       href: "/#tin-tuc"
     - label: Liên hệ
@@ -157,22 +157,22 @@ about04:
         src: /assets/images/Villa2-02-cropped.jpg
         alt: Villa Hoian d’Or
       caption: Villa
-      href: /
+      href: /bai-viet/villa-hoian-dor.html
     - image:
         src: /assets/images/khach-san-hoian-dor-cropped.jpg
         alt: Khách sạn 5 sao Hoian d’Or
       caption: Khách sạn 5 sao
-      href: /
+      href: /bai-viet/khach-san-hoian-dor.html
     - image:
         src: /assets/images/boutique-hoian-dor-cropped.jpg
         alt: Boutique Hoian d’Or
       caption: Boutique
-      href: /
+      href: /bai-viet/boutique-hoian-dor.html
     - image:
         src: /assets/images/Condotel1-02-cropped.jpg
         alt: Condotel Hoian d’Or
       caption: Condotel
-      href: /
+      href: /bai-viet/condotel-hoian-dor.html
   decoShape: /assets/images/shape1.png
 posts01:
   title: Hoian d’Or
