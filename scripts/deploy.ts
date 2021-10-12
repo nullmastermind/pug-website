@@ -2,7 +2,6 @@ import { copy, ensureFile, lstat, lstatSync, pathExists, readdir, readFile, writ
 import { compressImage, findName, fixedFloat, getAllFiles, getProject, IProject, parseFilename, relative } from "./utils/utils";
 import { load } from "cheerio";
 import path = require("path");
-import prompts = require("prompts");
 import yaml = require("yaml");
 import minimatch = require("minimatch");
 import _ = require("lodash");
