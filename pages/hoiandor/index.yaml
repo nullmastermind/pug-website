@@ -176,8 +176,8 @@ about04:
   decoShape: /assets/images/shape1.png
 posts01:
   title: Hoian d’Or
-  description: Tin tức nổi bật
-  viewAllHref: /
+  description: Tin tức
+  viewAllHref: /category/uncategorized.html
   items:
     - title: Xuất hiện chiếc nón lá truyền thống khổng lồ duy nhất tại Hội An
       description: Hai năm chịu ảnh hưởng nặng nề từ đại dịch Covid-19, ngành du lịch đã [...]

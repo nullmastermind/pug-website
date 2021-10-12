@@ -533,3 +533,16 @@ ul.post-inner {
   border: 1px solid #e6ebeb;
   padding: 0.25em 1em;
 }
+
+.la-view-more {
+  margin-top: 1em;
+  border: 1px solid var(--primary-color);
+  display: inline-block;
+  padding: 0.25em 1em;
+  color: var(--primary-color);
+  border-radius: 0.25em;
+}
+
+.la-view-more i {
+  margin-left: 0.5em;
+}

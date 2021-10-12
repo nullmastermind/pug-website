@@ -71,5 +71,8 @@ block body
                       a(href=post.url, title=post.description)
                         span.postnumber &bull;
                         span.posttext!= post.title
+                a.la-view-more(href=posts01.viewAllHref)
+                  span Xem tất cả
+                  i.fas.fa-angle-double-right
   include ../../blocks/hoiandor/contact01
   include ../../blocks/hoiandor/foot

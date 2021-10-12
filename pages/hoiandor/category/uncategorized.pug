@@ -1,0 +1,37 @@
+extends ../../../layouts/hoiandor/home
+
+block body
+  include ../../../blocks/hoiandor/header
+  //include ../../../blocks/hoiandor/banner
+  article#content
+    section.page-title.la-cloud(style=`background-image: url(${banner.background})`)
+      .pattern-layer.la-no-animation(style="background-image: url(/assets/themes/assets/images/shape/shape-1.png)")
+      .auto-container
+        .content-box(style="margin-top: 100px")
+          .row
+            header.col-lg-8.col-md-12.col-sm-12.content-side
+              //h1#firstHeading!= banner.title
+              //p.la-text-justify!= banner.description
+  section#tin-tuc.news-section.home-4.sec-pad.la-cloud(style="background: #f5f6f6")
+    .pattern-layer.la-no-animation(style="background-image: url(/assets/themes/assets/images/shape/shape-9.png)")
+    .auto-container
+      .sec-title
+        p.color-primary!= posts01.title
+        h2.color-primary!= posts01.description
+      .row.clearfix
+        - for (let i=0;i<posts.length;i++)
+          - var item = posts[i];
+            .col-lg-4.col-md-6.col-sm-12.news-block(style="margin-bottom: 2em")
+              .news-block-one.wow.fadeInUp.animated.animated(data-wow-delay="00ms", data-wow-duration="1500ms")
+                .inner-box
+                  figure.image-box
+                    a(href=item.url)
+                      img(src=item.cover, alt=item.title)
+                  .lower-content
+                    h3.la-same-height-02(data-offset=35)
+                      a(href=item.url)!= item.title
+                    p.la-same-height-03.la-text-primary(data-offset=0)!= item.description
+                    .btn-box
+                      a.theme-btn-two(href=item.url) Xem chi tiết
+  include ../../../blocks/hoiandor/contact01
+  include ../../../blocks/hoiandor/foot

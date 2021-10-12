@@ -310,6 +310,7 @@ async function main() {
   });
 
   for (const cd of buildData) {
+    const projectObject = await getProject();
     const project = cd.project;
     const filename = cd.filename;
     const fn = pug.compileFile(filename);
@@ -320,6 +321,10 @@ async function main() {
 
     await fs.ensureFile(cd.saveTo);
     await fs.writeFile(cd.saveTo, html);
+
+    const url = cd.saveTo.replace(projectObject.dist, "").split(path.sep).join("/");
+
+    console.log(url);
 
     console.log(project, filename.replace(workingDir, ""), "->", cd.saveTo.replace(workingDir, ""));
   }
