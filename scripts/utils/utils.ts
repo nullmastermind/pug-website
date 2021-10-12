@@ -216,6 +216,7 @@ export type IProject = {
   host: string;
   public: string;
   page: string;
+  assets: string;
 };
 
 export async function getProject() {
@@ -223,6 +224,7 @@ export async function getProject() {
     const distDir = path.resolve("./dist");
     const hostsDir = path.resolve("./hosts");
     const pagesDir = path.resolve("./pages");
+    const assetsDir = path.resolve("./assets");
     const projects = (await readdir(distDir))
       .map((dirname) => ({
         name: dirname,
@@ -230,6 +232,7 @@ export async function getProject() {
         host: path.join(hostsDir, dirname),
         public: path.join(hostsDir, dirname, "public"),
         page: path.join(pagesDir, dirname),
+        assets: path.join(assetsDir, dirname),
       }))
       .filter((project) => lstatSync(project.dist).isDirectory());
 
