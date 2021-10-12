@@ -6,7 +6,7 @@ header:
   logo:
     src: /assets/images/logo-hoian-dor.png
     alt: Logo Hoian d’Or
-    href: /index.html
+    href: /
   menu:
     - label: Trang chủ
       href: /
@@ -22,7 +22,7 @@ header:
       href: "/#co-cau"
       children:
         - label: Shophouse
-          href: "/#co-cau"
+          href: "/bai-viet/shophouse-maison-de-ville.html"
         - label: Villa
           href: "/#co-cau"
         - label: Khách sạn 5 sao
@@ -152,7 +152,7 @@ about04:
         src: /assets/images/shophouse-hoian-dor-cropped.jpg
         alt: Shophouse – Maison De ville Hoian d’Or
       caption: Shophouse
-      href: /
+      href: /bai-viet/shophouse-maison-de-ville.html
     - image:
         src: /assets/images/Villa2-02-cropped.jpg
         alt: Villa Hoian d’Or

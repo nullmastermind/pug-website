@@ -14,7 +14,8 @@ section#co-cau.place-section.sec-pad.bg-color-1.la-cloud(style="background: #fff
           .place-block-one
             .inner-box
               figure.image-box
-                img.allow-viewer(src=item.image.src, alt=item.image.alt)
+                a(href=item.href)
+                  img(src=item.image.src, alt=item.image.alt, title=item.caption)
               .text
                 h3
                   a.text-pretty.text-italic(href=item.href)!= item.caption
