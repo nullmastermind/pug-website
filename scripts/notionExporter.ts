@@ -80,7 +80,6 @@ async function exportBlock(token: string, id: string, saveTo: string, exportType
 
       await ensureDir(path.dirname(saveTo));
       await writeFile(saveTo, entry.getData());
-      console.log(saveTo);
     }
   }
 }

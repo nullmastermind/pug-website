@@ -1,8 +1,8 @@
 token: 07941f4d1f4ecf75d27363349a80d0a2b52ba60164d3308c64ef1cc4a4e72052b3f84aa1e754aa81aa64e34b86ca7eac32cc14d60058287947c904399044cf2d11e03956104b4ce9297c3ade2804
 posts:
   - id: 407a052f68ce4c84875e80c7f483bd2b
-    path: pages/hoiandor/posts/Sản phẩm/shophouse-maison-de-ville.html
+    path: pages/hoiandor/bai-viet/shophouse-maison-de-ville.html
   - id: f18935f759664135b35ff8996bace5b4
-    path: pages/hoiandor/posts/Tiện ích/khong-gian-van-hoa-hoian-dor.html
+    path: pages/hoiandor/bai-viet/khong-gian-van-hoa-hoian-dor.html
   - id: c7786f8c4e9045418697d7e551461d01
-    path: pages/hoiandor/posts/Tiện ích/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian.html
+    path: pages/hoiandor/bai-viet/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian.html
