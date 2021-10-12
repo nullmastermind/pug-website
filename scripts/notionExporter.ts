@@ -1,13 +1,15 @@
 import axios from "axios";
 import AdmZip = require("adm-zip");
-import { ensureDir, readFile, writeFile } from "fs-extra";
+import { ensureDir, ensureFile, readFile, readJSON, writeFile, writeJSON } from "fs-extra";
 import yaml = require("yaml");
 import path = require("path");
-import { getProject, parseFilename, toUUID } from "./utils/utils";
+import { getProject, parseFilename, relative, toUUID } from "./utils/utils";
 import slug = require("slug");
 import cheerio = require("cheerio");
+import { key } from "tinify";
+import moment = require("moment");
 
-async function exportBlock(token: string, id: string, saveTo: string, exportType: "html" | "markdown" = "html") {
+async function exportBlock(index: number, token: string, id: string, saveTo: string, exportType: "html" | "markdown" = "html") {
   id = toUUID(id);
 
   const instance = axios.create({
@@ -56,8 +58,12 @@ async function exportBlock(token: string, id: string, saveTo: string, exportType
 
   for (const entry of entries) {
     if (entry.entryName.endsWith(".html")) {
-      const saveTo2 = path.resolve(saveTo);
+      const moreInfoPath = path.join(project.cache, "notionInfo.json");
 
+      await ensureFile(moreInfoPath);
+
+      const moreInfo: { [key: string]: any } = (await readJSON(moreInfoPath, { throws: false })) || {};
+      const saveTo2 = path.resolve(saveTo);
       const html = entry.getData().toString();
       const $ = cheerio.load(html);
 
@@ -79,8 +85,17 @@ async function exportBlock(token: string, id: string, saveTo: string, exportType
         }
       });
 
+      if (!moreInfo[relative(saveTo2)]) {
+        moreInfo[relative(saveTo2)] = {
+          date: moment().format("YYYY-MM-DD hh:mm Z"),
+        };
+      }
+
+      moreInfo[relative(saveTo2)].index = index;
+
       await ensureDir(path.dirname(saveTo2));
       await writeFile(saveTo2, $.html(), "utf-8");
+      await writeJSON(moreInfoPath, moreInfo);
     } else {
       saveTo = path.join(project.assets, "images", parseEntryName(entry.entryName));
 
@@ -112,9 +127,12 @@ function parseEntryName(entryName: string) {
 
 async function main() {
   const config = yaml.parse(await readFile(path.join(__dirname, "notionExporter.yaml"), "utf-8"));
+  let i = 0;
 
   for (const post of config.posts) {
-    await exportBlock(config.token, post.id, post.path);
+    await exportBlock(i, config.token, post.id, post.path);
+
+    i++;
 
     console.log("exported:", post.path);
   }

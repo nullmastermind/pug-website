@@ -1,9 +1,5 @@
 token: 07941f4d1f4ecf75d27363349a80d0a2b52ba60164d3308c64ef1cc4a4e72052b3f84aa1e754aa81aa64e34b86ca7eac32cc14d60058287947c904399044cf2d11e03956104b4ce9297c3ade2804
 posts:
-  - id: 407a052f68ce4c84875e80c7f483bd2b
-    path: pages/hoiandor/bai-viet/shophouse-maison-de-ville.html
-  - id: 978c54d897004e039f37a190f1ea4f67
-    path: pages/hoiandor/bai-viet/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi.html
   - id: f18935f759664135b35ff8996bace5b4
     path: pages/hoiandor/bai-viet/khong-gian-van-hoa-hoian-dor.html
   - id: c7786f8c4e9045418697d7e551461d01
@@ -12,3 +8,7 @@ posts:
     path: pages/hoiandor/bai-viet/hoian-ngay-tro-lai.html
   - id: 3ba291be176f4f5eabef7cee889882e1
     path: pages/hoiandor/bai-viet/hoian-dor-thuong-cang-lien-ke-pho-hoi.html
+  - id: 978c54d897004e039f37a190f1ea4f67
+    path: pages/hoiandor/bai-viet/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi.html
+  - id: 407a052f68ce4c84875e80c7f483bd2b
+    path: pages/hoiandor/bai-viet/shophouse-maison-de-ville.html

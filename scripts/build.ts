@@ -1,9 +1,9 @@
 import pug = require("pug");
 import path = require("path");
-import { downloadFile, getAllDirs, getAllFiles, parseDescription, parseFilename, relative } from "./utils/utils";
+import { downloadFile, getAllDirs, getAllFiles, getProject, parseDescription, parseFilename, relative } from "./utils/utils";
 import fs = require("fs-extra");
 import yaml = require("yaml");
-import { copy, ensureDir, pathExists, writeFile } from "fs-extra";
+import { copy, ensureDir, pathExists, readJSON, writeFile } from "fs-extra";
 import cheerio = require("cheerio");
 import slug = require("slug");
 import _ = require("lodash");
@@ -42,6 +42,7 @@ async function main() {
     url: string;
     cover: string;
     id: string;
+    saveTo: string;
   }> = [];
 
   for (const filename of pageFiles) {
@@ -279,6 +280,7 @@ async function main() {
             cover: croppedBackgroundUrl,
             url: postId,
             id: postId,
+            saveTo: saveTo,
           });
         }
       }
@@ -291,6 +293,21 @@ async function main() {
       });
     }
   }
+
+  const project = await getProject();
+  const moreInfoPath = path.join(project.cache, "notionInfo.json");
+  const moreInfo: { [key: string]: any } = (await readJSON(moreInfoPath, { throws: false })) || {};
+
+  posts.sort((a, b) => {
+    const keyA = relative(a.saveTo.replace(project.dist, project.page));
+    const keyB = relative(b.saveTo.replace(project.dist, project.page));
+
+    if (moreInfo[keyA] && moreInfo[keyB]) {
+      return moreInfo[keyB].index - moreInfo[keyA].index;
+    }
+
+    return 0;
+  });
 
   for (const cd of buildData) {
     const project = cd.project;

@@ -122,7 +122,10 @@ export async function compressImage(filename: string): Promise<string> {
 }
 
 export function relative(filename: string): string {
-  return filename.replace(path.resolve("./") + path.sep, "");
+  return filename
+    .replace(path.resolve("./") + path.sep, "")
+    .split(path.sep)
+    .join("/");
 }
 
 export function fixedFloat(n: any, fractionDigits: number = 2) {
