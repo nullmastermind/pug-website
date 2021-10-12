@@ -3,10 +3,12 @@ import fs = require("fs-extra");
 import tinify = require("tinify");
 import _ = require("lodash");
 import md5 = require("md5");
-import { ensureDir, lstatSync, pathExists, readdir, remove } from "fs-extra";
+import { copy, ensureDir, lstatSync, pathExists, readdir, remove, unlink, writeFile } from "fs-extra";
 import axios from "axios";
 import { createWriteStream } from "fs";
 import prompts = require("prompts");
+
+const sharp = require("sharp");
 
 declare global {
   var project: IProject;
@@ -63,6 +65,24 @@ export function parseFilename(filename: string) {
 
 export async function compressImage(filename: string): Promise<string> {
   try {
+    if (!(filename.endsWith(".jpg") || filename.endsWith(".png") || filename.endsWith(".webp"))) {
+      const parsed = parseFilename(filename);
+      const newFilename = path.join(parsed.dir, parsed.onlyName + ".png");
+
+      if (!(await pathExists(newFilename))) {
+        // await writeFile(newFilename, await sharp(filename).png().toBuffer());
+        const tempFile = filename + "_copy." + parsed.ext;
+
+        await copy(filename, tempFile);
+        await sharp(filename + "_copy." + parsed.ext)
+          .png()
+          .toFile(newFilename);
+        await unlink(tempFile);
+      }
+
+      filename = newFilename;
+    }
+
     const cachedDir = path.resolve("./.cached");
 
     await ensureDir(cachedDir);

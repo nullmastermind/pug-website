@@ -1,4 +1,4 @@
-import { copy, ensureFile, lstat, lstatSync, pathExists, readdir, readFile, writeFile } from "fs-extra";
+import { copy, ensureDir, ensureFile, lstat, lstatSync, pathExists, readdir, readFile, remove, writeFile } from "fs-extra";
 import { compressImage, findName, fixedFloat, getAllFiles, getProject, IProject, parseFilename, relative } from "./utils/utils";
 import { load } from "cheerio";
 import path = require("path");
@@ -28,6 +28,10 @@ async function pre() {
   const rootDir = path.resolve("./");
   const distDir = path.resolve("./dist");
   const copyTo = path.join(project.host, "./public");
+
+  await remove(copyTo);
+  await ensureDir(copyTo);
+
   const allFiles = await getAllFiles(project.dist);
   const htmlFiles: Array<string> = [];
   const jsFiles: Array<string> = [];
@@ -170,7 +174,6 @@ async function processorImgTags(dirname: string, $: cheerio.Root) {
 
   for (const $element of elements) {
     const src = $element.attr("src");
-    const alt = $element.attr("alt").trim();
     const filename = path.join(dirname, src);
 
     await _compressImage(filename);
