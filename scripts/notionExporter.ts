@@ -4,7 +4,7 @@ import _ = require("lodash");
 import { ensureDir, readFile, writeFile } from "fs-extra";
 import yaml = require("yaml");
 import path = require("path");
-import { toUUID } from "./utils/utils";
+import { getProject, relative, toUUID } from "./utils/utils";
 
 async function exportBlock(token: string, id: string, saveTo: string, exportType: "html" | "markdown" = "html") {
   id = toUUID(id);
@@ -50,15 +50,20 @@ async function exportBlock(token: string, id: string, saveTo: string, exportType
 
   const res2 = await instance.get(zipURL, { responseType: "arraybuffer" });
   const zip = new AdmZip(res2.data);
-  const entry = _.find(zip.getEntries(), (entry) => entry.name.endsWith(".html"));
+  const entries = zip.getEntries();
+  const project = await getProject();
 
-  saveTo = path.resolve(saveTo);
+  for (const entry of entries) {
+    saveTo = path.resolve(saveTo);
 
-  if (entry?.getData().toString().trim()) {
-    await ensureDir(path.dirname(saveTo));
-    await writeFile(path.resolve(saveTo), entry?.getData().toString().trim() || "", "utf-8");
-  } else {
-    throw { message: "Error: " + id };
+    if (entry.entryName.endsWith(".html")) {
+    } else {
+    }
+
+    // await ensureDir(path.dirname(saveTo));
+    // await writeFile(saveTo, entry.getData());
+
+    console.log(entry.entryName, relative(saveTo), project);
   }
 }
 
@@ -67,6 +72,7 @@ async function main() {
 
   for (const post of config.posts) {
     await exportBlock(config.token, post.id, post.path);
+
     console.log("exported:", post.path);
   }
 

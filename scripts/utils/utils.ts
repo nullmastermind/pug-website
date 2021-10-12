@@ -3,10 +3,14 @@ import fs = require("fs-extra");
 import tinify = require("tinify");
 import _ = require("lodash");
 import md5 = require("md5");
-import { ensureDir, pathExists, remove } from "fs-extra";
-import { max } from "lodash";
+import { ensureDir, lstatSync, pathExists, readdir, remove } from "fs-extra";
 import axios from "axios";
 import { createWriteStream } from "fs";
+import prompts = require("prompts");
+
+declare global {
+  var project: IProject;
+}
 
 export async function getAllFiles(dir: string): Promise<Array<string>> {
   let result: Array<string> = [];
@@ -204,4 +208,51 @@ export function toUUID(value: string) {
     array = insert(array, position, "-");
   }
   return array.join("");
+}
+
+export type IProject = {
+  name: string;
+  dist: string;
+  host: string;
+  public: string;
+  page: string;
+};
+
+export async function getProject() {
+  if (!global.project) {
+    const distDir = path.resolve("./dist");
+    const hostsDir = path.resolve("./hosts");
+    const pagesDir = path.resolve("./pages");
+    const projects = (await readdir(distDir))
+      .map((dirname) => ({
+        name: dirname,
+        dist: path.join(distDir, dirname),
+        host: path.join(hostsDir, dirname),
+        public: path.join(hostsDir, dirname, "public"),
+        page: path.join(pagesDir, dirname),
+      }))
+      .filter((project) => lstatSync(project.dist).isDirectory());
+
+    if (projects.length > 1) {
+      global.project = (
+        await prompts([
+          {
+            type: "select",
+            name: "project",
+            message: "Project?",
+            choices: projects.map((project) => ({
+              title: project.name,
+              value: project,
+            })),
+          },
+        ])
+      ).project;
+    } else if (projects.length === 1) {
+      global.project = projects[0];
+    } else {
+      await getProject();
+    }
+  }
+
+  return global.project;
 }

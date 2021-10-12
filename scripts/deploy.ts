@@ -1,5 +1,5 @@
 import { copy, ensureFile, lstat, lstatSync, pathExists, readdir, readFile, writeFile } from "fs-extra";
-import { compressImage, findName, fixedFloat, getAllFiles, parseFilename, relative } from "./utils/utils";
+import { compressImage, findName, fixedFloat, getAllFiles, getProject, IProject, parseFilename, relative } from "./utils/utils";
 import { load } from "cheerio";
 import path = require("path");
 import prompts = require("prompts");
@@ -13,49 +13,21 @@ import moment = require("moment");
 import webp = require("webp-converter");
 import UglifyJS = require("uglify-js");
 import slug = require("slug");
-import { key } from "tinify";
 
 const sizeOf = require("image-size");
 
 declare global {
-  var project: { name: string; dist: string; host: string };
+  var project: IProject;
   var now: any;
 }
 
 async function pre() {
+  await getProject();
+
   global.now = moment().format("YYYYMMDD-HHmmss");
 
   const rootDir = path.resolve("./");
   const distDir = path.resolve("./dist");
-  const hostsDir = path.resolve("./hosts");
-  const projects = (await readdir(distDir))
-    .map((filename) => ({
-      name: filename,
-      dist: path.join(distDir, filename),
-      host: path.join(hostsDir, filename),
-    }))
-    .filter((project) => lstatSync(project.dist).isDirectory());
-
-  if (projects.length > 1) {
-    global.project = (
-      await prompts([
-        {
-          type: "select",
-          name: "project",
-          message: "Project?",
-          choices: projects.map((project) => ({
-            title: project.name,
-            value: project,
-          })),
-        },
-      ])
-    ).project;
-  } else if (projects.length === 1) {
-    global.project = projects[0];
-  } else {
-    throw { message: "no project found" };
-  }
-
   const copyTo = path.join(project.host, "./public");
   const allFiles = await getAllFiles(project.dist);
   const htmlFiles: Array<string> = [];
