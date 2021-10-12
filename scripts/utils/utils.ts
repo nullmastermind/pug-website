@@ -77,7 +77,10 @@ export async function compressImage(filename: string): Promise<string> {
         await sharp(filename + "_copy." + parsed.ext)
           .png()
           .toFile(newFilename);
-        await unlink(tempFile);
+
+        try {
+          await unlink(tempFile);
+        } catch (e) {}
       }
 
       filename = newFilename;
