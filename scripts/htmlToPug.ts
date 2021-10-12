@@ -1,4 +1,4 @@
-import { getAllFiles } from "./utils/utils";
+import { getAllFiles, getProject } from "./utils/utils";
 import path = require("path");
 import _ = require("lodash");
 import html2pug = require("html2pug");
@@ -6,7 +6,8 @@ import fs = require("fs-extra");
 import prettier = require("prettier");
 
 async function main() {
-  const dir = path.join(__dirname, "../assets/themes");
+  const project = await getProject();
+  const dir = path.join(project.assets, "themes");
   const files = await getAllFiles(dir);
 
   await Promise.all(
