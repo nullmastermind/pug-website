@@ -97,3 +97,12 @@ html(lang="vi")
       script(src="/assets/themes/assets/js/script.js")
       script(src="/assets/js/main.js")
       //script(src="https://w.trazk.com/v9/widgets.js", async="true", data-key="40183")
+      // Global site tag (gtag.js) - Google Analytics
+      script(async="", src="https://www.googletagmanager.com/gtag/js?id=G-P421CYCJ8T")
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-P421CYCJ8T');
