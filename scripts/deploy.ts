@@ -113,7 +113,7 @@ async function pre() {
   }
 
   await _cleanJs(jsFiles);
-  await _cleanImages(htmlFiles.map((v) => copies[v]));
+  await _cleanOthers(htmlFiles.map((v) => copies[v]));
 }
 
 async function processorBackgroundImages(dirname: string, content: string, config: any) {
@@ -335,16 +335,29 @@ async function _compressImage(filename: string, quality = 60) {
   }
 }
 
-async function _cleanImages(htmlFiles: Array<string>) {
+async function _cleanOthers(htmlFiles: Array<string>) {
   const project = await getProject();
   const dir = project.public;
   const cache: { [key: string]: string } = {};
+  const seoUrls = [];
+
+  htmlFiles.sort((a, b) => {
+    a = relative(a);
+    b = relative(b);
+
+    return a.split("/").length - b.split("/").length;
+  });
 
   for (const filename of htmlFiles) {
     const parsedFilename = parseFilename(filename);
     const content = await readFile(filename, "utf-8");
     const $ = load(content);
     const $elements: Array<cheerio.Cheerio> = [];
+    const images: Array<{
+      loc: string;
+      caption: string;
+      title: string;
+    }> = [];
 
     $("script").each((index, element) => {
       let src = $(element).attr("src");
@@ -378,6 +391,11 @@ async function _cleanImages(htmlFiles: Array<string>) {
           const newFile = await findName(path.join(newDir, newFilename + "." + parsedImageFilename.ext));
 
           cache[imageFile] = newFile;
+          images.push({
+            loc: cache[imageFile].replace(dir, "").split(path.sep).join("/"),
+            title: alt,
+            caption: alt,
+          });
 
           await copy(imageFile, newFile);
         }
@@ -387,7 +405,66 @@ async function _cleanImages(htmlFiles: Array<string>) {
     }
 
     await writeFile(filename, $.html());
+
+    if (!filename.endsWith("404.html")) {
+      seoUrls.push({
+        images: images,
+        url: filename.replace(dir, "").split(path.sep).join("/"),
+      });
+    }
   }
+
+  const config = yaml.parse(await readFile(path.resolve("./scripts/seo.yaml"), "utf-8"));
+  const domain = config["domains"][project.name];
+  let seoXmlUrls = [];
+
+  for (const seoUrl of seoUrls) {
+    const buildImages = [];
+
+    for (const image of seoUrl.images) {
+      buildImages.push(
+        `
+    <image:image>
+      <image:loc>https://${domain}${image.loc}</image:loc>
+      <image:caption>${image.caption}</image:caption>
+      <image:title>${image.title}</image:title>
+    </image:image>
+`
+      );
+    }
+
+    seoXmlUrls.push(
+      `
+  <url>
+    <loc>https://${domain}${seoUrl.url}</loc>
+    ${buildImages.join("\n")}
+  </url>
+`
+    );
+  }
+
+  await writeFile(
+    path.join(project.public, "sitemap.xml"),
+    (
+      await readFile(path.resolve("./pages/sitemap.xml"), "utf-8")
+    ).replace(
+      "<!-- {{ URLS }} -->",
+      seoXmlUrls
+        .join("\n")
+        .split("\n")
+        .map((v) => {
+          if (v.trim().length === 0) return undefined;
+
+          return v;
+        })
+        .filter((v) => v !== undefined)
+        .join("\n")
+    )
+  );
+  await writeFile(
+    path.join(project.public, "robots.txt"),
+    (await readFile(path.resolve("./pages/robots.txt"), "utf-8")).replace("{{DOMAIN}}", domain)
+  );
 }
 
 function deploy() {}

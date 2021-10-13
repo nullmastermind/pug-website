@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.hoiandor.org/index.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/logo-hoian-dor.webp</image:loc>
+      <image:caption>Logo Hoian d’Or</image:caption>
+      <image:title>Logo Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/anh-du-an-hoian-dor-1.webp</image:loc>
+      <image:caption>Ảnh dự án Hoian d’Or 1</image:caption>
+      <image:title>Ảnh dự án Hoian d’Or 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/anh-du-an-hoian-dor-2.webp</image:loc>
+      <image:caption>Ảnh dự án Hoian d’Or 2</image:caption>
+      <image:title>Ảnh dự án Hoian d’Or 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/vi-tri-hoian-dor.webp</image:loc>
+      <image:caption>Vị trí Hoian d’Or</image:caption>
+      <image:title>Vị trí Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/vi-tri-hoian-dor_01.webp</image:loc>
+      <image:caption>Vị trí Hoian d’Or</image:caption>
+      <image:title>Vị trí Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/anh-minh-hoa-hoian-dor.webp</image:loc>
+      <image:caption>Ảnh minh họa Hoian d’Or</image:caption>
+      <image:title>Ảnh minh họa Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/mat-bang-hoian-dor.webp</image:loc>
+      <image:caption>Mặt bằng Hoian d’Or</image:caption>
+      <image:title>Mặt bằng Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/ban-do-quy-hoach-hoian-dor.webp</image:loc>
+      <image:caption>Bản đồ quy hoạch Hoian d’Or</image:caption>
+      <image:title>Bản đồ quy hoạch Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/khong-gian-van-hoa-hoi-an-dor.webp</image:loc>
+      <image:caption>Không gian văn hoá Hoi an d'Or</image:caption>
+      <image:title>Không gian văn hoá Hoi an d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/thuong-cang-hoi-an-dor.webp</image:loc>
+      <image:caption>Thương cảng Hoi an d'Or</image:caption>
+      <image:title>Thương cảng Hoi an d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/khu-nong-nghiep-sinh-thai-hoi-an-dor.webp</image:loc>
+      <image:caption>Khu nông nghiệp sinh thái Hoi an d'Or</image:caption>
+      <image:title>Khu nông nghiệp sinh thái Hoi an d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/shophouse-maison-de-ville-hoian-dor.webp</image:loc>
+      <image:caption>Shophouse – Maison De ville Hoian d’Or</image:caption>
+      <image:title>Shophouse – Maison De ville Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/villa-hoian-dor.webp</image:loc>
+      <image:caption>Villa Hoian d’Or</image:caption>
+      <image:title>Villa Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/khach-san-5-sao-hoian-dor.webp</image:loc>
+      <image:caption>Khách sạn 5 sao Hoian d’Or</image:caption>
+      <image:title>Khách sạn 5 sao Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/boutique-hoian-dor.webp</image:loc>
+      <image:caption>Boutique Hoian d’Or</image:caption>
+      <image:title>Boutique Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/condotel-hoian-dor.webp</image:loc>
+      <image:caption>Condotel Hoian d’Or</image:caption>
+      <image:title>Condotel Hoian d’Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/index/mo-ban-shophouse-du-an-hoian-dor.webp</image:loc>
+      <image:caption>Mở bán Shophouse dự án Hoian d'Or</image:caption>
+      <image:title>Mở bán Shophouse dự án Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/index/shophouse-hoi-an-dor-sac-mau-bai-choi-pho-hoi.webp</image:loc>
+      <image:caption>Shophouse Hội An D'Or - Sắc màu Bài Chòi phố Hội</image:caption>
+      <image:title>Shophouse Hội An D'Or - Sắc màu Bài Chòi phố Hội</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/index/hoi-an-dor-thuong-cang-lien-ke-pho-hoi.webp</image:loc>
+      <image:caption>Hội An D'Or - thương cảng liền kề phố Hội</image:caption>
+      <image:title>Hội An D'Or - thương cảng liền kề phố Hội</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/index/divider.webp</image:loc>
+      <image:caption>divider</image:caption>
+      <image:title>divider</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/boutique-hoian-dor.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/boutique-hoian-dor/hinh-anh-boutique-du-an-hoian-dor.webp</image:loc>
+      <image:caption>Hình ảnh Boutique dự án Hoian d'Or</image:caption>
+      <image:title>Hình ảnh Boutique dự án Hoian d'Or</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/condotel-hoian-dor.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/condotel-hoian-dor/vi-tri-condotel-du-an-hoian-dor.webp</image:loc>
+      <image:caption>Vị trí condotel dự án Hoian d'Or</image:caption>
+      <image:title>Vị trí condotel dự án Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/condotel-hoian-dor/mat-bang-condotel-du-an-hoian-dor.webp</image:loc>
+      <image:caption>Mặt bằng condotel dự án Hoian d'Or</image:caption>
+      <image:title>Mặt bằng condotel dự án Hoian d'Or</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/cong-vien-sinh-thai-hoian-dor.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/cong-vien-sinh-thai-hoian-dor/hinh-anh-cong-vien-sinh-thai-du-an-hoian-dor-1.webp</image:loc>
+      <image:caption>Hình ảnh công viên sinh thái dự án Hoian d'Or (1)</image:caption>
+      <image:title>Hình ảnh công viên sinh thái dự án Hoian d'Or (1)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/cong-vien-sinh-thai-hoian-dor/hinh-anh-cong-vien-sinh-thai-du-an-hoian-dor-2.webp</image:loc>
+      <image:caption>Hình ảnh công viên sinh thái dự án Hoian d'Or (2)</image:caption>
+      <image:title>Hình ảnh công viên sinh thái dự án Hoian d'Or (2)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/dinh-lang-cam-pho-hoi-an.webp</image:loc>
+      <image:caption>Đình làng Cẩm Phô Hội An</image:caption>
+      <image:title>Đình làng Cẩm Phô Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/chua-cau-hoi-an.webp</image:loc>
+      <image:caption>Chùa Cầu Hội An</image:caption>
+      <image:title>Chùa Cầu Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/nha-tho-toc-nguyen-tuong.webp</image:loc>
+      <image:caption>Nhà thờ tộc Nguyễn Tường</image:caption>
+      <image:title>Nhà thờ tộc Nguyễn Tường</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/nha-co-tan-ky.webp</image:loc>
+      <image:caption>Nhà cổ Tấn Ký</image:caption>
+      <image:title>Nhà cổ Tấn Ký</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/lang-gom-thanh-ha-o-hoi-an.webp</image:loc>
+      <image:caption>Làng gốm Thanh Hà ở Hội An</image:caption>
+      <image:title>Làng gốm Thanh Hà ở Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/trung-tam-nghe-thuat-tai-xu-dang-trong-hoi-an.webp</image:loc>
+      <image:caption>Trung tâm nghệ thuật tại Xứ Đàng Trong Hội An</image:caption>
+      <image:title>Trung tâm nghệ thuật tại Xứ Đàng Trong Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/mua-roi-nuoc-o-hoi-an.webp</image:loc>
+      <image:caption>Múa rối nước ở Hội An</image:caption>
+      <image:title>Múa rối nước ở Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/nghe-thuat-hat-bai-choi-o-hoi-an.webp</image:loc>
+      <image:caption>Nghệ thuật hát bài chòi ở Hội An</image:caption>
+      <image:title>Nghệ thuật hát bài chòi ở Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/tha-den-hoa-dang-hoi-an.webp</image:loc>
+      <image:caption>Thả đèn hoa đăng Hội An</image:caption>
+      <image:title>Thả đèn hoa đăng Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/sinh-hoat-van-hoa-tai-hoi-an.webp</image:loc>
+      <image:caption>Sinh hoạt văn hóa tại Hội An</image:caption>
+      <image:title>Sinh hoạt văn hóa tại Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/du-an-hoi-an-dor.webp</image:loc>
+      <image:caption>Dự án Hội An D'Or</image:caption>
+      <image:title>Dự án Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/khu-dat-nong-nghiep-hoi-an-dor.webp</image:loc>
+      <image:caption>Khu đất nông nghiệp Hội An D'Or</image:caption>
+      <image:title>Khu đất nông nghiệp Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/quang-truong-hoi-an-dor.webp</image:loc>
+      <image:caption>Quảng trường Hội An D'Or</image:caption>
+      <image:title>Quảng trường Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/shophouse-hoi-an-dor.webp</image:loc>
+      <image:caption>Shophouse Hội An D'Or</image:caption>
+      <image:title>Shophouse Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-luu-tru-gia-tri-van-hoa-vuot-thoi-gian/thuong-cang-hoi-an-dor.webp</image:loc>
+      <image:caption>Thương cảng Hội An D'Or</image:caption>
+      <image:title>Thương cảng Hội An D'Or</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/hoian-dor-thuong-cang-lien-ke-pho-hoi.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-thuong-cang-lien-ke-pho-hoi/bao-tang-van-hoa-sa-huynh-o-hoi-an.webp</image:loc>
+      <image:caption>Bảo tàng văn hóa Sa Huỳnh ở Hội An</image:caption>
+      <image:title>Bảo tàng văn hóa Sa Huỳnh ở Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-dor-thuong-cang-lien-ke-pho-hoi/thuong-cang-hoi-an-dor.webp</image:loc>
+      <image:caption>Thương cảng Hội An D'Or</image:caption>
+      <image:title>Thương cảng Hội An D'Or</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/hoian-ngay-tro-lai.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/pho-co-hoi-an-thuc-hien-chi-thi-16.webp</image:loc>
+      <image:caption>Phố cổ Hội An thực hiện chỉ thị 16</image:caption>
+      <image:title>Phố cổ Hội An thực hiện chỉ thị 16</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/pho-co-hoi-an.webp</image:loc>
+      <image:caption>Phố cổ Hội An</image:caption>
+      <image:title>Phố cổ Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/hoi-an-dor.webp</image:loc>
+      <image:caption>Hội An D'Or</image:caption>
+      <image:title>Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/shophouse-hoi-an-dor.webp</image:loc>
+      <image:caption>Shophouse Hội An D'or</image:caption>
+      <image:title>Shophouse Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/shophouse-hoi-an-dor_01.webp</image:loc>
+      <image:caption>Shophouse Hội An D'or</image:caption>
+      <image:title>Shophouse Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/villa-hoi-an-dor.webp</image:loc>
+      <image:caption>Villa Hội An D'or</image:caption>
+      <image:title>Villa Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/biet-thu-hoi-an-dor.webp</image:loc>
+      <image:caption>Biệt thự Hội An D'or</image:caption>
+      <image:title>Biệt thự Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/biet-thu-hoi-an-dor_01.webp</image:loc>
+      <image:caption>Biệt thự Hội An D'or</image:caption>
+      <image:title>Biệt thự Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/condotel-hoi-an-dor.webp</image:loc>
+      <image:caption>Condotel Hội An D'Or</image:caption>
+      <image:title>Condotel Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/khong-gian-van-hoa-hoi-an-dor.webp</image:loc>
+      <image:caption>Không gian văn hóa Hội An D'Or</image:caption>
+      <image:title>Không gian văn hóa Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/khong-gian-van-hoa-trinh-cong-son-tai-hoi-an-dor.webp</image:loc>
+      <image:caption>Không gian văn hóa Trịnh Công Sơn tại Hội An D'or</image:caption>
+      <image:title>Không gian văn hóa Trịnh Công Sơn tại Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/khu-sinh-thai-hoi-an-dor.webp</image:loc>
+      <image:caption>Khu sinh thái Hội An D'Or</image:caption>
+      <image:title>Khu sinh thái Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/khu-nong-nghiep-hoi-an-dor.webp</image:loc>
+      <image:caption>Khu nông nghiệp Hội An D'or</image:caption>
+      <image:title>Khu nông nghiệp Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/boutique-hotel-hoi-an-dor.webp</image:loc>
+      <image:caption>Boutique hotel Hội An D'Or</image:caption>
+      <image:title>Boutique hotel Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/hoian-ngay-tro-lai/dao-de-men-hoi-an-dor.webp</image:loc>
+      <image:caption>Đảo dế mèn Hội An D'Or</image:caption>
+      <image:title>Đảo dế mèn Hội An D'Or</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/khach-san-hoian-dor.html</loc>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/khong-gian-van-hoa-hoian-dor.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/khong-gian-van-hoa-trinh-cong-son.webp</image:loc>
+      <image:caption>Không gian văn hóa Trịnh Công Sơn</image:caption>
+      <image:title>Không gian văn hóa Trịnh Công Sơn</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/mot-goc-khong-gian-trung-bay-gom-chu-dau-hoian-dor.webp</image:loc>
+      <image:caption>Một góc không gian trưng bày gốm Chu Đậu - Hoian d'Or</image:caption>
+      <image:title>Một góc không gian trưng bày gốm Chu Đậu - Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/anh-ve-minh-hoa-khong-gian-van-hoa-hoian-dor.webp</image:loc>
+      <image:caption>Ảnh vẽ minh hoạ không gian văn hoá Hoian d'Or</image:caption>
+      <image:title>Ảnh vẽ minh hoạ không gian văn hoá Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/nhac-cu-dan-toc-hoian-dor.webp</image:loc>
+      <image:caption>Nhạc cụ dân tộc Hoian d'Or</image:caption>
+      <image:title>Nhạc cụ dân tộc Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/cac-hinh-anh-ve-co-nhac-si-trinh-cong-son.webp</image:loc>
+      <image:caption>Các hình ảnh về cố nhạc sĩ Trịnh Công Sơn</image:caption>
+      <image:title>Các hình ảnh về cố nhạc sĩ Trịnh Công Sơn</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/anh-chup-tao-khong-gian-bieu-dien-ngoai-troi-tai-hoian-dor.webp</image:loc>
+      <image:caption>Ảnh chụp tạo không gian biểu diễn ngoài trời tại Hoian d'Or</image:caption>
+      <image:title>Ảnh chụp tạo không gian biểu diễn ngoài trời tại Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/goc-chup-rong-khong-gian-bieu-dien-ngoai-troi-tai-hoian-dor.webp</image:loc>
+      <image:caption>Góc chụp rộng không gian biểu diễn ngoài trời tại Hoian d'Or</image:caption>
+      <image:title>Góc chụp rộng không gian biểu diễn ngoài trời tại Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/mot-goc-chup-khac-cua-khong-gian-bieu-dien-ngoai-troi-tai-hoian-dor.webp</image:loc>
+      <image:caption>Một góc chụp khác của không gian biểu diễn ngoài trời tại Hoian d'Or</image:caption>
+      <image:title>Một góc chụp khác của không gian biểu diễn ngoài trời tại Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/khong-gian-van-hoa-hoian-dor/mat-bang-tong-the-cac-khong-gian-hoian-dor.webp</image:loc>
+      <image:caption>Mặt bằng tổng thể các không gian  - Hoian d'Or</image:caption>
+      <image:title>Mặt bằng tổng thể các không gian  - Hoian d'Or</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi/ho-hat-bai-choi-hoi-an.webp</image:loc>
+      <image:caption>Hô hát Bài Chòi Hội An</image:caption>
+      <image:title>Hô hát Bài Chòi Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi/phan-khu-shophouse-hoi-an-dor.webp</image:loc>
+      <image:caption>Phân khu shophouse  Hội An D'or</image:caption>
+      <image:title>Phân khu shophouse  Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi/gallery-trung-bay-tranh-du-an-hoi-an-dor.webp</image:loc>
+      <image:caption>Gallery trưng bày tranh dự án Hội An D'or</image:caption>
+      <image:title>Gallery trưng bày tranh dự án Hội An D'or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi/khu-sinh-thai-du-an-hoi-an-dor.webp</image:loc>
+      <image:caption>Khu sinh thái dự án Hội An D'Or</image:caption>
+      <image:title>Khu sinh thái dự án Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi/tuyen-pho-di-bo-thuoc-shophouse-du-an-hoi-an-dor.webp</image:loc>
+      <image:caption>Tuyến phố đi bộ thuộc Shophouse dự án Hội An D'Or</image:caption>
+      <image:title>Tuyến phố đi bộ thuộc Shophouse dự án Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi/tuyen-pho-di-bo-thuoc-shophouse-du-an-hoi-an-dor_01.webp</image:loc>
+      <image:caption>Tuyến phố đi bộ thuộc Shophouse dự án Hội An D'Or</image:caption>
+      <image:title>Tuyến phố đi bộ thuộc Shophouse dự án Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi/thuong-cang-hoi-an-dor.webp</image:loc>
+      <image:caption>Thương cảng Hội An D'Or</image:caption>
+      <image:title>Thương cảng Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi/quang-truong-cong-huong-du-an-hoi-an-dor.webp</image:loc>
+      <image:caption>Quảng trường cộng hưởng dự án Hội An D'Or</image:caption>
+      <image:title>Quảng trường cộng hưởng dự án Hội An D'Or</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/shophouse-maison-de-ville.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/ba-truc-hoian-dor.webp</image:loc>
+      <image:caption>Ba trục Hoian d'Or</image:caption>
+      <image:title>Ba trục Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/truc-van-hoa.webp</image:loc>
+      <image:caption>Trục văn hoá</image:caption>
+      <image:title>Trục văn hoá</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/truc-thuong-mai-shophouse-hoian-dor.webp</image:loc>
+      <image:caption>Trục thương mại shophouse Hoian d'Or</image:caption>
+      <image:title>Trục thương mại shophouse Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/truc-sinh-thai-shophouse.webp</image:loc>
+      <image:caption>Trục sinh thái shophouse</image:caption>
+      <image:title>Trục sinh thái shophouse</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/anh-bao-quat-quang-truong-cong-huong.webp</image:loc>
+      <image:caption>Ảnh bao quát quảng trường Cộng hưởng</image:caption>
+      <image:title>Ảnh bao quát quảng trường Cộng hưởng</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/quang-truong-cong-huong-ve-dem.webp</image:loc>
+      <image:caption>Quảng trường Cộng hưởng về đêm</image:caption>
+      <image:title>Quảng trường Cộng hưởng về đêm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/quang-truong-cong-huong-ngay-moi.webp</image:loc>
+      <image:caption>Quảng trường Cộng hưởng ngày mới</image:caption>
+      <image:title>Quảng trường Cộng hưởng ngày mới</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/tong-quan-thuong-canh-hoian-dor.webp</image:loc>
+      <image:caption>Tổng quan thương cảnh Hoian d'Or</image:caption>
+      <image:title>Tổng quan thương cảnh Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/thuong-canh-hoian-dor-ve-dem.webp</image:loc>
+      <image:caption>Thương cảnh Hoian d'Or về đêm</image:caption>
+      <image:title>Thương cảnh Hoian d'Or về đêm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/hoang-hon-tren-thuong-cang-hoian-dor.webp</image:loc>
+      <image:caption>Hoàng hôn trên thương cảng Hoian d'Or</image:caption>
+      <image:title>Hoàng hôn trên thương cảng Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/so-do-shophouse-hoian-dor.webp</image:loc>
+      <image:caption>Sơ đồ Shophouse Hoian d'Or</image:caption>
+      <image:title>Sơ đồ Shophouse Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/so-do-shophouse-1.webp</image:loc>
+      <image:caption>Sơ đồ Shophouse 1</image:caption>
+      <image:title>Sơ đồ Shophouse 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/mat-bang-shophouse-1-5mx14m.webp</image:loc>
+      <image:caption>Mặt bằng Shophouse 1 (5mx14m)</image:caption>
+      <image:title>Mặt bằng Shophouse 1 (5mx14m)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/hinh-anh-mua-ban-shophouse-1.webp</image:loc>
+      <image:caption>Hình ảnh mua bán shophouse 1</image:caption>
+      <image:title>Hình ảnh mua bán shophouse 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/so-do-shophouse-2.webp</image:loc>
+      <image:caption>Sơ đồ shophouse 2</image:caption>
+      <image:title>Sơ đồ shophouse 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/mat-bang-shophouse-2-75mx14m-corner.webp</image:loc>
+      <image:caption>Mặt bằng Shophouse 2 (7,5mx14m corner)</image:caption>
+      <image:title>Mặt bằng Shophouse 2 (7,5mx14m corner)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/anh-mua-ban-shophouse-2.webp</image:loc>
+      <image:caption>Ảnh mua bán shophouse 2</image:caption>
+      <image:title>Ảnh mua bán shophouse 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/so-do-shophouse-3.webp</image:loc>
+      <image:caption>Sơ đồ Shophouse 3</image:caption>
+      <image:title>Sơ đồ Shophouse 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/mat-bang-shophouse-3-86mx14m-corner-corner-kieu-2-dien-tich-rong-hon-kieu-1-cua-shophouse-2.webp</image:loc>
+      <image:caption>Mặt bằng shophouse 3 (8,6mx14m corner) (Corner kiểu 2 diện tích rộng hơn kiểu 1 của shophouse 2)</image:caption>
+      <image:title>Mặt bằng shophouse 3 (8,6mx14m corner) (Corner kiểu 2 diện tích rộng hơn kiểu 1 của shophouse 2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/anh-mua-ban-shophouse-3.webp</image:loc>
+      <image:caption>Ảnh mua bán Shophouse 3</image:caption>
+      <image:title>Ảnh mua bán Shophouse 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/so-do-shophouse-4.webp</image:loc>
+      <image:caption>Sơ đồ Shophouse 4</image:caption>
+      <image:title>Sơ đồ Shophouse 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/mat-bang-shophouse-4-67mx14m.webp</image:loc>
+      <image:caption>Mặt bằng shophouse 4 (6,7mx14m)</image:caption>
+      <image:title>Mặt bằng shophouse 4 (6,7mx14m)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/anh-mua-ban-shophouse-4.webp</image:loc>
+      <image:caption>Ảnh mua bán Shophouse 4</image:caption>
+      <image:title>Ảnh mua bán Shophouse 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/so-do-special-shophouse-shophouse-dac-biet.webp</image:loc>
+      <image:caption>Sơ đồ Special Shophouse, shophouse đặc biệt</image:caption>
+      <image:title>Sơ đồ Special Shophouse, shophouse đặc biệt</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/mat-bang-shophouse-special-shophouse-dac-biet-10-13mx14m.webp</image:loc>
+      <image:caption>Mặt bằng shophouse special (shophouse đặc biệt) (10-13mx14m)</image:caption>
+      <image:title>Mặt bằng shophouse special (shophouse đặc biệt) (10-13mx14m)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/anh-special-shophouse.webp</image:loc>
+      <image:caption>Ảnh special shophouse</image:caption>
+      <image:title>Ảnh special shophouse</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/tien-do-thanh-toan-chuan-du-kien-trang-1.webp</image:loc>
+      <image:caption>Tiến độ thanh toán chuẩn dự kiến (trang 1)</image:caption>
+      <image:title>Tiến độ thanh toán chuẩn dự kiến (trang 1)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/tien-do-thanh-toan-chuan-du-kien-trang-2.webp</image:loc>
+      <image:caption>Tiến độ thanh toán chuẩn dự kiến (trang 2)</image:caption>
+      <image:title>Tiến độ thanh toán chuẩn dự kiến (trang 2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/shophouse-maison-de-ville/tien-do-thanh-toan-chuan-du-kien-trang-3.webp</image:loc>
+      <image:caption>Tiến độ thanh toán chuẩn dự kiến (trang 3)</image:caption>
+      <image:title>Tiến độ thanh toán chuẩn dự kiến (trang 3)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/bai-viet/villa-hoian-dor.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/villa-hoian-dor/vi-tri-villa-cua-du-an-hoian-dor.webp</image:loc>
+      <image:caption>Vị trí Villa của dự án Hoian d'Or</image:caption>
+      <image:title>Vị trí Villa của dự án Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/villa-hoian-dor/hinh-anh-villa-1.webp</image:loc>
+      <image:caption>Hình ảnh Villa (1)</image:caption>
+      <image:title>Hình ảnh Villa (1)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/villa-hoian-dor/hinh-anh-villa-2.webp</image:loc>
+      <image:caption>Hình ảnh Villa (2)</image:caption>
+      <image:title>Hình ảnh Villa (2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/villa-hoian-dor/hinh-anh-villa-3.webp</image:loc>
+      <image:caption>Hình ảnh Villa (3)</image:caption>
+      <image:title>Hình ảnh Villa (3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/villa-hoian-dor/anh-noi-that-villa-hoian-dor-1.webp</image:loc>
+      <image:caption>Ảnh nội thất  Villa Hoian d'Or (1)</image:caption>
+      <image:title>Ảnh nội thất  Villa Hoian d'Or (1)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/villa-hoian-dor/anh-noi-that-villa-hoian-dor-2.webp</image:loc>
+      <image:caption>Ảnh nội thất  Villa Hoian d'Or (2)</image:caption>
+      <image:title>Ảnh nội thất  Villa Hoian d'Or (2)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/villa-hoian-dor/anh-noi-that-villa-hoian-dor-3.webp</image:loc>
+      <image:caption>Ảnh nội thất  Villa Hoian d'Or (3)</image:caption>
+      <image:title>Ảnh nội thất  Villa Hoian d'Or (3)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/villa-hoian-dor/anh-noi-that-villa-hoian-dor-4.webp</image:loc>
+      <image:caption>Ảnh nội thất  Villa Hoian d'Or (4)</image:caption>
+      <image:title>Ảnh nội thất  Villa Hoian d'Or (4)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoiandor.org/category/uncategorized.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/uncategorized/hoi-an-ngay-tro-lai.webp</image:loc>
+      <image:caption>Hội An, ngày trở lại</image:caption>
+      <image:title>Hội An, ngày trở lại</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/uncategorized/hoi-an-noi-luu-giu-nhung-gia-tri-van-hoa-vuot-thoi-gian.webp</image:loc>
+      <image:caption>Hội An - Nơi lưu giữ những giá trị văn hóa vượt thời gian</image:caption>
+      <image:title>Hội An - Nơi lưu giữ những giá trị văn hóa vượt thời gian</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/uncategorized/khong-gian-van-hoa-trinh-cong-son.webp</image:loc>
+      <image:caption>Không gian văn hóa Trịnh Công Sơn</image:caption>
+      <image:title>Không gian văn hóa Trịnh Công Sơn</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/uncategorized/boutique-du-an-hoian-dor.webp</image:loc>
+      <image:caption>Boutique dự án Hoian d'Or</image:caption>
+      <image:title>Boutique dự án Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/uncategorized/khach-san-du-an-hoian-dor.webp</image:loc>
+      <image:caption>Khách sạn dự án Hoian d'Or</image:caption>
+      <image:title>Khách sạn dự án Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/uncategorized/condotel-du-an-hoian-dor.webp</image:loc>
+      <image:caption>CONDOTEL dự án Hoian d'Or</image:caption>
+      <image:title>CONDOTEL dự án Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/uncategorized/villa-du-an-hoian-dor.webp</image:loc>
+      <image:caption>VILLA dự án Hoian d'Or</image:caption>
+      <image:title>VILLA dự án Hoian d'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/posts/uncategorized/cong-vien-sinh-thai-du-an-hoian-dor.webp</image:loc>
+      <image:caption>Công viên sinh thái dự án Hoian d'Or</image:caption>
+      <image:title>Công viên sinh thái dự án Hoian d'Or</image:title>
+    </image:image>
+  </url>
+</urlset>
