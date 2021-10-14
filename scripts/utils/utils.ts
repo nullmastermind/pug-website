@@ -64,6 +64,10 @@ export function parseFilename(filename: string) {
 }
 
 export async function compressImage(filename: string): Promise<string> {
+  if (!filename.endsWith(".webp")) {
+    return filename;
+  }
+
   try {
     if (!(filename.endsWith(".jpg") || filename.endsWith(".png") || filename.endsWith(".webp"))) {
       const parsed = parseFilename(filename);
