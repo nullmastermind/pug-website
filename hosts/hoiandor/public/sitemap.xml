@@ -89,14 +89,14 @@
       <image:title>Mở bán Shophouse dự án Hoian d'Or</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/index/tai-sao-nen-dau-tu-shophouse-hoi-an-dor.webp</image:loc>
+      <image:caption>Tại sao nên đầu tư shophouse Hội An D'Or?</image:caption>
+      <image:title>Tại sao nên đầu tư shophouse Hội An D'Or?</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://www.hoiandor.org/assets/images/index/shophouse-hoi-an-dor-sac-mau-bai-choi-pho-hoi.webp</image:loc>
       <image:caption>Shophouse Hội An D'Or - Sắc màu Bài Chòi phố Hội</image:caption>
       <image:title>Shophouse Hội An D'Or - Sắc màu Bài Chòi phố Hội</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.hoiandor.org/assets/images/index/hoi-an-dor-thuong-cang-lien-ke-pho-hoi.webp</image:loc>
-      <image:caption>Hội An D'Or - thương cảng liền kề phố Hội</image:caption>
-      <image:title>Hội An D'Or - thương cảng liền kề phố Hội</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.hoiandor.org/assets/index/divider.webp</image:loc>
@@ -550,6 +550,44 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.hoiandor.org/bai-viet/tai-sao-nen-dau-tu-shop-house-hoi-an-dor.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/tai-sao-nen-dau-tu-shop-house-hoi-an-dor/pho-co-hoi-an.webp</image:loc>
+      <image:caption>Phố cổ Hội An</image:caption>
+      <image:title>Phố cổ Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/tai-sao-nen-dau-tu-shop-house-hoi-an-dor/di-san-pho-co-hoi-an.webp</image:loc>
+      <image:caption>Di sản phố cổ Hội An</image:caption>
+      <image:title>Di sản phố cổ Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/tai-sao-nen-dau-tu-shop-house-hoi-an-dor/pho-co-hoi-an_01.webp</image:loc>
+      <image:caption>Phố cổ Hội An</image:caption>
+      <image:title>Phố cổ Hội An</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/tai-sao-nen-dau-tu-shop-house-hoi-an-dor/shophouse-hoi-an-dor.webp</image:loc>
+      <image:caption>Shophouse Hội An D'Or</image:caption>
+      <image:title>Shophouse Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/tai-sao-nen-dau-tu-shop-house-hoi-an-dor/bai-toan-dau-tu-shophouse-hoi-an-dor.webp</image:loc>
+      <image:caption>Bài toán đầu tư shophouse Hội An D'Or</image:caption>
+      <image:title>Bài toán đầu tư shophouse Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/tai-sao-nen-dau-tu-shop-house-hoi-an-dor/bai-toan-dau-tu-shophouse-hoi-an-dor_01.webp</image:loc>
+      <image:caption>Bài toán đầu tư shophouse Hội An D'Or</image:caption>
+      <image:title>Bài toán đầu tư shophouse Hội An D'Or</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/tai-sao-nen-dau-tu-shop-house-hoi-an-dor/bai-toan-dau-tu-shophouse-hoi-an-dor_02.webp</image:loc>
+      <image:caption>Bài toán đầu tư shophouse Hội An D'Or</image:caption>
+      <image:title>Bài toán đầu tư shophouse Hội An D'Or</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.hoiandor.org/bai-viet/villa-hoian-dor.html</loc>
     <image:image>
       <image:loc>https://www.hoiandor.org/assets/images/villa-hoian-dor/vi-tri-villa-cua-du-an-hoian-dor.webp</image:loc>
@@ -594,6 +632,11 @@
   </url>
   <url>
     <loc>https://www.hoiandor.org/category/uncategorized.html</loc>
+    <image:image>
+      <image:loc>https://www.hoiandor.org/assets/images/uncategorized/hoi-an-dor-thuong-cang-lien-ke-pho-hoi.webp</image:loc>
+      <image:caption>Hội An D'Or - thương cảng liền kề phố Hội</image:caption>
+      <image:title>Hội An D'Or - thương cảng liền kề phố Hội</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://www.hoiandor.org/assets/images/uncategorized/hoi-an-ngay-tro-lai.webp</image:loc>
       <image:caption>Hội An, ngày trở lại</image:caption>

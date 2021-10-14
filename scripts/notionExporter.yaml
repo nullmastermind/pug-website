@@ -20,5 +20,7 @@ posts:
     path: pages/hoiandor/bai-viet/hoian-dor-thuong-cang-lien-ke-pho-hoi.html
   - id: 978c54d897004e039f37a190f1ea4f67
     path: pages/hoiandor/bai-viet/shophouse-hoian-dor-sac-mau-bai-choi-pho-hoi.html
+  - id: 2f936cc8a53746b6a13c22cca422d45d
+    path: pages/hoiandor/bai-viet/tai-sao-nen-dau-tu-shop-house-hoi-an-dor.html
   - id: 407a052f68ce4c84875e80c7f483bd2b
     path: pages/hoiandor/bai-viet/shophouse-maison-de-ville.html
