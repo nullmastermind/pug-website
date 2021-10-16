@@ -167,6 +167,14 @@ function _autoGallery() {
 $(document).ready(function () {
   if (!($(".la-thanks-2").length > 0)) return;
 
+  $("a").on("click", function () {
+    var href = $(this).attr("href");
+
+    if (href && (href.startsWith("tel") || href.startsWith("mail"))) {
+      fbq("track", "Contact");
+    }
+  });
+
   document.getElementById("form-contact").addEventListener("submit", function (e) {
     e.preventDefault(); // before the code
 
@@ -193,6 +201,7 @@ $(document).ready(function () {
       $(".la-thanks").css("height", height + "px");
       $(".la-thanks-2").css("display", "none");
       $btn.html(oldBtnContent);
+      fbq("track", "Lead");
     });
   });
 });
