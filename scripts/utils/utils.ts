@@ -104,7 +104,7 @@ export async function compressImage(filename: string): Promise<string> {
 
     console.log("call API:", relative(filename));
 
-    const apiKeys = ["cLH8b75hpcXHxy202hg3XdjJDbh27wLS", "YBg9YR2P4H3qjF0MlddSk985R8Qlykf2", "GSh0VNTpw0XMkG3YNvxfvJkscvFVhH85"];
+    const apiKeys = ["cLH8b75hpcXHxy202hg3XdjJDbh27wLS", "YBg9YR2P4H3qjF0MlddSk985R8Qlykf2", "06SYzPCc6ct9RmCcczGLDDBQ3sCyxTvy"];
 
     tinify.key = apiKeys[_.random(0, apiKeys.length - 1)];
 
